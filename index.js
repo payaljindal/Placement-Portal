@@ -74,7 +74,7 @@ app.use('/admin',adminRoutes);
 
 mongoose
   .connect(
-    'mongodb+srv://Payal:internity@cluster0.k6odf.gcp.mongodb.net/db2?retryWrites=true&w=majority',
+    'mongodb+srv://Payal:payalplacement@cluster0.xjtag.mongodb.net/db1?retryWrites=true&w=majority',
     { useCreateIndex: true,useUnifiedTopology: true, useNewUrlParser: true },
   )
   .then(() => app.listen(process.env.PORT || 5000, console.log("Your server is up man.....")))
