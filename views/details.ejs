@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Workaholics</title>
+		<link rel ="shortcut icon" type="image/png" href="/img/favicon.png">
+		<!-- All Plugins Css -->
+		<link href="/css/plugins.css" rel="stylesheet">
+		 
+	
+		<!-- Custom CSS -->
+		<link href="/css/styles.css" rel="stylesheet">
+		
+		<!-- Custom Color -->
+		<link href="/css/default.css" rel="stylesheet">
+	</head>
+	
+	<body class="green-skin bg-light">
+		
+		<div class="Loader"></div>
+		
+		<!-- ============================================================== -->
+		<!-- Main wrapper - style you can find in pages.scss -->
+		<!-- ============================================================== -->
+		<div id="main-wrapper">
+		
+			<!-- ============================================================== -->
+			<!-- Top header  -->
+			<!-- ============================================================== -->
+			<!-- Start Navigation -->
+			<div class="header header-light">
+				<div class="container-fluid">
+					<nav id="navigation" class="navigation navigation-landscape">
+						<div class="nav-header">
+							<a class="nav-brand" href="#">
+								<img src="/img/Logo.jpg" class="logo" width="170" height="40" alt="logo">
+							</a>
+							<div class="nav-toggle"></div>
+						</div>
+						<div class="nav-menus-wrapper" style="transition-property: none;">
+							<ul class="nav-menu">
+							
+								<li><a href="/">Home</a>
+									
+								</li>
+								
+								
+								
+								<li><a href="/contact">Contact Us</a></li>
+								
+							</ul>
+							
+							
+						</div>
+					</nav>
+				</div>
+			</div>
+			<!-- End Navigation -->
+			<div class="clearfix"></div>
+			<!-- ============================================================== -->
+			<!-- Top header  -->
+			<!-- ============================================================== -->
+			
+			<!-- ======================= Start Banner ===================== -->
+			<section class="page-title-banner"  style="background-image:url(/img/aa.jpg);">
+				<div class="container">
+					<div class="row m-0 align-items-end detail-swap">
+						<div class="tr-list-wrap">
+							<div class="tr-list-detail">
+								<div class="tr-list-thumb">
+									<img src="/img/user.png" class="img-responsive" alt="" />
+								</div>
+								<div class="tr-list-info">
+									
+									<h4 class="mb-1"><%= user[0].name %></h4>
+									
+									<p class="mb-1"><i class="ti-location-pin mr-2"></i><%= user[0].location %></p>
+								</div>
+							</div>
+							<div class="listing-detail_right">
+								<div class="listing-detail-item">
+									<% if(admin){%>
+										
+									<a  class="btn btn-list full-width color--linkedin" data-toggle="modal" data-target="#exampleModal"><i class="ti-email mr-2"></i> Send A Message</a>
+										<% } %>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ======================= End Banner ===================== -->
+		
+			<!-- ============== Job Detail ====================== -->	
+			<section class="tr-single-detail gray-bg">
+				<div class="container">
+					<div class="row">
+					
+						<div class="col-md-8 col-sm-12">
+							
+							
+														
+							<!-- Extra Skill& Knowledge -->
+							<div class="tr-single-box">
+								<div class="tr-single-header">
+									<h4><i class="ti-book"></i>Extra Skill & Knowledge</h4>
+								</div>
+								<div class="tr-single-body">
+									
+									
+									<!-- Skills -->
+									<div class="row">
+
+										<% user[0].skills.forEach(function(skill){ %>
+											<div class="col-lg-6 col-md-6 col-sm-12">
+												<label><%= skill.name %></label>
+												<div class="progress">
+												  <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: <%= skill.level*20 %>%" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+											</div>
+											<% });%>
+									
+										
+										
+									</div>
+									
+								</div>
+							</div>
+							
+							
+							<!-- Education & Qualification -->
+							<div class="tr-single-box">
+								<div class="tr-single-header">
+									<h4><i class="ti-cup"></i>Education & Qualification</h4>
+								</div>
+								<div class="tr-single-body">
+									<ul class="qa-skill-list">
+										<% user[0].education.forEach(function(a){ %>
+										
+
+											<li>
+												<div class="qa-skill-box">
+													<h4 class="qa-skill-title"><%= a.title %><span class="qa-time"><%= a.from %> - <%= a.to %></span></h4>
+													<div class="qa-content">
+														<p><b>University - </b><%= a.university %> <br>
+														<b>Result - </b> <%= a.result%></p>
+													</div>
+												</div>
+											</li>
+
+											<% });%>
+									
+									</ul>
+								</div>
+							</div>
+							
+							<!-- Experience -->
+							<div class="tr-single-box">
+								<div class="tr-single-header">
+									<h4><i class="ti-medall-alt"></i>Award & Experience</h4>
+								</div>
+								<div class="tr-single-body">
+									<ul class="qa-skill-list">
+										<% user[0].work.forEach(function(a){ %>
+											<li>
+												<div class="qa-skill-box">
+													<h4 class="qa-skill-title"><%= a.orgname %><span class="qa-time"><%= a.start_date%> - <%= a.end_date %></span></h4>
+													<h5 class="qa-subtitle"><%= a.title %></h5>
+													<div class="qa-content">
+														<p> <b>Project - <%= a.project_name %></b> <br>
+														<b>Description - <%= a.description %> </b> <br>
+														<b>Contribution - </b> <%= a.contribution %> <br>
+														<b>Other Comments - </b> <%= a.comment %>
+													</p>
+													</div>
+												</div>
+											</li>
+
+											
+											<% });%>
+									
+										
+									</ul>
+								</div>
+							</div>
+							
+							
+						</div>
+					
+						<!-- Sidebar Start -->
+						<div class="col-md-4 col-sm-12">
+							
+						
+												
+							<!-- Candidate Detail -->
+							<div class="tr-single-box">
+								<div class="tr-single-header">
+									<h4><i class="ti-direction"></i> Candidate Details</h4>
+								</div>
+								
+								<div class="tr-single-body">
+									<ul class="extra-service">
+										<li>
+											<div class="icon-box-icon-block">
+												<div class="icon-box-round">
+													<i class="ti-stats-down"></i>
+												</div>
+												<div class="icon-box-text">
+													<strong class="d-block">Expected Sallery</strong>
+													
+													 <%= user[0].min_salary %> +
+												</div>
+											</div>
+										</li>
+
+										
+										<li>
+											<div class="icon-box-icon-block">
+												<div class="icon-box-round">
+													<i class="ti-user"></i>
+												</div>
+												<div class="icon-box-text">
+													<strong class="d-block">Gender</strong>
+													<%= user[0].gender %>
+												</div>
+											</div>
+										</li>
+
+										<li>
+											<div class="icon-box-icon-block">
+												<div class="icon-box-round">
+													<i class="ti-hand-point-right"></i>
+												</div>
+												<div class="icon-box-text">
+													<strong class="d-block">Marital Status</strong>
+													<%= user[0].marital %>
+												</div>
+											</div>
+										</li>
+										
+										<li>
+											<div class="icon-box-icon-block">
+												<div class="icon-box-round">
+													<i class="ti-marker"></i>
+												</div>
+												<div class="icon-box-text">
+													<strong class="d-block">Experience</strong>
+													<%= user[0].experience %> years
+												</div>
+											</div>
+										</li>
+										
+										<li>
+											<div class="icon-box-icon-block">
+												<div class="icon-box-round">
+													<i class="ti-clipboard"></i>
+												</div>
+												<div class="icon-box-text">
+													<strong class="d-block">Job Type</strong>
+													<%= user[0].job_type %>
+												</div>
+											</div>
+										</li>
+										
+									</ul>
+								</div>
+								
+							</div>
+							
+							<!-- Candidate Address -->
+							<div class="tr-single-box">
+								<div class="tr-single-header">
+									<h4><i class="ti-direction"></i> Candidate Address</h4>
+								</div>
+								
+								<div class="tr-single-body">
+									<ul class="extra-service">
+										<li>
+											<div class="icon-box-icon-block">
+												<a href="#">
+													<div class="icon-box-round">
+														<i class="ti-location-pin"></i>
+													</div>
+													<div class="icon-box-text">
+														<%= user[0].location %>
+													</div>
+												</a>
+											</div>
+										</li>
+										
+										<li>
+											<div class="icon-box-icon-block">
+												<a href="#">
+													<div class="icon-box-round">
+														<i class="lni-phone-handset"></i>
+													</div>
+													<div class="icon-box-text">
+														<%= user[0].contact %>
+													</div>
+												</a>
+											</div>
+										</li>
+										
+										<li>
+											<div class="icon-box-icon-block">
+												<a href="#">
+													<div class="icon-box-round">
+														<i class="ti-google"></i>
+													</div>
+													<div class="icon-box-text">
+														<%= user[0].email %>
+													</div>
+												</a>
+											</div>
+										</li>
+										
+										<!-- <li>
+											<div class="icon-box-icon-block">
+												<a href="#">
+													<div class="icon-box-round">
+														<i class="lni-world"></i>
+													</div>
+													<div class="icon-box-text">
+														www.myfinding.com
+													</div>
+												</a>
+											</div>
+										</li> -->
+										
+									</ul>
+								</div>
+								
+							</div>
+							
+							<!-- Social Links -->
+							<div class="tr-single-box">
+								<div class="tr-single-header">
+									<h4><i class="ti-share"></i> Social Profiles</h4>
+								</div>
+								
+								<div class="tr-single-body">
+									<ul class="extra-service half">
+										<li>
+											<div class="icon-box-icon-block">
+												<a href="#">
+													<div class="icon-box-round">
+														<i class="ti-linkedin"></i>
+													</div>
+													<div class="icon-box-text">
+														
+														<a href="<%= user[0].linkedin %>">Linkedin</a>
+													</div>
+												</a>
+											</div>
+										</li>
+										
+										<li>
+											<div class="icon-box-icon-block">
+												<a href="#">
+													<div class="icon-box-round">
+														<i class="ti-github"></i>
+													</div>
+													<div class="icon-box-text">
+														
+														<a href="<%= user[0].github %>">Github</a>
+												</a>
+											</div>
+										</li>
+										
+										<li>
+											<div class="icon-box-icon-block">
+												<a href="#">
+													<div class="icon-box-round">
+														<i class="ti-twitter-alt"></i>
+													</div>
+													<div class="icon-box-text">
+														Twitter
+													</div>
+												</a>
+											</div>
+										</li>
+										
+										
+									</ul>
+								</div>
+								
+							</div>
+							
+						</div>
+						<!-- /col-md-4 -->
+					</div>
+				</div>
+			</section>
+			<!-- ============== Job Detail ====================== -->
+			
+					
+			
+			<!-- ============================ Footer Start ================================== -->
+			
+			<footer class="dark-footer skin-dark-footer">
+				<div>
+					<div class="container">
+						<div class="row">
+							
+							<div class="col-lg-4 col-md-4">
+								<div class="footer-widget">
+									<img src="/img/logofooter.png" class="logo" width="170" height="100" alt="logo">
+
+									
+									
+								</div>
+							</div>	
+							<div class="col-lg-4 col-md-4">
+								<div class="footer-widget">
+									
+
+									<div class="footer-add">
+										
+										<h4>Address:</h4></strong><p>Model Town, Delhi,</br> India</p>
+										<h4>Email:</strong></br><a href="#">hello@workaholics.com</a></p></h4>
+										<h4>Call:</h4></strong><p>91 9876543210</p>
+									</div>
+									
+								</div>
+							</div>		
+							<div class="col-lg-4 col-md-4">
+								<div class="footer-widget">
+									<h4>Navigations</h4>
+									<ul class="footer-menu">
+										<li><a href="/">Home</a></li>
+										<li><a href="/users/profile">Edit Profile</a></li>
+										<li><a href="/users/detail/<%= user._id %>">View Profile</a></li>
+										
+										
+									</ul>
+								</div>
+							</div>
+									</div>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<div class="container">
+						<div class="row align-items-center">
+							
+							<div class="col-lg-6 col-md-6">
+								<p class="mb-0">© 2020 Workaholics.All Rights Reserved</p>
+							</div>
+							
+							<div class="col-lg-6 col-md-6 text-right">
+								<ul class="footer-bottom-social">
+									<li><a href="#"><i class="ti-facebook"></i></a></li>
+									<li><a href="#"><i class="ti-twitter"></i></a></li>
+									<li><a href="#"><i class="ti-instagram"></i></a></li>
+									<li><a href="#"><i class="ti-linkedin"></i></a></li>
+								</ul>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				
+			</footer>
+			<!-- ============================ Footer End ================================== -->
+			
+			<!-- Log In Modal -->
+			<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="registermodal" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
+					<div class="modal-content" id="registermodal">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true"><i class="ti-close"></i></span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<h4 class="modal-header-title">SignIn</h4>
+							
+							
+							
+							
+							<div class="login-form">
+								<form>
+								
+									<div class="form-group">
+										<label>User Name</label>
+										<div class="input-with-gray">
+											<input type="text" class="form-control" placeholder="Username">
+											<i class="ti-user theme-cl"></i>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label>Password</label>
+										<div class="input-with-gray">
+											<input type="password" class="form-control" placeholder="*******">
+											<i class="ti-unlock theme-cl"></i>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<button type="submit" class="btn btn-primary btn-md full-width pop-login">Login</button>
+									</div>
+								
+								</form>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<div class="mf-link"><i class="ti-user"></i>Haven't An Account?<a href="javascript:void(0)" data-toggle="modal" data-target="#signup" data-dismiss="modal"> Sign Up</a></div>
+							<div class="mf-forget"><a href="#"><i class="ti-help"></i>Forget Password</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Modal -->
+			
+			<!-- Sign Up Modal -->
+			<div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="sign-up" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
+        <div class="modal-content" id="sign-up">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="ti-close"></i></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h4 class="modal-header-title">Sign Up</h4>
+                
+                
+                <div class="login-form">
+                    <form>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <label>Full Name</label>
+                                    <div class="input-with-gray">
+                                        <input type="text" class="form-control" placeholder="Your Name">
+                                        <i class="ti-user theme-cl"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <div class="input-with-gray">
+                                        <input type="email" class="form-control" placeholder="Email ID">
+                                        <i class="ti-user theme-cl"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <label>Phone Number</label>
+                                    <div class="input-with-gray">
+                                        <input type="number" class="form-control" placeholder="Phone Number">
+                                        <i class="ti-user theme-cl"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <label>Whatsapp Number</label>
+                                    <div class="input-with-gray">
+                                        <input type="number" class="form-control" placeholder="Whatsapp Number">
+                                        <i class="ti-user theme-cl"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <label>Gender</label>
+                                    <div class="input-with-gray">
+                                        <input type="text" class="form-control" placeholder="Gender">
+                                        <i class="ti-user theme-cl"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <label>Marital Status</label>
+                                    <div class="input-with-gray">
+                                        <input type="text" class="form-control" placeholder="Marital Status">
+                                        <i class="ti-user theme-cl"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <label>Known Languages</label>
+                                    <div class="input-with-gray">
+                                        <input type="text" class="form-control" placeholder="Languages">
+                                        <i class="ti-user theme-cl"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <label>Native Location</label>
+                                    <div class="input-with-gray">
+                                        <input type="text" class="form-control" placeholder="Native Location">
+                                        <i class="ti-user theme-cl"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    
+                        
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <label>User Name</label>
+                                    <div class="input-with-gray">
+                                        <input type="text" class="form-control" placeholder="Username">
+                                        <i class="ti-user theme-cl"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <div class="input-with-gray">
+                                        <input type="password" class="form-control" placeholder="*******">
+                                        <i class="ti-unlock theme-cl"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary btn-md full-width pop-login">Login</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="mf-link"><i class="ti-user"></i>Already Have Account? Sign In</a></div>
+                <div class="mf-forget"><a href="#"><i class="ti-help"></i>Need Help</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+			<!-- End Modal -->			
+
+		</div>
+		<!-- ============================================================== -->
+		<!-- End Wrapper -->
+		<!-- ============================================================== -->
+
+		<!-- ============================================================== -->
+		<!-- All Jquery -->
+		<!-- ============================================================== -->
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/popper.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/select2.min.js"></script>
+		<script src="/js/aos.js"></script>
+		<script src="/js/perfect-scrollbar.jquery.min.js"></script>
+		<script src="/js/owl.carousel.min.js"></script>
+		<script src="/js/jquery.counterup.min.js"></script>
+		<script src="/js/slick.js"></script>
+		<script src="/js/bootstrap-datepicker.js"></script>
+		<script src="/js/isotope.min.js"></script>
+		<script src="/js/summernote.js"></script>
+		<script src="/js/jQuery.style.switcher.js"></script>
+		 
+		<script src="/js/counterup.min.js"></script>
+		<script src="/js/custom.js"></script>
+
+		<script>
+			$(function(){
+				$('.datepicker').datepicker({
+					format: 'mm-dd-yyyy'
+				});
+			});
+	</script>
+		<!-- ============================================================== -->
+		<!-- This page plugins -->
+		<!-- ============================================================== -->
+		
+
+
+		<!-- send message modal  -->
+		<!-- Modal -->
+		
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="exampleModalLabel">Send Message to this candidate</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+			
+			<form action="/admin/msg/<%= user[0]._id %>" method="POST">
+				From which company- <br>
+				<input type="text" name="company" class="form-control"> <br>
+				Enter message you want to send -
+				<br>
+				<textarea type="text" placeholder="Enter message " name="message" class="form-control" ></textarea>
+				<br>
+				<button type="submit">Send message</button>
+			</form>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		  
+		</div>
+	  </div>
+	</div>
+  </div>
+
+	</body>
+
+</html>

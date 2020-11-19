@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Workaholics</title>
+    <link rel ="shortcut icon" type="image/png" href="/img/favicon.png">
+    <!-- All Plugins Css -->
+    <link href="css/plugins.css" rel="stylesheet">
+     
+
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+    
+    <!-- Custom Color -->
+    <link href="css/default.css" rel="stylesheet">
+</head>
+
+<body class="green-skin bg-light">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="Loader"></div>
+    
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+    
+        <!-- ============================================================== -->
+        <!-- Top header  -->
+        <!-- ============================================================== -->
+        <!-- Start Navigation -->
+        <div class="header header-light">
+            <div class="container-fluid">
+                <nav id="navigation" class="navigation navigation-landscape">
+                    <div class="nav-header">
+                        <a class="nav-brand" href="#">
+                            <img src="/img/Logo.jpg" class="logo" width="170" height="40" alt="logo">
+                        </a>
+                        <div class="nav-toggle"></div>
+                    </div>
+                    <div class="nav-menus-wrapper" style="transition-property: none;">
+                        <ul class="nav-menu">
+                        
+                            <li ><a href="/">Home</a>
+                                
+                            </li>
+							
+							
+                     
+                            
+                            <li><a href="#">Pages<span class="submenu-indicator"></span></a>
+								<ul class="nav-dropdown nav-submenu" style="right: auto; display: none;">
+									<% if(!user){%>
+										<li><a href="/users/login">LogIn</a></li> 
+										<% } %>
+                                  
+                                    <li class="active"><a href="/tip">Tips and Tricks</a></li>                                    
+                                    
+                                    
+                                </ul>
+                            </li>
+                            
+                            <li><a href="/contact">Contact Us</a></li>
+                            
+                        </ul>
+                        
+                        <ul class="nav-menu nav-menu-social align-to-right">
+							<% if(!user){%>
+								<li><a href="/users/login"><i class="ti-user"></i> LogIn</a></li> 
+								<% }else{%>
+									<li><a href="/users/logout"><i class="ti-user"></i> Logout</a></li>
+							<%}%>
+
+							
+							<li class="add-listing theme-bg">
+								<a data-toggle="modal" data-target="#exampleModal">
+									 <i class="ti-plus"></i> Add new tip
+								</a>
+							</li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- End Navigation -->
+        <div class="clearfix"></div>
+			<!-- ============================================================== -->
+			<!-- Top header  -->
+			<!-- ============================================================== -->
+			
+			
+			<!-- ============================ Hero Banner  Start================================== -->
+			<div class="page-title-wrap pt-img-wrap" style="background:url(img/bl.jpg) no-repeat;">
+				<div class="container">
+					<div class="col-lg-12 col-md-12">
+						<div class="pt-caption text-center">
+							<h1>TIPS AND TRICKS</h1>
+							<p><a href="/">Home</a><span class="current-page">Blog</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<!-- ============================ Hero Banner End ================================== -->
+			
+			<!-- ============================ Blog Grid Start ================================== -->
+			<section>
+				<div class="container">
+					<div class="row">
+					<% blogs.forEach(function(blog){%>
+						<div class="col-lg-4 col-md-4">
+							<div class="blog-grid-wrap mb-4">
+								<div class="blog-grid-thumb">
+									<img src="/img/tip.jpg" class="img-responsive" alt="" />
+
+									<div class="bg-cat-info">
+										<div class="post-m-info">
+											<h5 class="pm-date">12</h5>
+											<h5 class="pm-month">Dec</h5>
+										</div>
+									</div>
+									<h6 class="post-cat"><%= blog.topic %></h6>
+								</div>
+								<div class="blog-grid-content">
+									<h4 class="cnt-gb-title"><a href="#"><%= blog.title %></a></h4>
+									<p><%= blog.content %></p>
+								</div>
+								<div class="blog-grid-meta">
+									<div class="gb-info-author">
+										<p><strong>By </strong><%= blog.by %></p>
+									</div>
+								
+								</div>
+							</div>
+						</div>
+						<% }); %>
+					</div>
+
+					
+				
+					
+				</div>
+			</section>
+			<div class="clearfix"></div>
+			<!-- ============================ Blog Grid End ================================== -->
+			
+						<!-- ============================ Newsletter Start ================================== -->
+			
+			<!-- ============================ Newsletter Start ================================== -->			
+			
+			<!-- ============================ Footer Start ================================== -->
+			<footer class="dark-footer skin-dark-footer">
+				<div>
+					<div class="container">
+						<div class="row">
+							
+							<div class="col-lg-4 col-md-4">
+								<div class="footer-widget">
+									<img src="img/logofooter.png" class="logo" width="170" height="100" alt="logo">
+
+									
+									
+								</div>
+							</div>	
+							<div class="col-lg-4 col-md-4">
+								<div class="footer-widget">
+									
+
+									<div class="footer-add">
+										
+										<h4>Address:</h4></strong><p>Model Town, Delhi,</br> India</p>
+										<h4>Email:</strong></br><a href="#">hello@workaholics.com</a></p></h4>
+										<h4>Call:</h4></strong><p>91 9876543210</p>
+									</div>
+									
+								</div>
+							</div>		
+							<div class="col-lg-4 col-md-4">
+								<div class="footer-widget">
+									<h4>Navigations</h4>
+									<ul class="footer-menu">
+										<li><a href="/">Home</a></li>
+										<a href="/contact">Contact Us</a>
+										
+									</ul>
+								</div>
+							</div>
+				
+						</div>
+					</div>
+				</div>
+				
+				
+				<div class="footer-bottom">
+					<div class="container">
+						<div class="row align-items-center">
+							
+							<div class="col-lg-6 col-md-6">
+								<p class="mb-0">© 2020 Workaholics.All Rights Reserved</p>
+							</div>
+							
+							<div class="col-lg-6 col-md-6 text-right">
+								<ul class="footer-bottom-social">
+									<li><a href="#"><i class="ti-facebook"></i></a></li>
+									<li><a href="#"><i class="ti-twitter"></i></a></li>
+									<li><a href="#"><i class="ti-instagram"></i></a></li>
+									<li><a href="#"><i class="ti-linkedin"></i></a></li>
+								</ul>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- ============================ Footer End ================================== -->
+					<!-- Log In Modal -->
+					<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="registermodal" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
+							<div class="modal-content" id="registermodal">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true"><i class="ti-close"></i></span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<h4 class="modal-header-title">SignIn</h4>
+									
+									
+									
+									
+									<div class="login-form">
+										<form>
+										
+											<div class="form-group">
+												<label>User Name</label>
+												<div class="input-with-gray">
+													<input type="text" class="form-control" placeholder="Username">
+													<i class="ti-user theme-cl"></i>
+												</div>
+											</div>
+											
+											<div class="form-group">
+												<label>Password</label>
+												<div class="input-with-gray">
+													<input type="password" class="form-control" placeholder="*******">
+													<i class="ti-unlock theme-cl"></i>
+												</div>
+											</div>
+											
+											<div class="form-group">
+												<button type="submit" class="btn btn-primary btn-md full-width pop-login">Login</button>
+											</div>
+										
+										</form>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<div class="mf-link"><i class="ti-user"></i>Haven't An Account?<a href="javascript:void(0)" data-toggle="modal" data-target="#signup" data-dismiss="modal"> Sign Up</a></div>
+									<div class="mf-forget"><a href="#"><i class="ti-help"></i>Forget Password</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+		<!-- End Modal -->
+					
+		
+					<!-- Sign Up Modal -->
+					<div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="sign-up" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
+							<div class="modal-content" id="sign-up">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true"><i class="ti-close"></i></span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<h4 class="modal-header-title">Sign Up</h4>
+									
+									
+									<div class="login-form">
+										<form>
+											<div class="row">
+												<div class="col-lg-6 col-md-6 col-sm-6">
+													<div class="form-group">
+														<label>Full Name</label>
+														<div class="input-with-gray">
+															<input type="text" class="form-control" placeholder="Your Name">
+															<i class="ti-user theme-cl"></i>
+														</div>
+													</div>
+												</div>
+												
+												<div class="col-lg-6 col-md-6 col-sm-6">
+													<div class="form-group">
+														<label>Email</label>
+														<div class="input-with-gray">
+															<input type="email" class="form-control" placeholder="Email ID">
+															<i class="ti-user theme-cl"></i>
+														</div>
+													</div>
+												</div>
+											</div>
+					
+											<div class="row">
+												<div class="col-lg-6 col-md-6 col-sm-6">
+													<div class="form-group">
+														<label>Phone Number</label>
+														<div class="input-with-gray">
+															<input type="number" class="form-control" placeholder="Phone Number">
+															<i class="ti-user theme-cl"></i>
+														</div>
+													</div>
+												</div>
+												
+												<div class="col-lg-6 col-md-6 col-sm-6">
+													<div class="form-group">
+														<label>Whatsapp Number</label>
+														<div class="input-with-gray">
+															<input type="number" class="form-control" placeholder="Whatsapp Number">
+															<i class="ti-user theme-cl"></i>
+														</div>
+													</div>
+												</div>
+											</div>
+					
+											<div class="row">
+												<div class="col-lg-6 col-md-6 col-sm-6">
+													<div class="form-group">
+														<label>Gender</label>
+														<div class="input-with-gray">
+															<input type="text" class="form-control" placeholder="Gender">
+															<i class="ti-user theme-cl"></i>
+														</div>
+													</div>
+												</div>
+												
+												<div class="col-lg-6 col-md-6 col-sm-6">
+													<div class="form-group">
+														<label>Marital Status</label>
+														<div class="input-with-gray">
+															<input type="text" class="form-control" placeholder="Marital Status">
+															<i class="ti-user theme-cl"></i>
+														</div>
+													</div>
+												</div>
+											</div>
+					
+											<div class="row">
+												<div class="col-lg-6 col-md-6 col-sm-6">
+													<div class="form-group">
+														<label>Known Languages</label>
+														<div class="input-with-gray">
+															<input type="text" class="form-control" placeholder="Languages">
+															<i class="ti-user theme-cl"></i>
+														</div>
+													</div>
+												</div>
+												
+												<div class="col-lg-6 col-md-6 col-sm-6">
+													<div class="form-group">
+														<label>Native Location</label>
+														<div class="input-with-gray">
+															<input type="text" class="form-control" placeholder="Native Location">
+															<i class="ti-user theme-cl"></i>
+														</div>
+													</div>
+												</div>
+											</div>
+					
+					
+										
+											
+											<div class="row">
+												<div class="col-lg-12 col-md-12 col-sm-12">
+													<div class="form-group">
+														<label>User Name</label>
+														<div class="input-with-gray">
+															<input type="text" class="form-control" placeholder="Username">
+															<i class="ti-user theme-cl"></i>
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-12 col-md-12 col-sm-12">
+													<div class="form-group">
+														<label>Password</label>
+														<div class="input-with-gray">
+															<input type="password" class="form-control" placeholder="*******">
+															<i class="ti-unlock theme-cl"></i>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+											<div class="row">
+												<div class="col-lg-12 col-md-12 col-sm-12">
+													<div class="form-group">
+														<button type="submit" class="btn btn-primary btn-md full-width pop-login">Login</button>
+													</div>
+												</div>
+											</div>
+					
+										</form>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<div class="mf-link"><i class="ti-user"></i>Already Have Account? Sign In</a></div>
+									<div class="mf-forget"><a href="#"><i class="ti-help"></i>Need Help</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End Modal -->
+			
+
+		</div>
+		<!-- ============================================================== -->
+		<!-- End Wrapper -->
+		<!-- ============================================================== -->
+
+
+		<!-- modal add blog -->
+			<!-- Modal -->
+		
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="exampleModalLabel">Add a new tip or trick</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+			
+			<form action="/tip" method="POST">
+				Written by - <br>
+				<input type="text" name="by" class="form-control" placeholder="Anonymous"> <br>
+				About Topic- <br>
+				<input type="text" name="topic" class="form-control"> <br>
+				Title (Question) - <br>
+				<input type="text" name="title" class="form-control"> <br>
+				
+				Enter the tip -
+				<br>
+				<textarea type="text"  name="content" class="form-control" ></textarea>
+				<br>
+				<button type="submit" class="btn  add-pr-item-btn">Post</button>
+				
+			</form>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		  
+		</div>
+	  </div>
+	</div>
+  </div>
+
+
+		<!-- ============================================================== -->
+		<!-- All Jquery -->
+		<!-- ============================================================== -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/select2.min.js"></script>
+		<script src="js/aos.js"></script>
+		<script src="js/perfect-scrollbar.jquery.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/jquery.counterup.min.js"></script>
+		<script src="js/slick.js"></script>
+		<script src="js/bootstrap-datepicker.js"></script>
+		<script src="js/isotope.min.js"></script>
+		<script src="js/summernote.js"></script>
+		<script src="js/jQuery.style.switcher.js"></script>
+		 
+		<script src="js/counterup.min.js"></script>
+		<script src="js/custom.js"></script>
+		
+		<script>
+				$(function(){
+					$('.datepicker').datepicker({
+						format: 'mm-dd-yyyy'
+					});
+				});
+		</script>
+
+	</body>
+
+</html>

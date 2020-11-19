@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Workaholics</title>
+		<link rel ="shortcut icon" type="image/png" href="/img/favicon.png">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<!-- All Plugins Css -->
+		<link href="/css/plugins.css" rel="stylesheet">
+		 
+	
+		<!-- Custom CSS -->
+		<link href="/css/styles.css" rel="stylesheet">
+		
+		<!-- Custom Color -->
+		<link href="/css/default.css" rel="stylesheet">
+	</head>
+	
+	<body class="green-skin bg-light">
+		<!-- ============================================================== -->
+		<!-- Preloader - style you can find in spinners.css -->
+		<!-- ============================================================== -->
+		<div class="Loader"></div>
+		
+		<!-- ============================================================== -->
+		<!-- Main wrapper - style you can find in pages.scss -->
+		<!-- ============================================================== -->
+		<div id="main-wrapper">
+		
+			<!-- ============================================================== -->
+			<!-- Top header  -->
+			<!-- ============================================================== -->
+			<!-- Start Navigation -->
+			<div class="header header-light">
+				<div class="container-fluid">
+					<nav id="navigation" class="navigation navigation-landscape">
+						<div class="nav-header">
+							<a class="nav-brand" href="#">
+								<img src="/img/Logo.jpg" class="logo" width="170" height="40" alt="logo">
+
+							</a>
+							<div class="nav-toggle"></div>
+						</div>
+						<div class="nav-menus-wrapper" style="transition-property: none;">
+							<ul class="nav-menu">
+							
+								<li ><a href="/">Home</a></li>
+								
+								<li class="active"><a href="#">For Candidates<span class="submenu-indicator"></span></a>
+									<ul class="nav-dropdown nav-submenu" style="right: auto; display: none;">
+										
+										
+											
+										</li>
+										
+										<li><a href="/users/profile">Candidate Dashboard</a></li>	
+									</ul>
+								</li>
+								
+								
+								<li><a href="#">Pages<span class="submenu-indicator"></span></a>
+									<ul class="nav-dropdown nav-submenu" style="right: auto; display: none;">
+										
+										<li><a href="/tip">Tips and Tricks</a></li>                                    
+										
+										
+									</ul>
+								</li>
+								
+								<li><a href="/contact">Contact Us</a></li>
+								
+							</ul>
+
+							<ul class="nav-menu nav-menu-social align-to-right">
+                            
+                            
+								<% if(user) {%>
+									<li>
+                                <a href="/users/logout" >
+                                    <i class="ti-user mr-1"></i><span class="dn-lg">Logout</span>
+								</a>
+								</li>
+								<% } %>
+								
+                            
+                            
+                        </ul>
+							
+							
+						</div>
+					</nav>
+				</div>
+			</div>
+			<!-- End Navigation -->
+			<div class="clearfix"></div>
+			
+			<!-- ============================================================== -->
+			<!-- Top header  -->
+			<!-- ============================================================== -->
+			
+			<!-- ============================ Hero Banner  Start================================== -->
+			<div class="page-title-wrap">
+				<div class="container">
+					<div class="col-lg-12 col-md-12">
+						<div class="pt-caption">
+							<h1>Hello! <%= user.name %></h1>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<!-- ============================ Hero Banner End ================================== -->
+			<%- messages('messages', locals) -%>
+		
+			<!-- ============== Candidate Dashboard ====================== -->	
+			<section class="tr-single-detail gray-bg">
+				<div class="container">
+					<div class="row">
+					
+						<!-- Sidebar Start -->
+						<div class="col-md-4 col-sm-12">
+							<div class="dashboard-wrap">
+							
+							<div class="dashboard-thumb">
+								<div class="dashboard-th-pic">
+									
+									<img src="/img/user.png" class="img-fluid mx-auto img-circle" alt="" />
+								</div>
+								<h4 class="mb-1"><%= user.name %></h4>
+								<span class="text-success">Web Designer</span>
+							</div>
+							
+							<!-- Nav tabs -->
+							<ul class="nav dashboard-verticle-nav">
+								<li class="nav-item">
+									<a class="nav-link active" data-toggle="tab" href="#profile"><i class="ti-user"></i>My Profile</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" data-toggle="tab" href="#resume"><i class="ti-file"></i>My Resume</a>
+								</li>
+							
+								
+								<li class="nav-item">
+									<a class="nav-link" data-toggle="tab" href="#applied"><i class="lni-briefcase"></i>Messages</a>
+								</li>
+								
+								
+								<li class="nav-item">
+									<a class="nav-link" href="/users/detail/<%= user._id %>"><i class="ti-heart"></i>How your profile will be shown to recruiters?</a>
+								</li>
+								
+								<li class="nav-item">
+									<a class="nav-link" data-toggle="tab" href="#change-password"><i class="ti-lock"></i>Change Password</a>
+								</li>
+								
+								<li class="nav-item">
+									<a class="nav-link" href="/users/logout"><i class="lni-exit"></i>Log Out</a>
+								</li>
+								<% if(typeof(user.score) !== "undefined"){ %>
+									<li style="align-items: center;">
+										Capability score -> <%= user.score %>/25
+									</li>
+									<%}else { %>
+										<li style="align-items: center;">
+											<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+												Give Skill Test 
+											  </button>
+											  <br>
+											  You can give this test only once!
+										</li>
+										<% } %>
+
+											<%if(typeof(user.git_score) !== "undefined"){ %>
+												<li style="align-items: center;">
+													Github score -> <%= user.git_score %>
+													<a type="button" class="btn btn-primary" href="/github_score" style="color: aliceblue;padding: 3px 3px;">
+														Update
+													</a>
+												</li>
+												<%}else{%>
+													<li>
+													<a type="button" class="btn btn-primary" href="/github_score" style="color: aliceblue;padding: 3px 3px;">
+														Get Github score
+													</a> <br>
+													Make sure you've filled your github handle!
+													<% } %>
+												</li>
+												<% if(typeof(user.tot_score) !== "undefined"){ %>
+													<li style="align-items: center;">
+														Total score -> <%= user.tot_score %>
+														<br>
+														
+													</li>
+													<% } %>
+													<% if(typeof(user.score) === "undefined"){ %>	
+														<li style="color: red;">
+															Give skill test, otherwise your profile wouldn't be shown to our recruiters!
+														</li>
+														<% } else{ %>
+															<li>
+																<span style="color: green;">Your profile will now be visible to our recruiters!</span>	
+															</li>
+															<% } %>
+								
+							</ul>
+							
+							
+							</div>
+						</div>
+						<!-- /col-md-4 -->
+					
+						<div class="col-md-8 col-sm-12">
+							<!-- Tab panes -->
+							<div class="tab-content">
+							
+								<!-- My Profile -->
+								<div class="tab-pane active container" id="profile">
+										<form method="POST" action="/edit1">
+									<!-- Basic Info -->
+									<div class="tr-single-box">
+										<div class="tr-single-header">
+											<h4><i class="ti-desktop"></i> Desired Job Details</h4>
+										</div>
+										
+										<div class="tr-single-body">
+											<div class="row">
+											
+												<div class="col-lg-12 col-md-12 col-sm-12">
+													<div class="form-group">
+														<label>Full Name</label>
+														<input class="form-control" name="name" type="text" value="<%= user.name %>">
+													</div>
+												</div>
+											
+												<div class="col-lg-12 col-md-12 col-sm-12">
+													<div class="form-group">
+														<label>Job Category - <%= user.job_category%> <br>
+														Change it from here -   </label>
+                                                        <select name="job_category" id="" class="form-control">
+															<option value=""></option>
+                                                            <option value="it">IT</option>
+                                                            <option value="designing">Graphic Designing</option>
+                                                            <option value="marketing">Marketing</option>
+                                                            <option value="banking">Banking</option>
+                                                            <option value="data_analyst">Data Analyst</option>
+                                                          </select>
+													</div>
+												</div>
+											
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="form-group">
+														<label>Job type - <%= user.job_type %> <br>
+															Change it from here -  </label> 
+														<select name="job_type" id="" class="form-control">
+															<option value=""></option>
+                                                            <option value="full_time">Full Time</option>
+                                                            <option value="part_time">Part Time</option>
+                                                            <option value="internship">Internship</option>
+                                                          </select>
+													</div>
+												</div>
+											
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="form-group">
+														<label>Min Expected Salary(in rupees)</label>
+														<input class="form-control" type="number" value="<%= user.min_salary %>" name="min_salary">
+													</div>
+												</div>
+											
+												
+												
+												
+												<!-- <div class="col-lg-12 col-md-12 col-sm-12">
+													<div class="form-group">
+														<label>Candidate Picture</label>
+														<div class="custom-file">
+															<input type="file" class="custom-file-input" id="clogo">
+															<label class="custom-file-label" for="clogo">Choose file</label>
+														 </div>
+													</div>
+												</div> -->
+												
+												
+											
+											</div>
+										</div>
+										
+									</div>
+									<!-- /Basic Info -->
+									
+									<!-- Contact Info -->
+									<div class="tr-single-box">
+										<div class="tr-single-header">
+											<h4><i class="ti-headphone"></i> Basic Info</h4>
+										</div>
+										
+										<div class="tr-single-body">
+											<div class="row">
+												
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="form-group">
+														<label class="social-nfo">Phone Number</label>
+														<input class="form-control" type="text" value="<%= user.contact %>" name="contact" required>
+													</div>
+												</div>
+												
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="form-group">
+														<label class="social-nfo">Email</label>
+														<input class="form-control" type="text" value="<%= user.email %>" name="email" required>
+													</div>
+												</div>
+												
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="form-group">
+														<label class="social-nfo">Gender</label>
+														<input class="form-control" type="text" value="<%= user.gender %>" name="gender" disabled>
+													</div>
+												</div>
+												
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="form-group">
+														<label class="social-nfo">Marital Status</label>
+														<input class="form-control" type="text" value="<%= user.marital %>" disabled>
+													</div>
+												</div>
+												
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="form-group">
+														<label class="social-nfo">Native Location</label>
+														<input class="form-control" name="location" type="text" value="<%= user.location %>">
+													</div>
+												</div>
+												
+												
+												
+												
+												
+											</div>
+										</div>
+										
+									</div>
+									<!-- /Contact Info -->
+									
+									<!-- Social Account -->
+									<div class="tr-single-box">
+										<div class="tr-single-header">
+											<h4><i class="ti-new-window"></i> Social Accounts</h4>
+										</div>
+										
+										<div class="tr-single-body">
+											<div class="row">
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="form-group">
+														<label class="social-nfo"><i class="lni-facebook"></i>Github handle</label>
+														<input class="form-control" type="text" name="github" value="<%= user.github %>" placeholder="payaljindal">
+													</div>
+												</div>
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="form-group">
+														<label class="social-nfo"><i class="lni-google-plus"></i>LinkedIn URL</label>
+														<input name="linkedin" class="form-control" type="text" value="<%= user.linkedin %>"  placeholder="LinkedIn URL">
+													</div>
+												</div>
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="form-group">
+														<label class="social-nfo"><i class="lni-twitter"></i>Twitter URL</label>
+														<input class="form-control" type="text" value="htps://twitter.com">
+													</div>
+												</div>
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="form-group">
+														<label class="social-nfo"><i class="lni-instagram"></i>Instagram URL</label>
+														<input class="form-control" type="text" value="https://instagram.com/">
+													</div>
+												</div>
+											</div>
+										</div>
+										
+									</div>
+									<!-- /Social Account -->
+									
+									<!-- Advance Information -->
+									<div class="tr-single-box">
+										<div class="tr-single-header">
+											<h4><i class="ti-heart"></i> Extra Information</h4>
+										</div>
+										
+										<div class="tr-single-body">
+											<div class="row">
+												
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="form-group">
+														<label class="social-nfo"> Total Experience(in years)</label>
+														<input class="form-control" type="number" value="<%= user.experience %>" name = "experience">
+													</div>
+												</div>
+
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="form-group">
+														<label class="social-nfo">Languages</label>
+														<input class="form-control" type="text" value="<%= user.languages %>" name="languages">
+													</div>
+												</div>
+												
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="form-group">
+														<label class="social-nfo">Age</label>
+														<input class="form-control" type="number" name="age" value="<%= user.age %>">
+													</div>
+												</div>
+										
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="form-group">
+														<label class="social-nfo">Current Education Level</label>
+														<input class="form-control" name="studying" type="text" value="<%= user.studying %>">
+													</div>
+												</div>
+												
+											</div>
+										</div>
+										
+									</div>
+									<!-- /Advance Information -->
+									<button type="submit" class="btn btn-info btn-md full-width">Save & Update<i class="ml-2 ti-arrow-right"></i></button>
+									
+									</form>
+								</div>
+								
+								<!-- My Resume -->
+								<div class="tab-pane" id="resume">
+								
+									<!-- Add Educations -->
+									<div class="tr-single-box">
+										<div class="tr-single-header">
+											<h4><i class="ti-cup"></i> Add Education</h4>
+										</div>
+										
+										<div class="tr-single-body">
+											<table class="table table-striped mb-5">
+												<thead class="thead-dark">
+													<tr>
+														<th scope="col">Qualification</th>
+														<th scope="col">From</th>
+														<th scope="col">To</th>
+														<th scope="col">School / Colleges</th>
+														<th scope="col">Result</th>
+													</tr>
+												</thead>
+												<tbody>
+													<% user.education.forEach(function(a){ %>
+														<tr>
+															<th scope="row"><%= a.title %></th>
+															<td><%= a.from %></td>
+															<td><%= a.to %></td>
+															<td><%= a.university %></td>
+															<td><%= a.result%></td>
+														</tr>
+														<% });%>
+												
+													
+												</tbody>
+											</table>
+											
+											<table class="price-list-wrap">
+												<tbody class="ui-sortable"><tr class="pricing-list-item pattern ui-sortable-handle">
+													<td>
+														
+														<form action="/add_education" method="POST">
+														<div class="row">
+											
+															<div class="col-lg-12 col-md-12 col-sm-12">
+																<div class="form-group">
+																	<label>Qualification</label>
+																	<input class="form-control" type="text" placeholder="Qualification" name="title">
+																</div>
+															</div>
+															
+															<div class="col-lg-6 col-md-6 col-sm-6">
+																<div class="form-group">
+																	<label>From</label>
+																	<input placeholder="06.11.2015" type="text" class="form-control datepicker" name="from">
+																</div>
+															</div>
+															
+															<div class="col-lg-6 col-md-6 col-sm-6">
+																<div class="form-group">
+																	<label>To</label>
+																	<input placeholder="07.17.2019" type="text" class="form-control datepicker" name="to">
+																</div>
+															</div>
+															
+															
+															<div class="col-lg-12 col-md-12 col-sm-12">
+																<div class="form-group">
+																	<label>University</label>
+																	<input placeholder="University Name" type="text" class="form-control" name="university"> 
+																</div>
+															</div>
+															<div class="col-lg-12 col-md-12 col-sm-12">
+																<div class="form-group">
+																	<label>Result</label>
+																	<input placeholder="CGPA/GPA" type="text" class="form-control" name="result">
+																</div>
+															</div>
+														
+														</div>
+														<button type="submit" class="btn add-pr-item-btn">Add Education</button>
+														
+														</form>
+													</td>
+												</tr>
+												</tbody>
+											</table>
+											
+										</div>
+										
+									</div>
+									<!-- /Education Info -->
+									
+									<!-- Add Experience -->
+									<div class="tr-single-box">
+										<div class="tr-single-header">
+											<h4><i class="lni-briefcase"></i>Work Experience</h4>
+										</div>
+										
+										<div class="tr-single-body">
+											<table class="table table-striped mb-5">
+												<thead class="thead-dark">
+													<tr>
+														<th scope="col">Company</th>
+														<th scope="col">Title</th>
+														<th scope="col">From</th>
+														<th scope="col">To</th>
+														<th scope="col">Project</th>
+														<th scope="col">Contribution</th>
+														
+
+													</tr>
+												</thead>
+												<tbody>
+													<% user.work.forEach(function(a){ %>
+														<tr>
+															<th scope="row"><%= a.orgname %></th>
+															<td><%= a.title %></td>
+															<td><%= a.start_date%></td>
+															<td><%= a.end_date %></td>
+															<td><%= a.project_name %></td>
+															
+															<td><%= a.contribution %></td>
+	
+															
+															<!-- <td>
+																<div class="dash-action">
+																	<a href="#" class="dg-edit" data-toggle="tooltip" data-placement="top" title="Edit"><i class="ti-pencil"></i></a>
+																	<a href="#" class="dg-delete" data-toggle="tooltip" data-placement="top" title="Delete"><i class="ti-trash"></i></a>
+																</div>
+															</td> -->
+														</tr>
+														
+														<% });%>
+													
+												</tbody>
+											</table>
+											
+											<table class="price-list-wrap">
+												<tbody class="ui-sortable"><tr class="pricing-list-item pattern ui-sortable-handle">
+													<td>
+														<form action="/add_work" method="POST">
+														<div class="row">
+											
+															<div class="col-lg-12 col-md-12 col-sm-12">
+																<div class="form-group">
+																	<label>Organization Name</label>
+																	<input class="form-control" type="text" placeholder="Organization name" name="orgname">
+																</div>
+															</div>
+															
+															<div class="col-lg-6 col-md-6 col-sm-6">
+																<div class="form-group">
+																	<label>From</label>
+																	<input placeholder="06.11.2007" type="text" class="form-control datepicker" name="start_date">
+																</div>
+															</div>
+															
+															<div class="col-lg-6 col-md-6 col-sm-6">
+																<div class="form-group">
+																	<label>To</label>
+																	<input placeholder="07.17.2010" type="text" class="form-control datepicker" name="end_date">
+																</div>
+															</div>
+															
+															
+															<div class="col-lg-12 col-md-12 col-sm-12">
+																<div class="form-group">
+																	<label>Title</label>
+																	<input name="title" type="text" class="form-control" placeholder="Title" >
+																</div>
+															</div>
+															<div class="col-lg-12 col-md-12 col-sm-12">
+																<div class="form-group">
+																	<label>Project Name</label>
+																	<input name="project_name" placeholder="Project Name" type="text" class="form-control">
+																</div>
+															</div>
+															<div class="col-lg-12 col-md-12 col-sm-12">
+																<div class="form-group">
+																	<label>Description</label>
+																	<input name="description" placeholder="Description"  type="text" class="form-control">
+																</div>
+															</div>
+															<div class="col-lg-12 col-md-12 col-sm-12">
+																<div class="form-group">
+																	<label>Contribution</label>
+																	<input name="contribution" placeholder="Contribution"  type="text" class="form-control">
+																</div>
+															</div>
+
+															<div class="col-lg-12 col-md-12 col-sm-12">
+																<div class="form-group">
+																	<label>Any Comments</label>
+																	<input name="comment" placeholder="Any Other comment"  type="text" class="form-control">
+																</div>
+															</div>
+															<button type="submit" class="btn add-pr-item-btn">Add Work</button>
+															
+														</div>
+														</form>
+													</td>
+												</tr>
+												</tbody>
+											</table>
+											
+										</div>
+										
+									</div>
+									<!-- /Experience Info -->
+									
+									<!-- Add Skills -->
+									<div class="tr-single-box">
+										<div class="tr-single-header">
+											<h4><i class="ti-receipt"></i> Skills Or Expertise</h4>
+										</div>
+										
+										<div class="tr-single-body">
+											<table class="table table-striped mb-5">
+												<thead class="thead-dark">
+													<tr>
+														<th scope="col">Skills</th>
+														<th scope="col">Level(Out of 5)</th>
+													</tr>
+												</thead>
+												<tbody>
+													<% user.skills.forEach(function(skill){ %>
+														<tr>
+															<th scope="row"><%= skill.name %> </th>
+															<td><%= skill.level %></td>
+															<!-- <td>
+																<div class="dash-action">
+																	<a href="#" class="dg-edit" data-toggle="tooltip" data-placement="top" title="Edit"><i class="ti-pencil"></i></a>
+																	<a href="#" class="dg-delete" data-toggle="tooltip" data-placement="top" title="Delete"><i class="ti-trash"></i></a>
+																</div>
+															</td> -->
+														</tr>
+														<% });%>
+											
+												</tbody>
+											</table>
+											
+											<table class="price-list-wrap">
+												<tbody class="ui-sortable"><tr class="pricing-list-item pattern ui-sortable-handle">
+													<td>
+														
+														<form action="/add_skill" method="POST">
+														<div class="row">
+											
+															<div class="col-lg-9 col-md-9 col-sm-8">
+																<div class="form-group">
+																	<label>Skills</label>
+																	
+																	<select name="skill_name" id="" class="form-control">
+																		<option value=""></option>
+																		<option value="python">Python</option>
+																		<option value="java">Java</option>
+																		<option value="ml">ML</option>
+																		<option value="c/c++">C/C++</option>
+																		<option value="web_dev">Web Developement</option>
+																	  </select>
+																</div>
+															</div>
+															
+															<div class="col-lg-3 col-md-3 col-sm-4">
+																<div class="form-group">
+																	<label>Level</label>
+																	<input placeholder="4" type="text" name="level" class="form-control">
+																</div>
+															</div>
+														
+														</div>
+														<button type="submit" class="btn add-pr-item-btn">Add skill</button>
+														
+														</form>
+													</td>
+												</tr>
+												</tbody>
+											</table>
+											
+										</div>
+										
+									</div>
+									<!-- /Skills Info -->
+									
+									
+									
+								</div>
+								
+								<!-- shortlisted -->
+								
+								
+								<!-- messages -->
+								<div class="tab-pane" id="applied">
+								<div class="tr-single-box">
+									<div class="tr-single-header">
+										<h4><i class="lni-briefcase"></i>Messages received from recruiters</h4>
+									</div>
+									
+									<div class="tr-single-body">
+										
+										<table class="table table-striped mb-5">
+											<thead class="thead-dark">
+												<tr>
+													<th scope="col">Recriter Name</th>
+													<th scope="col">Company</th>
+													<th scope="col">Message</th>
+													<th scope="col">Status</th>
+													<th></th>
+
+
+												</tr>
+											</thead>
+											<tbody>
+												<% user.messages.forEach(function(a){ %>
+														<tr>
+															<th scope="col"><%= a.name %></th>
+															<th scope="col"><%= a.company %></th>
+															<th scope="col"><%= a.message %></th>
+															<th scope="col"><%= a.status %></th>
+															<% if(a.status === "pending"){ %>
+																<th>
+																	<a href="/accept/<%= a.company%>" class="btn btn-secondary">Accept</a>
+																</th>
+																<%}%>
+															
+														</tr>
+													<% });%>
+										
+											</tbody>
+										</table>
+		
+									</div>
+									
+								</div>
+								
+								</div>
+							
+								
+								<!-- alert job -->
+								
+								<!-- CV & Cover letter -->
+								
+								
+								<!-- package -->
+								
+								
+								<!-- change-password -->
+								<div class="tab-pane" id="change-password">
+									<div class="tr-single-box">
+										<div class="tr-single-header">
+											<h4><i class="lni-lock"></i> Change Password</h4>
+										</div>
+										
+										<div class="tr-single-body">
+											<div class="form-group">
+												<label>Current Password</label>
+												<input class="form-control" type="password">
+											</div>
+											<div class="form-group">
+												<label>New Password</label>
+												<input class="form-control" type="password">
+											</div>
+											<div class="form-group">
+												<label>Confirm Password</label>
+												<input class="form-control" type="password">
+											</div>
+										</div>
+										
+									</div>
+									
+									<a href="#" class="btn btn-info btn-md full-width">Save & Update<i class="ml-2 ti-arrow-right"></i></a>
+									</div>
+									</div>
+									
+								
+						
+					</div>
+				</div>
+			</section>
+			<!-- ============== Candidate Dashboard ====================== -->
+			
+		
+			
+			<!-- ============================ Footer Start ================================== -->
+			<footer class="dark-footer skin-dark-footer">
+				<div>
+					<div class="container">
+						<div class="row">
+							
+							<div class="col-lg-4 col-md-4">
+								<div class="footer-widget">
+									<img src="/img/logofooter.png" class="logo" width="170" height="100" alt="logo">
+
+									
+									
+								</div>
+							</div>	
+							<div class="col-lg-4 col-md-4">
+								<div class="footer-widget">
+									
+
+									<div class="footer-add">
+										
+										<h4>Address:</h4></strong><p>Model Town, Delhi,</br> India</p>
+										<h4>Email:</strong></br><a href="#">hello@workaholics.com</a></p></h4>
+										<h4>Call:</h4></strong><p>91 9876543210</p>
+									</div>
+									
+								</div>
+							</div>		
+							<div class="col-lg-4 col-md-4">
+								<div class="footer-widget">
+									<h4>Navigations</h4>
+									<ul class="footer-menu">
+										<li><a href="/">Home</a></li>
+										<li><a href="/users/profile">Edit Profile</a></li>
+										<li><a href="/users/detail/<%= user._id %>">View Profile</a></li>
+										
+									</ul>
+								</div>
+							</div>
+									</div>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<div class="container">
+						<div class="row align-items-center">
+							
+							<div class="col-lg-6 col-md-6">
+								<p class="mb-0">© 2020 Workaholics.All Rights Reserved</p>
+							</div>
+							
+							<div class="col-lg-6 col-md-6 text-right">
+								<ul class="footer-bottom-social">
+									<li><a href="#"><i class="ti-facebook"></i></a></li>
+									<li><a href="#"><i class="ti-twitter"></i></a></li>
+									<li><a href="#"><i class="ti-instagram"></i></a></li>
+									<li><a href="#"><i class="ti-linkedin"></i></a></li>
+								</ul>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				
+			</footer>
+			<!-- ============================ Footer End ================================== -->
+			
+			<!-- Log In Modal -->
+			<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="registermodal" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
+					<div class="modal-content" id="registermodal">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true"><i class="ti-close"></i></span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<h4 class="modal-header-title">SignIn</h4>
+							
+							
+							
+							
+							<div class="login-form">
+								<form>
+								
+									<div class="form-group">
+										<label>User Name</label>
+										<div class="input-with-gray">
+											<input type="text" class="form-control" placeholder="Username">
+											<i class="ti-user theme-cl"></i>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label>Password</label>
+										<div class="input-with-gray">
+											<input type="password" class="form-control" placeholder="*******">
+											<i class="ti-unlock theme-cl"></i>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<button type="submit" class="btn btn-primary btn-md full-width pop-login">Login</button>
+									</div>
+								
+								</form>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<div class="mf-link"><i class="ti-user"></i>Haven't An Account?<a href="javascript:void(0)" data-toggle="modal" data-target="#signup" data-dismiss="modal"> Sign Up</a></div>
+							<div class="mf-forget"><a href="#"><i class="ti-help"></i>Forget Password</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+<!-- End Modal -->
+			
+
+			<!-- Sign Up Modal -->
+			<div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="sign-up" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
+					<div class="modal-content" id="sign-up">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true"><i class="ti-close"></i></span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<h4 class="modal-header-title">Sign Up</h4>
+							
+							
+							<div class="login-form">
+								<form>
+									<div class="row">
+										<div class="col-lg-6 col-md-6 col-sm-6">
+											<div class="form-group">
+												<label>Full Name</label>
+												<div class="input-with-gray">
+													<input type="text" class="form-control" placeholder="Your Name">
+													<i class="ti-user theme-cl"></i>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-lg-6 col-md-6 col-sm-6">
+											<div class="form-group">
+												<label>Email</label>
+												<div class="input-with-gray">
+													<input type="email" class="form-control" placeholder="Email ID">
+													<i class="ti-user theme-cl"></i>
+												</div>
+											</div>
+										</div>
+									</div>
+			
+									<div class="row">
+										<div class="col-lg-6 col-md-6 col-sm-6">
+											<div class="form-group">
+												<label>Phone Number</label>
+												<div class="input-with-gray">
+													<input type="number" class="form-control" placeholder="Phone Number">
+													<i class="ti-user theme-cl"></i>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-lg-6 col-md-6 col-sm-6">
+											<div class="form-group">
+												<label>Whatsapp Number</label>
+												<div class="input-with-gray">
+													<input type="number" class="form-control" placeholder="Whatsapp Number">
+													<i class="ti-user theme-cl"></i>
+												</div>
+											</div>
+										</div>
+									</div>
+			
+									<div class="row">
+										<div class="col-lg-6 col-md-6 col-sm-6">
+											<div class="form-group">
+												<label>Gender</label>
+												<div class="input-with-gray">
+													<input type="text" class="form-control" placeholder="Gender">
+													<i class="ti-user theme-cl"></i>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-lg-6 col-md-6 col-sm-6">
+											<div class="form-group">
+												<label>Marital Status</label>
+												<div class="input-with-gray">
+													<input type="text" class="form-control" placeholder="Marital Status">
+													<i class="ti-user theme-cl"></i>
+												</div>
+											</div>
+										</div>
+									</div>
+			
+									<div class="row">
+										<div class="col-lg-6 col-md-6 col-sm-6">
+											<div class="form-group">
+												<label>Known Languages</label>
+												<div class="input-with-gray">
+													<input type="text" class="form-control" placeholder="Languages">
+													<i class="ti-user theme-cl"></i>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-lg-6 col-md-6 col-sm-6">
+											<div class="form-group">
+												<label>Native Location</label>
+												<div class="input-with-gray">
+													<input type="text" class="form-control" placeholder="Native Location">
+													<i class="ti-user theme-cl"></i>
+												</div>
+											</div>
+										</div>
+									</div>
+			
+			
+								
+									
+									<div class="row">
+										<div class="col-lg-12 col-md-12 col-sm-12">
+											<div class="form-group">
+												<label>User Name</label>
+												<div class="input-with-gray">
+													<input type="text" class="form-control" placeholder="Username">
+													<i class="ti-user theme-cl"></i>
+												</div>
+											</div>
+										</div>
+										<div class="col-lg-12 col-md-12 col-sm-12">
+											<div class="form-group">
+												<label>Password</label>
+												<div class="input-with-gray">
+													<input type="password" class="form-control" placeholder="*******">
+													<i class="ti-unlock theme-cl"></i>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<div class="row">
+										<div class="col-lg-12 col-md-12 col-sm-12">
+											<div class="form-group">
+												<button type="submit" class="btn btn-primary btn-md full-width pop-login">Login</button>
+											</div>
+										</div>
+									</div>
+			
+								</form>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<div class="mf-link"><i class="ti-user"></i>Already Have Account? Sign In</a></div>
+							<div class="mf-forget"><a href="#"><i class="ti-help"></i>Need Help</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Modal -->	
+			
+			<!-- choose skill model  -->
+			<div class="modal fade modal-dialog-centered" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+				  <div class="modal-content">
+					<div class="modal-header">
+					  <h5 class="modal-title" id="exampleModalLabel">Select the best skill to give test!</h5>
+					  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					  </button>
+					</div>
+					<div class="modal-body" >
+						
+					  <a class="btn add-pr-item-btn" href="/python">Python</a> <br> <br>
+					  <a class="btn add-pr-item-btn" href="/web">Web Developement</a> <br> <br>
+					  <a class="btn add-pr-item-btn" href="/c">C/C++</a> <br> <br>
+					  
+					</div>
+					<div class="modal-footer">
+					  <button type="button" class="btn btn-secondary" data-dismiss="modal" style="padding: 2px 2px ;">Close</button>
+					  
+					</div>
+				  </div>
+				</div>
+			  </div>
+
+		</div>
+		<!-- ============================================================== -->
+		<!-- End Wrapper -->
+		<!-- ============================================================== -->
+
+		<!-- ============================================================== -->
+		<!-- All Jquery -->
+		<!-- ============================================================== -->
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/popper.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/select2.min.js"></script>
+		<script src="/js/aos.js"></script>
+		<script src="/js/perfect-scrollbar.jquery.min.js"></script>
+		<script src="/js/owl.carousel.min.js"></script>
+		<script src="/js/jquery.counterup.min.js"></script>
+		<script src="/js/slick.js"></script>
+		<script src="/js/bootstrap-datepicker.js"></script>
+		<script src="/js/isotope.min.js"></script>
+		<script src="/js/summernote.js"></script>
+		<script src="/js/jQuery.style.switcher.js"></script>
+		 
+		<script src="/js/counterup.min.js"></script>
+		<script src="/js/custom.js"></script>
+
+		
+		<script>
+				$(function(){
+					$('.datepicker').datepicker({
+						format: 'mm-dd-yyyy'
+					});
+				});
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,753 @@
+/*-------------- Blue Skins -----------------*/
+.blue-skin .bg-theme,
+.blue-skin .layout-switcher ul li.active a, .blue-skin .layout-switcher ul li a:hover, .blue-skin .layout-switcher ul li a:focus,
+.blue-skin .bg-info,
+.blue-skin .bg-primary,
+.blue-skin .btn-info, .blue-skin .btn-info.disabled,
+.blue-skin .btn-info:hover, .blue-skin .btn-info.disabled:hover,
+.blue-skin .btn-primary, .blue-skin .btn-primary.disabled,
+.blue-skin .btn-primary:hover, .blue-skin .btn-primary.disabled:hover,
+.blue-skin .category-wrap li:hover, .blue-skin .category-wrap li:focus,
+.blue-skin .btn-outline-info.active, .blue-skin .btn-outline-info:active, .blue-skin .btn-outline-info:focus,
+.blue-skin .btn-outline-info:hover, .blue-skin .btn-outline-info:focus, .blue-skin .btn-outline-info.focus,
+.blue-skin .small-category-box:hover, .blue-skin .small-category-box:focus,
+.blue-skin .btn-outline-info.active, .blue-skin .btn-outline-info:active, .blue-skin .btn-outline-info:focus,
+.blue-skin .btn-info.active.focus, .blue-skin .btn-info.active:focus, .blue-skin .btn-info.active:hover, .blue-skin .btn-info.focus:active, .blue-skin .btn-info:active:focus, .blue-skin .btn-info:active:hover, .blue-skin .open > .dropdown-toggle.btn-info.focus, .blue-skin .open > .dropdown-toggle.btn-info:focus, .blue-skin .open > .dropdown-toggle.btn-info:hover, .blue-skin .btn-info.focus, .blue-skin .btn-info:focus,
+.blue-skin .owl-item.active .testimonial-wrap, .blue-skin .testimonial-wrap.active,
+.blue-skin .emp-total-vacancy,
+.blue-skin .dark-search,
+.blue-skin .candidate-grid:hover .blue-skin .btn.download-btn, .blue-skin .candidate-grid:focus .btn.download-btn,
+.blue-skin .btn-primary.active.focus, .blue-skin .btn-primary.active:focus, .blue-skin .btn-primary.active:hover, .blue-skin .btn-primary.focus:active, .blue-skin .btn-primary:active:focus, .blue-skin .btn-primary:active:hover, .blue-skin .open > .dropdown-toggle.btn-primary.focus, .blue-skin .open > .dropdown-toggle.btn-primary:focus, .blue-skin .open > .dropdown-toggle.btn-primary:hover, .blue-skin .btn-primary.focus, .blue-skin .btn-primary:focus,
+.blue-skin .pagination li:first-child a,
+.blue-skin .pagination>.active>a, .blue-skin .pagination>.active>a:focus, .blue-skin .pagination>.active>a:hover, .blue-skin .pagination>.active>span, .blue-skin .pagination>.active>span:focus, .blue-skin .pagination>.active>span:hover, .blue-skin .pagination>li>a:focus, .blue-skin .pagination>li>a:hover,
+.blue-skin .page-item.active .page-link,
+.blue-skin .qa-skill-list li:before,
+.blue-skin .checkbox-custom:checked + .checkbox-custom-label:before,
+.blue-skin .dropdown-item.active, .blue-skin .dropdown-item:hover, .blue-skin .dropdown-item:focus, .blue-skin .dropdown-item:active,
+.blue-skin .breadcrumbs,
+.blue-skin .featured-category ul li a:hover, .blue-skin .featured-category ul li a:focus,
+.blue-skin .select2-container--default .select2-results__option--highlighted[aria-selected],
+.blue-skin .candidate-grid:hover .btn.download-btn, .blue-skin .candidate-grid:focus .btn.download-btn{
+	background:#3a5bbc !important;
+	background-color:#3a5bbc !important;
+}
+
+.blue-skin .theme-cl,
+.blue-skin a.link:hover, .blue-skin a.link:focus, .blue-skin a:hover, .blue-skin a:focus,
+.blue-skin .job-grid.style-1:hover .jbc-name a, .blue-skin .job-grid.style-1:hover .job-price,
+.blue-skin button.owl-prev, .blue-skin button.owl-next,
+.blue-skin .nav-advance.nav-tabs .nav-item.show .nav-link, .blue-skin .nav-advance.nav-tabs .nav-link.active,
+.blue-skin .btn-outline-info,
+.blue-skin .icon-box-round,
+.blue-skin .qa-subtitle,
+.blue-skin .dashboard-verticle-nav li a>i,
+.blue-skin .btn-flit.active,
+.blue-skin .advance-search .search-big-form .form-group i,
+.blue-skin .text-info{
+	color:#3a5bbc;
+}
+
+.blue-skin .btn-outline-info:hover, .blue-skin .btn-outline-info:focus, .blue-skin .btn-outline-info.focus,
+.blue-skin .verticle-candidate-list:hover, .blue-skin .verticle-candidate-list:focus,
+.blue-skin .job-new-list:hover, .blue-skin .job-new-list:focus,
+.blue-skin .btn-outline-info:hover, .blue-skin .btn-outline-info:focus, .blue-skin .btn-outline-info.focus,
+.blue-skin .btn-info.active.focus, .blue-skin .btn-info.active:focus, .blue-skin .btn-info.active:hover, .blue-skin .btn-info.focus:active, .blue-skin .btn-info:active:focus, .blue-skin .btn-info:active:hover, .blue-skin .open > .dropdown-toggle.btn-info.focus, .blue-skin .open > .dropdown-toggle.btn-info:focus, .blue-skin .open > .dropdown-toggle.btn-info:hover, .blue-skin .btn-info.focus, .blue-skin .btn-info:focus,
+.blue-skin .page-item.active .page-link,
+.blue-skin .btn-outline-info,
+.blue-skin .modal-footer a,
+.blue-skin .btn-info, .blue-skin.btn-info.disabled,
+.blue-skin .pagination li:first-child a,
+.blue-skin .btn-primary, .blue-skin .btn-primary.disabled,
+.blue-skin .pagination>.active>a, .blue-skin .pagination>.active>a:focus, .blue-skin .pagination>.active>a:hover, .blue-skin .pagination>.active>span, .blue-skin .pagination>.active>span:focus, .blue-skin .pagination>.active>span:hover, .blue-skin .pagination>li>a:focus, .blue-skin .pagination>li>a:hover{
+	border-color:#3a5bbc !important;
+}
+
+.blue-skin .header-topbar{
+	background:#3a5bbc !important;
+}
+
+/*-------------- Green Skins -----------------*/
+.green-skin .bg-theme,
+.green-skin .cluster div, .green-skin .mapzoom-in, .green-skin .mapzoom-out, .green-skin .nav-tabs .nav-item.show .nav-link, .green-skin .nav-tabs .nav-link.active, .green-skin .nav-pills .nav-item.show .nav-link, .green-skin .nav-pills .nav-link.active,
+.green-skin .layout-switcher ul li.active a, .green-skin .layout-switcher ul li a:hover, .green-skin .layout-switcher ul li a:focus,
+.green-skin .bg-info,
+.green-skin .bg-primary,
+.green-skin .btn-info, .green-skin .btn-info.disabled,
+.green-skin .btn-info:hover, .green-skin .btn-info.disabled:hover,
+.green-skin .btn-primary, .green-skin .btn-primary.disabled,
+.green-skin .btn-primary:hover, .green-skin .btn-primary.disabled:hover,
+.green-skin .category-wrap li:hover, .green-skin .category-wrap li:focus,
+.green-skin .btn-outline-info.active, .green-skin .btn-outline-info:active, .green-skin .btn-outline-info:focus,
+.green-skin .btn-outline-info:hover, .green-skin .btn-outline-info:focus, .green-skin .btn-outline-info.focus,
+.green-skin .small-category-box:hover, .green-skin .small-category-box:focus,
+.green-skin .btn-outline-info.active, .green-skin .btn-outline-info:active, .green-skin .btn-outline-info:focus,
+.green-skin .btn-info.active.focus, .green-skin .btn-info.active:focus, .green-skin .btn-info.active:hover, .green-skin .btn-info.focus:active, .green-skin .btn-info:active:focus, .green-skin .btn-info:active:hover, .green-skin .open > .dropdown-toggle.btn-info.focus, .green-skin .open > .dropdown-toggle.btn-info:focus, .green-skin .open > .dropdown-toggle.btn-info:hover, .green-skin .btn-info.focus, .green-skin .btn-info:focus,
+.green-skin .emp-total-vacancy,
+.green-skin .dark-search,
+.green-skin .candidate-grid:hover .green-skin .btn.download-btn, .green-skin .candidate-grid:focus .btn.download-btn,
+.green-skin .btn-primary.active.focus, .green-skin .btn-primary.active:focus, .green-skin .btn-primary.active:hover, .green-skin .btn-primary.focus:active, .green-skin .btn-primary:active:focus, .green-skin .btn-primary:active:hover, .green-skin .open > .dropdown-toggle.btn-primary.focus, .green-skin .open > .dropdown-toggle.btn-primary:focus, .green-skin .open > .dropdown-toggle.btn-primary:hover, .green-skin .btn-primary.focus, .green-skin .btn-primary:focus,
+.green-skin .pagination li:first-child a,
+.green-skin .pagination>.active>a, .green-skin .pagination>.active>a:focus, .green-skin .pagination>.active>a:hover, .green-skin .pagination>.active>span, .green-skin .pagination>.active>span:focus, .green-skin .pagination>.active>span:hover, .green-skin .pagination>li>a:focus, .green-skin .pagination>li>a:hover,
+.green-skin .page-item.active .page-link,
+.green-skin .qa-skill-list li:before,
+.green-skin .checkbox-custom:checked + .checkbox-custom-label:before,
+.green-skin .dropdown-item.active, .green-skin .dropdown-item:hover, .green-skin .dropdown-item:focus, .green-skin .dropdown-item:active,
+.green-skin .breadcrumbs,
+.green-skin .featured-category ul li a:hover, .green-skin .featured-category ul li a:focus,
+.green-skin .select2-container--default .select2-results__option--highlighted[aria-selected],
+.green-skin .candidate-grid:hover .btn.download-btn, .green-skin .candidate-grid:focus .btn.download-btn{
+	background:#00a94f !important;
+	background-color:#00a94f !important;
+}
+
+.green-skin .theme-cl,
+.green-skin a.link:hover, .green-skin a.link:focus, .green-skin a:hover, .green-skin a:focus,
+.green-skin .job-grid.style-1:hover .jbc-name a, .green-skin .job-grid.style-1:hover .job-price,
+.green-skin button.owl-prev, .green-skin button.owl-next,
+.green-skin .nav-advance.nav-tabs .nav-item.show .nav-link, .green-skin .nav-advance.nav-tabs .nav-link.active,
+.green-skin .btn-outline-info,
+.green-skin .icon-box-round,
+.green-skin .qa-subtitle,
+.green-skin .dashboard-verticle-nav li a>i,
+.green-skin .btn-flit.active,
+.green-skin .advance-search .search-big-form .form-group i,
+.green-skin .text-info{
+	color:#00a94f;
+}
+
+.green-skin .btn-outline-info:hover, .green-skin .btn-outline-info:focus, .green-skin .btn-outline-info.focus,
+.green-skin .verticle-candidate-list:hover, .green-skin .verticle-candidate-list:focus,
+.green-skin .job-new-list:hover, .green-skin .job-new-list:focus,
+.green-skin .btn-outline-info:hover, .green-skin .btn-outline-info:focus, .green-skin .btn-outline-info.focus,
+.green-skin .btn-info.active.focus, .green-skin .btn-info.active:focus, .green-skin .btn-info.active:hover, .green-skin .btn-info.focus:active, .green-skin .btn-info:active:focus, .green-skin .btn-info:active:hover, .green-skin .open > .dropdown-toggle.btn-info.focus, .green-skin .open > .dropdown-toggle.btn-info:focus, .green-skin .open > .dropdown-toggle.btn-info:hover, .green-skin .btn-info.focus, .green-skin .btn-info:focus,
+.green-skin .page-item.active .page-link,
+.green-skin .btn-outline-info,
+.green-skin .modal-footer a,
+.green-skin .btn-info, .green-skin.btn-info.disabled,
+.green-skin .pagination li:first-child a,
+.green-skin .btn-primary, .green-skin .btn-primary.disabled,
+.green-skin .pagination>.active>a, .green-skin .pagination>.active>a:focus, .green-skin .pagination>.active>a:hover, .green-skin .pagination>.active>span, .green-skin .pagination>.active>span:focus, .green-skin .pagination>.active>span:hover, .green-skin .pagination>li>a:focus, .green-skin .pagination>li>a:hover{
+	border-color:#00a94f !important;
+}
+
+.green-skin .header-topbar{
+	background:#00a94f !important;
+}
+
+.green-skin .theme-light{
+	background:rgba(0, 169, 79,0.2) !important;
+}
+.green-skin .themes-light{
+	background:rgba(0, 169, 79,0.1) !important;
+}
+/*-------------- Red Skins -----------------*/
+.red-skin .cluster div, .red-skin .mapzoom-in, .red-skin .mapzoom-out, .red-skin .nav-tabs .nav-item.show .nav-link, .red-skin .nav-tabs .nav-link.active, .red-skin .nav-pills .nav-item.show .nav-link, .red-skin .nav-pills .nav-link.active,
+.red-skin .bg-theme,
+.red-skin .layout-switcher ul li.active a, .red-skin .layout-switcher ul li a:hover, .red-skin .layout-switcher ul li a:focus,
+.red-skin .bg-info,
+.red-skin .bg-primary,
+.red-skin .btn-info, .red-skin .btn-info.disabled,
+.red-skin .btn-info:hover, .red-skin .btn-info.disabled:hover,
+.red-skin .btn-primary, .red-skin .btn-primary.disabled,
+.red-skin .btn-primary:hover, .red-skin .btn-primary.disabled:hover,
+.red-skin .category-wrap li:hover, .red-skin .category-wrap li:focus,
+.red-skin .btn-outline-info.active, .red-skin .btn-outline-info:active, .red-skin .btn-outline-info:focus,
+.red-skin .btn-outline-info:hover, .red-skin .btn-outline-info:focus, .red-skin .btn-outline-info.focus,
+.red-skin .small-category-box:hover, .red-skin .small-category-box:focus,
+.red-skin .btn-outline-info.active, .red-skin .btn-outline-info:active, .red-skin .btn-outline-info:focus,
+.red-skin .btn-info.active.focus, .red-skin .btn-info.active:focus, .red-skin .btn-info.active:hover, .red-skin .btn-info.focus:active, .red-skin .btn-info:active:focus, .red-skin .btn-info:active:hover, .red-skin .open > .dropdown-toggle.btn-info.focus, .red-skin .open > .dropdown-toggle.btn-info:focus, .red-skin .open > .dropdown-toggle.btn-info:hover, .red-skin .btn-info.focus, .red-skin .btn-info:focus,
+.red-skin .emp-total-vacancy,
+.red-skin .dark-search,
+.red-skin .candidate-grid:hover .red-skin .btn.download-btn, .red-skin .candidate-grid:focus .btn.download-btn,
+.red-skin .btn-primary.active.focus, .red-skin .btn-primary.active:focus, .red-skin .btn-primary.active:hover, .red-skin .btn-primary.focus:active, .red-skin .btn-primary:active:focus, .red-skin .btn-primary:active:hover, .red-skin .open > .dropdown-toggle.btn-primary.focus, .red-skin .open > .dropdown-toggle.btn-primary:focus, .red-skin .open > .dropdown-toggle.btn-primary:hover, .red-skin .btn-primary.focus, .red-skin .btn-primary:focus,
+.red-skin .pagination li:first-child a,
+.red-skin .pagination>.active>a, .red-skin .pagination>.active>a:focus, .red-skin .pagination>.active>a:hover, .red-skin .pagination>.active>span, .red-skin .pagination>.active>span:focus, .red-skin .pagination>.active>span:hover, .red-skin .pagination>li>a:focus, .red-skin .pagination>li>a:hover,
+.red-skin .page-item.active .page-link,
+.red-skin .qa-skill-list li:before,
+.red-skin .checkbox-custom:checked + .checkbox-custom-label:before,
+.red-skin .dropdown-item.active, .red-skin .dropdown-item:hover, .red-skin .dropdown-item:focus, .red-skin .dropdown-item:active,
+.red-skin .breadcrumbs,
+.red-skin .featured-category ul li a:hover, .red-skin .featured-category ul li a:focus,
+.red-skin .select2-container--default .select2-results__option--highlighted[aria-selected],
+.red-skin .candidate-grid:hover .btn.download-btn, .red-skin .candidate-grid:focus .btn.download-btn{
+	background:#d32e2a !important;
+	background-color:#d32e2a !important;
+}
+
+.red-skin .theme-cl,
+.red-skin a.link:hover, .red-skin a.link:focus, .red-skin a:hover, .red-skin a:focus,
+.red-skin .job-grid.style-1:hover .jbc-name a, .red-skin .job-grid.style-1:hover .job-price,
+.red-skin button.owl-prev, .red-skin button.owl-next,
+.red-skin .nav-advance.nav-tabs .nav-item.show .nav-link, .red-skin .nav-advance.nav-tabs .nav-link.active,
+.red-skin .btn-outline-info,
+.red-skin .icon-box-round,
+.red-skin .qa-subtitle,
+.red-skin .dashboard-verticle-nav li a>i,
+.red-skin .btn-flit.active,
+.red-skin .advance-search .search-big-form .form-group i,
+.red-skin .text-info{
+	color:#d32e2a;
+}
+
+.red-skin .btn-outline-info:hover, .red-skin .btn-outline-info:focus, .red-skin .btn-outline-info.focus,
+.red-skin .verticle-candidate-list:hover, .red-skin .verticle-candidate-list:focus,
+.red-skin .job-new-list:hover, .red-skin .job-new-list:focus,
+.red-skin .btn-outline-info:hover, .red-skin .btn-outline-info:focus, .red-skin .btn-outline-info.focus,
+.red-skin .btn-info.active.focus, .red-skin .btn-info.active:focus, .red-skin .btn-info.active:hover, .red-skin .btn-info.focus:active, .red-skin .btn-info:active:focus, .red-skin .btn-info:active:hover, .red-skin .open > .dropdown-toggle.btn-info.focus, .red-skin .open > .dropdown-toggle.btn-info:focus, .red-skin .open > .dropdown-toggle.btn-info:hover, .red-skin .btn-info.focus, .red-skin .btn-info:focus,
+.red-skin .page-item.active .page-link,
+.red-skin .btn-outline-info,
+.red-skin .modal-footer a,
+.red-skin .btn-info, .red-skin.btn-info.disabled,
+.red-skin .pagination li:first-child a,
+.red-skin .btn-primary, .red-skin .btn-primary.disabled,
+.red-skin .pagination>.active>a, .red-skin .pagination>.active>a:focus, .red-skin .pagination>.active>a:hover, .red-skin .pagination>.active>span, .red-skin .pagination>.active>span:focus, .red-skin .pagination>.active>span:hover, .red-skin .pagination>li>a:focus, .red-skin .pagination>li>a:hover{
+	border-color:#d32e2a !important;
+}
+
+.red-skin .header-topbar{
+	background:#d32e2a !important;
+}
+
+/*-------------- Purple Skins -----------------*/
+.purple-skin .cluster div, .purple-skin .mapzoom-in, .purple-skin .mapzoom-out, .purple-skin .nav-tabs .nav-item.show .nav-link, .purple-skin .nav-tabs .nav-link.active, .purple-skin .nav-pills .nav-item.show .nav-link, .purple-skin .nav-pills .nav-link.active,
+.purple-skin .bg-theme,
+.purple-skin .layout-switcher ul li.active a, .purple-skin .layout-switcher ul li a:hover, .purple-skin .layout-switcher ul li a:focus,
+.purple-skin .bg-info,
+.purple-skin .bg-primary,
+.purple-skin .btn-info, .purple-skin .btn-info.disabled,
+.purple-skin .btn-info:hover, .purple-skin .btn-info.disabled:hover,
+.purple-skin .btn-primary, .purple-skin .btn-primary.disabled,
+.purple-skin .btn-primary:hover, .purple-skin .btn-primary.disabled:hover,
+.purple-skin .category-wrap li:hover, .purple-skin .category-wrap li:focus,
+.purple-skin .btn-outline-info.active, .purple-skin .btn-outline-info:active, .purple-skin .btn-outline-info:focus,
+.purple-skin .btn-outline-info:hover, .purple-skin .btn-outline-info:focus, .purple-skin .btn-outline-info.focus,
+.purple-skin .small-category-box:hover, .purple-skin .small-category-box:focus,
+.purple-skin .btn-outline-info.active, .purple-skin .btn-outline-info:active, .purple-skin .btn-outline-info:focus,
+.purple-skin .btn-info.active.focus, .purple-skin .btn-info.active:focus, .purple-skin .btn-info.active:hover, .purple-skin .btn-info.focus:active, .purple-skin .btn-info:active:focus, .purple-skin .btn-info:active:hover, .purple-skin .open > .dropdown-toggle.btn-info.focus, .purple-skin .open > .dropdown-toggle.btn-info:focus, .purple-skin .open > .dropdown-toggle.btn-info:hover, .purple-skin .btn-info.focus, .purple-skin .btn-info:focus,
+.purple-skin .emp-total-vacancy,
+.purple-skin .dark-search,
+.purple-skin .candidate-grid:hover .purple-skin .btn.download-btn, .purple-skin .candidate-grid:focus .btn.download-btn,
+.purple-skin .btn-primary.active.focus, .purple-skin .btn-primary.active:focus, .purple-skin .btn-primary.active:hover, .purple-skin .btn-primary.focus:active, .purple-skin .btn-primary:active:focus, .purple-skin .btn-primary:active:hover, .purple-skin .open > .dropdown-toggle.btn-primary.focus, .purple-skin .open > .dropdown-toggle.btn-primary:focus, .purple-skin .open > .dropdown-toggle.btn-primary:hover, .purple-skin .btn-primary.focus, .purple-skin .btn-primary:focus,
+.purple-skin .pagination li:first-child a,
+.purple-skin .pagination>.active>a, .purple-skin .pagination>.active>a:focus, .purple-skin .pagination>.active>a:hover, .purple-skin .pagination>.active>span, .purple-skin .pagination>.active>span:focus, .purple-skin .pagination>.active>span:hover, .purple-skin .pagination>li>a:focus, .purple-skin .pagination>li>a:hover,
+.purple-skin .page-item.active .page-link,
+.purple-skin .qa-skill-list li:before,
+.purple-skin .checkbox-custom:checked + .checkbox-custom-label:before,
+.purple-skin .dropdown-item.active, .purple-skin .dropdown-item:hover, .purple-skin .dropdown-item:focus, .purple-skin .dropdown-item:active,
+.purple-skin .breadcrumbs,
+.purple-skin .featured-category ul li a:hover, .purple-skin .featured-category ul li a:focus,
+.purple-skin .select2-container--default .select2-results__option--highlighted[aria-selected],
+.purple-skin .candidate-grid:hover .btn.download-btn, .purple-skin .candidate-grid:focus .btn.download-btn{
+	background:#9886ec !important;
+	background-color:#9886ec !important;
+}
+
+.purple-skin .theme-cl,
+.purple-skin a.link:hover, .purple-skin a.link:focus, .purple-skin a:hover, .purple-skin a:focus,
+.purple-skin .job-grid.style-1:hover .jbc-name a, .purple-skin .job-grid.style-1:hover .job-price,
+.purple-skin button.owl-prev, .purple-skin button.owl-next,
+.purple-skin .nav-advance.nav-tabs .nav-item.show .nav-link, .purple-skin .nav-advance.nav-tabs .nav-link.active,
+.purple-skin .btn-outline-info,
+.purple-skin .icon-box-round,
+.purple-skin .qa-subtitle,
+.purple-skin .dashboard-verticle-nav li a>i,
+.purple-skin .btn-flit.active,
+.purple-skin .advance-search .search-big-form .form-group i,
+.purple-skin .text-info{
+	color:#9886ec;
+}
+
+.purple-skin .btn-outline-info:hover, .purple-skin .btn-outline-info:focus, .purple-skin .btn-outline-info.focus,
+.purple-skin .verticle-candidate-list:hover, .purple-skin .verticle-candidate-list:focus,
+.purple-skin .job-new-list:hover, .purple-skin .job-new-list:focus,
+.purple-skin .btn-outline-info:hover, .purple-skin .btn-outline-info:focus, .purple-skin .btn-outline-info.focus,
+.purple-skin .btn-info.active.focus, .purple-skin .btn-info.active:focus, .purple-skin .btn-info.active:hover, .purple-skin .btn-info.focus:active, .purple-skin .btn-info:active:focus, .purple-skin .btn-info:active:hover, .purple-skin .open > .dropdown-toggle.btn-info.focus, .purple-skin .open > .dropdown-toggle.btn-info:focus, .purple-skin .open > .dropdown-toggle.btn-info:hover, .purple-skin .btn-info.focus, .purple-skin .btn-info:focus,
+.purple-skin .page-item.active .page-link,
+.purple-skin .btn-outline-info,
+.purple-skin .modal-footer a,
+.purple-skin .btn-info, .purple-skin.btn-info.disabled,
+.purple-skin .pagination li:first-child a,
+.purple-skin .btn-primary, .purple-skin .btn-primary.disabled,
+.purple-skin .pagination>.active>a, .purple-skin .pagination>.active>a:focus, .purple-skin .pagination>.active>a:hover, .purple-skin .pagination>.active>span, .purple-skin .pagination>.active>span:focus, .purple-skin .pagination>.active>span:hover, .purple-skin .pagination>li>a:focus, .purple-skin .pagination>li>a:hover{
+	border-color:#9886ec !important;
+}
+
+.purple-skin .header-topbar{
+	background:#9886ec !important;
+}
+
+/*-------------- Pink Skins -----------------*/
+.pink-skin .cluster div, .pink-skin .mapzoom-in, .pink-skin .mapzoom-out, .pink-skin .nav-tabs .nav-item.show .nav-link, .pink-skin .nav-tabs .nav-link.active, .pink-skin .nav-pills .nav-item.show .nav-link, .pink-skin .nav-pills .nav-link.active,
+.pink-skin .bg-theme,
+.pink-skin .layout-switcher ul li.active a, .pink-skin .layout-switcher ul li a:hover, .pink-skin .layout-switcher ul li a:focus,
+.pink-skin .bg-info,
+.pink-skin .bg-primary,
+.pink-skin .btn-info, .pink-skin .btn-info.disabled,
+.pink-skin .btn-info:hover, .pink-skin .btn-info.disabled:hover,
+.pink-skin .btn-primary, .pink-skin .btn-primary.disabled,
+.pink-skin .btn-primary:hover, .pink-skin .btn-primary.disabled:hover,
+.pink-skin .category-wrap li:hover, .pink-skin .category-wrap li:focus,
+.pink-skin .btn-outline-info.active, .pink-skin .btn-outline-info:active, .pink-skin .btn-outline-info:focus,
+.pink-skin .btn-outline-info:hover, .pink-skin .btn-outline-info:focus, .pink-skin .btn-outline-info.focus,
+.pink-skin .small-category-box:hover, .pink-skin .small-category-box:focus,
+.pink-skin .btn-outline-info.active, .pink-skin .btn-outline-info:active, .pink-skin .btn-outline-info:focus,
+.pink-skin .btn-info.active.focus, .pink-skin .btn-info.active:focus, .pink-skin .btn-info.active:hover, .pink-skin .btn-info.focus:active, .pink-skin .btn-info:active:focus, .pink-skin .btn-info:active:hover, .pink-skin .open > .dropdown-toggle.btn-info.focus, .pink-skin .open > .dropdown-toggle.btn-info:focus, .pink-skin .open > .dropdown-toggle.btn-info:hover, .pink-skin .btn-info.focus, .pink-skin .btn-info:focus,
+.pink-skin .emp-total-vacancy,
+.pink-skin .dark-search,
+.pink-skin .candidate-grid:hover .pink-skin .btn.download-btn, .pink-skin .candidate-grid:focus .btn.download-btn,
+.pink-skin .btn-primary.active.focus, .pink-skin .btn-primary.active:focus, .pink-skin .btn-primary.active:hover, .pink-skin .btn-primary.focus:active, .pink-skin .btn-primary:active:focus, .pink-skin .btn-primary:active:hover, .pink-skin .open > .dropdown-toggle.btn-primary.focus, .pink-skin .open > .dropdown-toggle.btn-primary:focus, .pink-skin .open > .dropdown-toggle.btn-primary:hover, .pink-skin .btn-primary.focus, .pink-skin .btn-primary:focus,
+.pink-skin .pagination li:first-child a,
+.pink-skin .pagination>.active>a, .pink-skin .pagination>.active>a:focus, .pink-skin .pagination>.active>a:hover, .pink-skin .pagination>.active>span, .pink-skin .pagination>.active>span:focus, .pink-skin .pagination>.active>span:hover, .pink-skin .pagination>li>a:focus, .pink-skin .pagination>li>a:hover,
+.pink-skin .page-item.active .page-link,
+.pink-skin .qa-skill-list li:before,
+.pink-skin .checkbox-custom:checked + .checkbox-custom-label:before,
+.pink-skin .dropdown-item.active, .pink-skin .dropdown-item:hover, .pink-skin .dropdown-item:focus, .pink-skin .dropdown-item:active,
+.pink-skin .breadcrumbs,
+.pink-skin .featured-category ul li a:hover, .pink-skin .featured-category ul li a:focus,
+.pink-skin .select2-container--default .select2-results__option--highlighted[aria-selected],
+.pink-skin .candidate-grid:hover .btn.download-btn, .pink-skin .candidate-grid:focus .btn.download-btn{
+	background:#d92d7b !important;
+	background-color:#d92d7b !important;
+}
+
+.pink-skin .theme-cl,
+.pink-skin a.link:hover, .pink-skin a.link:focus, .pink-skin a:hover, .pink-skin a:focus,
+.pink-skin .job-grid.style-1:hover .jbc-name a, .pink-skin .job-grid.style-1:hover .job-price,
+.pink-skin button.owl-prev, .pink-skin button.owl-next,
+.pink-skin .nav-advance.nav-tabs .nav-item.show .nav-link, .pink-skin .nav-advance.nav-tabs .nav-link.active,
+.pink-skin .btn-outline-info,
+.pink-skin .icon-box-round,
+.pink-skin .qa-subtitle,
+.pink-skin .dashboard-verticle-nav li a>i,
+.pink-skin .btn-flit.active,
+.pink-skin .advance-search .search-big-form .form-group i,
+.pink-skin .text-info{
+	color:#d92d7b;
+}
+
+.pink-skin .btn-outline-info:hover, .pink-skin .btn-outline-info:focus, .pink-skin .btn-outline-info.focus,
+.pink-skin .verticle-candidate-list:hover, .pink-skin .verticle-candidate-list:focus,
+.pink-skin .job-new-list:hover, .pink-skin .job-new-list:focus,
+.pink-skin .btn-outline-info:hover, .pink-skin .btn-outline-info:focus, .pink-skin .btn-outline-info.focus,
+.pink-skin .btn-info.active.focus, .pink-skin .btn-info.active:focus, .pink-skin .btn-info.active:hover, .pink-skin .btn-info.focus:active, .pink-skin .btn-info:active:focus, .pink-skin .btn-info:active:hover, .pink-skin .open > .dropdown-toggle.btn-info.focus, .pink-skin .open > .dropdown-toggle.btn-info:focus, .pink-skin .open > .dropdown-toggle.btn-info:hover, .pink-skin .btn-info.focus, .pink-skin .btn-info:focus,
+.pink-skin .page-item.active .page-link,
+.pink-skin .btn-outline-info,
+.pink-skin .modal-footer a,
+.pink-skin .btn-info, .pink-skin.btn-info.disabled,
+.pink-skin .pagination li:first-child a,
+.pink-skin .btn-primary, .pink-skin .btn-primary.disabled,
+.pink-skin .pagination>.active>a, .pink-skin .pagination>.active>a:focus, .pink-skin .pagination>.active>a:hover, .pink-skin .pagination>.active>span, .pink-skin .pagination>.active>span:focus, .pink-skin .pagination>.active>span:hover, .pink-skin .pagination>li>a:focus, .pink-skin .pagination>li>a:hover{
+	border-color:#d92d7b !important;
+}
+
+.pink-skin .header-topbar{
+	background:#d92d7b !important;
+}
+
+/*-------------- Yellow Skins -----------------*/
+.yellow-skin .cluster div, .yellow-skin .mapzoom-in, .yellow-skin .mapzoom-out, .yellow-skin .nav-tabs .nav-item.show .nav-link, .yellow-skin .nav-tabs .nav-link.active, .yellow-skin .nav-pills .nav-item.show .nav-link, .yellow-skin .nav-pills .nav-link.active,
+.yellow-skin .bg-theme,
+.yellow-skin .layout-switcher ul li.active a, .yellow-skin .layout-switcher ul li a:hover, .yellow-skin .layout-switcher ul li a:focus,
+.yellow-skin .bg-info,
+.yellow-skin .bg-primary,
+.yellow-skin .btn-info, .yellow-skin .btn-info.disabled,
+.yellow-skin .btn-info:hover, .yellow-skin .btn-info.disabled:hover,
+.yellow-skin .btn-primary, .yellow-skin .btn-primary.disabled,
+.yellow-skin .btn-primary:hover, .yellow-skin .btn-primary.disabled:hover,
+.yellow-skin .category-wrap li:hover, .yellow-skin .category-wrap li:focus,
+.yellow-skin .btn-outline-info.active, .yellow-skin .btn-outline-info:active, .yellow-skin .btn-outline-info:focus,
+.yellow-skin .btn-outline-info:hover, .yellow-skin .btn-outline-info:focus, .yellow-skin .btn-outline-info.focus,
+.yellow-skin .small-category-box:hover, .yellow-skin .small-category-box:focus,
+.yellow-skin .btn-outline-info.active, .yellow-skin .btn-outline-info:active, .yellow-skin .btn-outline-info:focus,
+.yellow-skin .btn-info.active.focus, .yellow-skin .btn-info.active:focus, .yellow-skin .btn-info.active:hover, .yellow-skin .btn-info.focus:active, .yellow-skin .btn-info:active:focus, .yellow-skin .btn-info:active:hover, .yellow-skin .open > .dropdown-toggle.btn-info.focus, .yellow-skin .open > .dropdown-toggle.btn-info:focus, .yellow-skin .open > .dropdown-toggle.btn-info:hover, .yellow-skin .btn-info.focus, .yellow-skin .btn-info:focus,
+.yellow-skin .emp-total-vacancy,
+.yellow-skin .dark-search,
+.yellow-skin .candidate-grid:hover .yellow-skin .btn.download-btn, .yellow-skin .candidate-grid:focus .btn.download-btn,
+.yellow-skin .btn-primary.active.focus, .yellow-skin .btn-primary.active:focus, .yellow-skin .btn-primary.active:hover, .yellow-skin .btn-primary.focus:active, .yellow-skin .btn-primary:active:focus, .yellow-skin .btn-primary:active:hover, .yellow-skin .open > .dropdown-toggle.btn-primary.focus, .yellow-skin .open > .dropdown-toggle.btn-primary:focus, .yellow-skin .open > .dropdown-toggle.btn-primary:hover, .yellow-skin .btn-primary.focus, .yellow-skin .btn-primary:focus,
+.yellow-skin .pagination li:first-child a,
+.yellow-skin .pagination>.active>a, .yellow-skin .pagination>.active>a:focus, .yellow-skin .pagination>.active>a:hover, .yellow-skin .pagination>.active>span, .yellow-skin .pagination>.active>span:focus, .yellow-skin .pagination>.active>span:hover, .yellow-skin .pagination>li>a:focus, .yellow-skin .pagination>li>a:hover,
+.yellow-skin .page-item.active .page-link,
+.yellow-skin .qa-skill-list li:before,
+.yellow-skin .checkbox-custom:checked + .checkbox-custom-label:before,
+.yellow-skin .dropdown-item.active, .yellow-skin .dropdown-item:hover, .yellow-skin .dropdown-item:focus, .yellow-skin .dropdown-item:active,
+.yellow-skin .breadcrumbs,
+.yellow-skin .featured-category ul li a:hover, .yellow-skin .featured-category ul li a:focus,
+.yellow-skin .select2-container--default .select2-results__option--highlighted[aria-selected],
+.yellow-skin .candidate-grid:hover .btn.download-btn, .yellow-skin .candidate-grid:focus .btn.download-btn{
+	background:#fbbb00 !important;
+	background-color:#fbbb00 !important;
+}
+
+.yellow-skin .theme-cl,
+.yellow-skin a.link:hover, .yellow-skin a.link:focus, .yellow-skin a:hover, .yellow-skin a:focus,
+.yellow-skin .job-grid.style-1:hover .jbc-name a, .yellow-skin .job-grid.style-1:hover .job-price,
+.yellow-skin button.owl-prev, .yellow-skin button.owl-next,
+.yellow-skin .nav-advance.nav-tabs .nav-item.show .nav-link, .yellow-skin .nav-advance.nav-tabs .nav-link.active,
+.yellow-skin .btn-outline-info,
+.yellow-skin .icon-box-round,
+.yellow-skin .qa-subtitle,
+.yellow-skin .dashboard-verticle-nav li a>i,
+.yellow-skin .btn-flit.active,
+.yellow-skin .advance-search .search-big-form .form-group i,
+.yellow-skin .text-info{
+	color:#fbbb00;
+}
+
+.yellow-skin .btn-outline-info:hover, .yellow-skin .btn-outline-info:focus, .yellow-skin .btn-outline-info.focus,
+.yellow-skin .verticle-candidate-list:hover, .yellow-skin .verticle-candidate-list:focus,
+.yellow-skin .job-new-list:hover, .yellow-skin .job-new-list:focus,
+.yellow-skin .btn-outline-info:hover, .yellow-skin .btn-outline-info:focus, .yellow-skin .btn-outline-info.focus,
+.yellow-skin .btn-info.active.focus, .yellow-skin .btn-info.active:focus, .yellow-skin .btn-info.active:hover, .yellow-skin .btn-info.focus:active, .yellow-skin .btn-info:active:focus, .yellow-skin .btn-info:active:hover, .yellow-skin .open > .dropdown-toggle.btn-info.focus, .yellow-skin .open > .dropdown-toggle.btn-info:focus, .yellow-skin .open > .dropdown-toggle.btn-info:hover, .yellow-skin .btn-info.focus, .yellow-skin .btn-info:focus,
+.yellow-skin .page-item.active .page-link,
+.yellow-skin .btn-outline-info,
+.yellow-skin .modal-footer a,
+.yellow-skin .btn-info, .yellow-skin.btn-info.disabled,
+.yellow-skin .pagination li:first-child a,
+.yellow-skin .btn-primary, .yellow-skin .btn-primary.disabled,
+.yellow-skin .pagination>.active>a, .yellow-skin .pagination>.active>a:focus, .yellow-skin .pagination>.active>a:hover, .yellow-skin .pagination>.active>span, .yellow-skin .pagination>.active>span:focus, .yellow-skin .pagination>.active>span:hover, .yellow-skin .pagination>li>a:focus, .yellow-skin .pagination>li>a:hover{
+	border-color:#fbbb00 !important;
+}
+
+.yellow-skin .header-topbar{
+	background:#fbbb00 !important;
+}
+
+/*-------------- Dark yellow Skins -----------------*/
+.green-darkyellow-skin .cluster div, .green-darkyellow-skin .mapzoom-in, .green-darkyellow-skin .mapzoom-out, .green-darkyellow-skin .nav-tabs .nav-item.show .nav-link, .green-darkyellow-skin .nav-tabs .nav-link.active, .green-darkyellow-skin .nav-pills .nav-item.show .nav-link, .green-darkyellow-skin .nav-pills .nav-link.active,
+.darkyellow-skin .bg-theme,
+.darkyellow-skin .layout-switcher ul li.active a, .darkyellow-skin .layout-switcher ul li a:hover, .darkyellow-skin .layout-switcher ul li a:focus,
+.darkyellow-skin .bg-info,
+.darkyellow-skin .bg-primary,
+.darkyellow-skin .btn-info, .darkyellow-skin .btn-info.disabled,
+.darkyellow-skin .btn-info:hover, .darkyellow-skin .btn-info.disabled:hover,
+.darkyellow-skin .btn-primary, .darkyellow-skin .btn-primary.disabled,
+.darkyellow-skin .btn-primary:hover, .darkyellow-skin .btn-primary.disabled:hover,
+.darkyellow-skin .category-wrap li:hover, .darkyellow-skin .category-wrap li:focus,
+.darkyellow-skin .btn-outline-info.active, .darkyellow-skin .btn-outline-info:active, .darkyellow-skin .btn-outline-info:focus,
+.darkyellow-skin .btn-outline-info:hover, .darkyellow-skin .btn-outline-info:focus, .darkyellow-skin .btn-outline-info.focus,
+.darkyellow-skin .small-category-box:hover, .darkyellow-skin .small-category-box:focus,
+.darkyellow-skin .btn-outline-info.active, .darkyellow-skin .btn-outline-info:active, .darkyellow-skin .btn-outline-info:focus,
+.darkyellow-skin .btn-info.active.focus, .darkyellow-skin .btn-info.active:focus, .darkyellow-skin .btn-info.active:hover, .darkyellow-skin .btn-info.focus:active, .darkyellow-skin .btn-info:active:focus, .darkyellow-skin .btn-info:active:hover, .darkyellow-skin .open > .dropdown-toggle.btn-info.focus, .darkyellow-skin .open > .dropdown-toggle.btn-info:focus, .darkyellow-skin .open > .dropdown-toggle.btn-info:hover, .darkyellow-skin .btn-info.focus, .darkyellow-skin .btn-info:focus,
+.darkyellow-skin .emp-total-vacancy,
+.darkyellow-skin .dark-search,
+.darkyellow-skin .candidate-grid:hover .darkyellow-skin .btn.download-btn, .darkyellow-skin .candidate-grid:focus .btn.download-btn,
+.darkyellow-skin .btn-primary.active.focus, .darkyellow-skin .btn-primary.active:focus, .darkyellow-skin .btn-primary.active:hover, .darkyellow-skin .btn-primary.focus:active, .darkyellow-skin .btn-primary:active:focus, .darkyellow-skin .btn-primary:active:hover, .darkyellow-skin .open > .dropdown-toggle.btn-primary.focus, .darkyellow-skin .open > .dropdown-toggle.btn-primary:focus, .darkyellow-skin .open > .dropdown-toggle.btn-primary:hover, .darkyellow-skin .btn-primary.focus, .darkyellow-skin .btn-primary:focus,
+.darkyellow-skin .pagination li:first-child a,
+.darkyellow-skin .pagination>.active>a, .darkyellow-skin .pagination>.active>a:focus, .darkyellow-skin .pagination>.active>a:hover, .darkyellow-skin .pagination>.active>span, .darkyellow-skin .pagination>.active>span:focus, .darkyellow-skin .pagination>.active>span:hover, .darkyellow-skin .pagination>li>a:focus, .darkyellow-skin .pagination>li>a:hover,
+.darkyellow-skin .page-item.active .page-link,
+.darkyellow-skin .qa-skill-list li:before,
+.darkyellow-skin .checkbox-custom:checked + .checkbox-custom-label:before,
+.darkyellow-skin .dropdown-item.active, .darkyellow-skin .dropdown-item:hover, .darkyellow-skin .dropdown-item:focus, .darkyellow-skin .dropdown-item:active,
+.darkyellow-skin .breadcrumbs,
+.darkyellow-skin .featured-category ul li a:hover, .darkyellow-skin .featured-category ul li a:focus,
+.darkyellow-skin .select2-container--default .select2-results__option--highlighted[aria-selected],
+.darkyellow-skin .candidate-grid:hover .btn.download-btn, .darkyellow-skin .candidate-grid:focus .btn.download-btn{
+	background:#ff7d00 !important;
+	background-color:#ff7d00 !important;
+}
+
+.darkyellow-skin .theme-cl,
+.darkyellow-skin a.link:hover, .darkyellow-skin a.link:focus, .darkyellow-skin a:hover, .darkyellow-skin a:focus,
+.darkyellow-skin .job-grid.style-1:hover .jbc-name a, .darkyellow-skin .job-grid.style-1:hover .job-price,
+.darkyellow-skin button.owl-prev, .darkyellow-skin button.owl-next,
+.darkyellow-skin .nav-advance.nav-tabs .nav-item.show .nav-link, .darkyellow-skin .nav-advance.nav-tabs .nav-link.active,
+.darkyellow-skin .btn-outline-info,
+.darkyellow-skin .icon-box-round,
+.darkyellow-skin .qa-subtitle,
+.darkyellow-skin .dashboard-verticle-nav li a>i,
+.darkyellow-skin .btn-flit.active,
+.darkyellow-skin .advance-search .search-big-form .form-group i,
+.darkyellow-skin .text-info{
+	color:#ff7d00;
+}
+
+.darkyellow-skin .btn-outline-info:hover, .darkyellow-skin .btn-outline-info:focus, .darkyellow-skin .btn-outline-info.focus,
+.darkyellow-skin .verticle-candidate-list:hover, .darkyellow-skin .verticle-candidate-list:focus,
+.darkyellow-skin .job-new-list:hover, .darkyellow-skin .job-new-list:focus,
+.darkyellow-skin .btn-outline-info:hover, .darkyellow-skin .btn-outline-info:focus, .darkyellow-skin .btn-outline-info.focus,
+.darkyellow-skin .btn-info.active.focus, .darkyellow-skin .btn-info.active:focus, .darkyellow-skin .btn-info.active:hover, .darkyellow-skin .btn-info.focus:active, .darkyellow-skin .btn-info:active:focus, .darkyellow-skin .btn-info:active:hover, .darkyellow-skin .open > .dropdown-toggle.btn-info.focus, .darkyellow-skin .open > .dropdown-toggle.btn-info:focus, .darkyellow-skin .open > .dropdown-toggle.btn-info:hover, .darkyellow-skin .btn-info.focus, .darkyellow-skin .btn-info:focus,
+.darkyellow-skin .page-item.active .page-link,
+.darkyellow-skin .btn-outline-info,
+.darkyellow-skin .modal-footer a,
+.darkyellow-skin .btn-info, .darkyellow-skin.btn-info.disabled,
+.darkyellow-skin .pagination li:first-child a,
+.darkyellow-skin .btn-primary, .darkyellow-skin .btn-primary.disabled,
+.darkyellow-skin .pagination>.active>a, .darkyellow-skin .pagination>.active>a:focus, .darkyellow-skin .pagination>.active>a:hover, .darkyellow-skin .pagination>.active>span, .darkyellow-skin .pagination>.active>span:focus, .darkyellow-skin .pagination>.active>span:hover, .darkyellow-skin .pagination>li>a:focus, .darkyellow-skin .pagination>li>a:hover{
+	border-color:#ff7d00 !important;
+}
+
+.darkyellow-skin .header-topbar{
+	background:#ff7d00 !important;
+}
+
+/*-------------- Light Blue Skins -----------------*/
+.lightblue-skin .cluster div, .lightblue-skin .mapzoom-in, .lightblue-skin .mapzoom-out, .lightblue-skin .nav-tabs .nav-item.show .nav-link, .lightblue-skin .nav-tabs .nav-link.active, .lightblue-skin .nav-pills .nav-item.show .nav-link, .lightblue-skin .nav-pills .nav-link.active,
+.lightblue-skin .bg-theme,
+.lightblue-skin .layout-switcher ul li.active a, .lightblue-skin .layout-switcher ul li a:hover, .lightblue-skin .layout-switcher ul li a:focus,
+.lightblue-skin .bg-info,
+.lightblue-skin .bg-primary,
+.lightblue-skin .btn-info, .lightblue-skin .btn-info.disabled,
+.lightblue-skin .btn-info:hover, .lightblue-skin .btn-info.disabled:hover,
+.lightblue-skin .btn-primary, .lightblue-skin .btn-primary.disabled,
+.lightblue-skin .btn-primary:hover, .lightblue-skin .btn-primary.disabled:hover,
+.lightblue-skin .category-wrap li:hover, .lightblue-skin .category-wrap li:focus,
+.lightblue-skin .btn-outline-info.active, .lightblue-skin .btn-outline-info:active, .lightblue-skin .btn-outline-info:focus,
+.lightblue-skin .btn-outline-info:hover, .lightblue-skin .btn-outline-info:focus, .lightblue-skin .btn-outline-info.focus,
+.lightblue-skin .small-category-box:hover, .lightblue-skin .small-category-box:focus,
+.lightblue-skin .btn-outline-info.active, .lightblue-skin .btn-outline-info:active, .lightblue-skin .btn-outline-info:focus,
+.lightblue-skin .btn-info.active.focus, .lightblue-skin .btn-info.active:focus, .lightblue-skin .btn-info.active:hover, .lightblue-skin .btn-info.focus:active, .lightblue-skin .btn-info:active:focus, .lightblue-skin .btn-info:active:hover, .lightblue-skin .open > .dropdown-toggle.btn-info.focus, .lightblue-skin .open > .dropdown-toggle.btn-info:focus, .lightblue-skin .open > .dropdown-toggle.btn-info:hover, .lightblue-skin .btn-info.focus, .lightblue-skin .btn-info:focus,
+.lightblue-skin .emp-total-vacancy,
+.lightblue-skin .dark-search,
+.lightblue-skin .candidate-grid:hover .lightblue-skin .btn.download-btn, .lightblue-skin .candidate-grid:focus .btn.download-btn,
+.lightblue-skin .btn-primary.active.focus, .lightblue-skin .btn-primary.active:focus, .lightblue-skin .btn-primary.active:hover, .lightblue-skin .btn-primary.focus:active, .lightblue-skin .btn-primary:active:focus, .lightblue-skin .btn-primary:active:hover, .lightblue-skin .open > .dropdown-toggle.btn-primary.focus, .lightblue-skin .open > .dropdown-toggle.btn-primary:focus, .lightblue-skin .open > .dropdown-toggle.btn-primary:hover, .lightblue-skin .btn-primary.focus, .lightblue-skin .btn-primary:focus,
+.lightblue-skin .pagination li:first-child a,
+.lightblue-skin .pagination>.active>a, .lightblue-skin .pagination>.active>a:focus, .lightblue-skin .pagination>.active>a:hover, .lightblue-skin .pagination>.active>span, .lightblue-skin .pagination>.active>span:focus, .lightblue-skin .pagination>.active>span:hover, .lightblue-skin .pagination>li>a:focus, .lightblue-skin .pagination>li>a:hover,
+.lightblue-skin .page-item.active .page-link,
+.lightblue-skin .qa-skill-list li:before,
+.lightblue-skin .checkbox-custom:checked + .checkbox-custom-label:before,
+.lightblue-skin .dropdown-item.active, .lightblue-skin .dropdown-item:hover, .lightblue-skin .dropdown-item:focus, .lightblue-skin .dropdown-item:active,
+.lightblue-skin .breadcrumbs,
+.lightblue-skin .featured-category ul li a:hover, .lightblue-skin .featured-category ul li a:focus,
+.lightblue-skin .select2-container--default .select2-results__option--highlighted[aria-selected],
+.lightblue-skin .candidate-grid:hover .btn.download-btn, .lightblue-skin .candidate-grid:focus .btn.download-btn{
+	background:#518ef8 !important;
+	background-color:#518ef8 !important;
+}
+
+.lightblue-skin .theme-cl,
+.lightblue-skin a.link:hover, .lightblue-skin a.link:focus, .lightblue-skin a:hover, .lightblue-skin a:focus,
+.lightblue-skin .job-grid.style-1:hover .jbc-name a, .lightblue-skin .job-grid.style-1:hover .job-price,
+.lightblue-skin button.owl-prev, .lightblue-skin button.owl-next,
+.lightblue-skin .nav-advance.nav-tabs .nav-item.show .nav-link, .lightblue-skin .nav-advance.nav-tabs .nav-link.active,
+.lightblue-skin .btn-outline-info,
+.lightblue-skin .icon-box-round,
+.lightblue-skin .qa-subtitle,
+.lightblue-skin .dashboard-verticle-nav li a>i,
+.lightblue-skin .btn-flit.active,
+.lightblue-skin .advance-search .search-big-form .form-group i,
+.lightblue-skin .text-info{
+	color:#518ef8;
+}
+
+.lightblue-skin .btn-outline-info:hover, .lightblue-skin .btn-outline-info:focus, .lightblue-skin .btn-outline-info.focus,
+.lightblue-skin .verticle-candidate-list:hover, .lightblue-skin .verticle-candidate-list:focus,
+.lightblue-skin .job-new-list:hover, .lightblue-skin .job-new-list:focus,
+.lightblue-skin .btn-outline-info:hover, .lightblue-skin .btn-outline-info:focus, .lightblue-skin .btn-outline-info.focus,
+.lightblue-skin .btn-info.active.focus, .lightblue-skin .btn-info.active:focus, .lightblue-skin .btn-info.active:hover, .lightblue-skin .btn-info.focus:active, .lightblue-skin .btn-info:active:focus, .lightblue-skin .btn-info:active:hover, .lightblue-skin .open > .dropdown-toggle.btn-info.focus, .lightblue-skin .open > .dropdown-toggle.btn-info:focus, .lightblue-skin .open > .dropdown-toggle.btn-info:hover, .lightblue-skin .btn-info.focus, .lightblue-skin .btn-info:focus,
+.lightblue-skin .page-item.active .page-link,
+.lightblue-skin .btn-outline-info,
+.lightblue-skin .modal-footer a,
+.lightblue-skin .btn-info, .lightblue-skin.btn-info.disabled,
+.lightblue-skin .pagination li:first-child a,
+.lightblue-skin .btn-primary, .lightblue-skin .btn-primary.disabled,
+.lightblue-skin .pagination>.active>a, .lightblue-skin .pagination>.active>a:focus, .lightblue-skin .pagination>.active>a:hover, .lightblue-skin .pagination>.active>span, .lightblue-skin .pagination>.active>span:focus, .lightblue-skin .pagination>.active>span:hover, .lightblue-skin .pagination>li>a:focus, .lightblue-skin .pagination>li>a:hover{
+	border-color:#518ef8 !important;
+}
+
+.lightblue-skin .header-topbar{
+	background:#518ef8 !important;
+}
+
+/*-------------- Dark Green Skins -----------------*/
+.darkgreen-skin .cluster div, .darkgreen-skin .mapzoom-in, .darkgreen-skin .mapzoom-out, .darkgreen-skin .nav-tabs .nav-item.show .nav-link, .darkgreen-skin .nav-tabs .nav-link.active, .darkgreen-skin .nav-pills .nav-item.show .nav-link, .darkgreen-skin .nav-pills .nav-link.active,
+.darkgreen-skin .bg-theme,
+.darkgreen-skin .layout-switcher ul li.active a, .darkgreen-skin .layout-switcher ul li a:hover, .darkgreen-skin .layout-switcher ul li a:focus,
+.darkgreen-skin .bg-info,
+.darkgreen-skin .bg-primary,
+.darkgreen-skin .btn-info, .darkgreen-skin .btn-info.disabled,
+.darkgreen-skin .btn-info:hover, .darkgreen-skin .btn-info.disabled:hover,
+.darkgreen-skin .btn-primary, .darkgreen-skin .btn-primary.disabled,
+.darkgreen-skin .btn-primary:hover, .darkgreen-skin .btn-primary.disabled:hover,
+.darkgreen-skin .category-wrap li:hover, .darkgreen-skin .category-wrap li:focus,
+.darkgreen-skin .btn-outline-info.active, .darkgreen-skin .btn-outline-info:active, .darkgreen-skin .btn-outline-info:focus,
+.darkgreen-skin .btn-outline-info:hover, .darkgreen-skin .btn-outline-info:focus, .darkgreen-skin .btn-outline-info.focus,
+.darkgreen-skin .small-category-box:hover, .darkgreen-skin .small-category-box:focus,
+.darkgreen-skin .btn-outline-info.active, .darkgreen-skin .btn-outline-info:active, .darkgreen-skin .btn-outline-info:focus,
+.darkgreen-skin .btn-info.active.focus, .darkgreen-skin .btn-info.active:focus, .darkgreen-skin .btn-info.active:hover, .darkgreen-skin .btn-info.focus:active, .darkgreen-skin .btn-info:active:focus, .darkgreen-skin .btn-info:active:hover, .darkgreen-skin .open > .dropdown-toggle.btn-info.focus, .darkgreen-skin .open > .dropdown-toggle.btn-info:focus, .darkgreen-skin .open > .dropdown-toggle.btn-info:hover, .darkgreen-skin .btn-info.focus, .darkgreen-skin .btn-info:focus,
+.darkgreen-skin .emp-total-vacancy,
+.darkgreen-skin .dark-search,
+.darkgreen-skin .candidate-grid:hover .darkgreen-skin .btn.download-btn, .darkgreen-skin .candidate-grid:focus .btn.download-btn,
+.darkgreen-skin .btn-primary.active.focus, .darkgreen-skin .btn-primary.active:focus, .darkgreen-skin .btn-primary.active:hover, .darkgreen-skin .btn-primary.focus:active, .darkgreen-skin .btn-primary:active:focus, .darkgreen-skin .btn-primary:active:hover, .darkgreen-skin .open > .dropdown-toggle.btn-primary.focus, .darkgreen-skin .open > .dropdown-toggle.btn-primary:focus, .darkgreen-skin .open > .dropdown-toggle.btn-primary:hover, .darkgreen-skin .btn-primary.focus, .darkgreen-skin .btn-primary:focus,
+.darkgreen-skin .pagination li:first-child a,
+.darkgreen-skin .pagination>.active>a, .darkgreen-skin .pagination>.active>a:focus, .darkgreen-skin .pagination>.active>a:hover, .darkgreen-skin .pagination>.active>span, .darkgreen-skin .pagination>.active>span:focus, .darkgreen-skin .pagination>.active>span:hover, .darkgreen-skin .pagination>li>a:focus, .darkgreen-skin .pagination>li>a:hover,
+.darkgreen-skin .page-item.active .page-link,
+.darkgreen-skin .qa-skill-list li:before,
+.darkgreen-skin .checkbox-custom:checked + .checkbox-custom-label:before,
+.darkgreen-skin .dropdown-item.active, .darkgreen-skin .dropdown-item:hover, .darkgreen-skin .dropdown-item:focus, .darkgreen-skin .dropdown-item:active,
+.darkgreen-skin .breadcrumbs,
+.darkgreen-skin .featured-category ul li a:hover, .darkgreen-skin .featured-category ul li a:focus,
+.darkgreen-skin .select2-container--default .select2-results__option--highlighted[aria-selected],
+.darkgreen-skin .candidate-grid:hover .btn.download-btn, .darkgreen-skin .candidate-grid:focus .btn.download-btn{
+	background:#05996a !important;
+	background-color:#05996a !important;
+}
+
+.darkgreen-skin .theme-cl,
+.darkgreen-skin a.link:hover, .darkgreen-skin a.link:focus, .darkgreen-skin a:hover, .darkgreen-skin a:focus,
+.darkgreen-skin .job-grid.style-1:hover .jbc-name a, .darkgreen-skin .job-grid.style-1:hover .job-price,
+.darkgreen-skin button.owl-prev, .darkgreen-skin button.owl-next,
+.darkgreen-skin .nav-advance.nav-tabs .nav-item.show .nav-link, .darkgreen-skin .nav-advance.nav-tabs .nav-link.active,
+.darkgreen-skin .btn-outline-info,
+.darkgreen-skin .icon-box-round,
+.darkgreen-skin .qa-subtitle,
+.darkgreen-skin .dashboard-verticle-nav li a>i,
+.darkgreen-skin .btn-flit.active,
+.darkgreen-skin .advance-search .search-big-form .form-group i,
+.darkgreen-skin .text-info{
+	color:#05996a;
+}
+
+.darkgreen-skin .btn-outline-info:hover, .darkgreen-skin .btn-outline-info:focus, .darkgreen-skin .btn-outline-info.focus,
+.darkgreen-skin .verticle-candidate-list:hover, .darkgreen-skin .verticle-candidate-list:focus,
+.darkgreen-skin .job-new-list:hover, .darkgreen-skin .job-new-list:focus,
+.darkgreen-skin .btn-outline-info:hover, .darkgreen-skin .btn-outline-info:focus, .darkgreen-skin .btn-outline-info.focus,
+.darkgreen-skin .btn-info.active.focus, .darkgreen-skin .btn-info.active:focus, .darkgreen-skin .btn-info.active:hover, .darkgreen-skin .btn-info.focus:active, .darkgreen-skin .btn-info:active:focus, .darkgreen-skin .btn-info:active:hover, .darkgreen-skin .open > .dropdown-toggle.btn-info.focus, .darkgreen-skin .open > .dropdown-toggle.btn-info:focus, .darkgreen-skin .open > .dropdown-toggle.btn-info:hover, .darkgreen-skin .btn-info.focus, .darkgreen-skin .btn-info:focus,
+.darkgreen-skin .page-item.active .page-link,
+.darkgreen-skin .btn-outline-info,
+.darkgreen-skin .modal-footer a,
+.darkgreen-skin .btn-info, .darkgreen-skin.btn-info.disabled,
+.darkgreen-skin .pagination li:first-child a,
+.darkgreen-skin .btn-primary, .darkgreen-skin .btn-primary.disabled,
+.darkgreen-skin .pagination>.active>a, .darkgreen-skin .pagination>.active>a:focus, .darkgreen-skin .pagination>.active>a:hover, .darkgreen-skin .pagination>.active>span, .darkgreen-skin .pagination>.active>span:focus, .darkgreen-skin .pagination>.active>span:hover, .darkgreen-skin .pagination>li>a:focus, .darkgreen-skin .pagination>li>a:hover{
+	border-color:#05996a !important;
+}
+
+.darkgreen-skin .header-topbar{
+	background:#05996a !important;
+}
+
+/*-------------- Light pink Skins -----------------*/
+.lightpink-skin .cluster div, .lightpink-skin .mapzoom-in, .lightpink-skin .mapzoom-out, .lightpink-skin .nav-tabs .nav-item.show .nav-link, .lightpink-skin .nav-tabs .nav-link.active, .lightpink-skin .nav-pills .nav-item.show .nav-link, .lightpink-skin .nav-pills .nav-link.active,
+.lightpink-skin .bg-theme,
+.lightpink-skin .layout-switcher ul li.active a, .lightpink-skin .layout-switcher ul li a:hover, .lightpink-skin .layout-switcher ul li a:focus,
+.lightpink-skin .bg-info,
+.lightpink-skin .bg-primary,
+.lightpink-skin .btn-info, .lightpink-skin .btn-info.disabled,
+.lightpink-skin .btn-info:hover, .lightpink-skin .btn-info.disabled:hover,
+.lightpink-skin .btn-primary, .lightpink-skin .btn-primary.disabled,
+.lightpink-skin .btn-primary:hover, .lightpink-skin .btn-primary.disabled:hover,
+.lightpink-skin .category-wrap li:hover, .lightpink-skin .category-wrap li:focus,
+.lightpink-skin .btn-outline-info.active, .lightpink-skin .btn-outline-info:active, .lightpink-skin .btn-outline-info:focus,
+.lightpink-skin .btn-outline-info:hover, .lightpink-skin .btn-outline-info:focus, .lightpink-skin .btn-outline-info.focus,
+.lightpink-skin .small-category-box:hover, .lightpink-skin .small-category-box:focus,
+.lightpink-skin .btn-outline-info.active, .lightpink-skin .btn-outline-info:active, .lightpink-skin .btn-outline-info:focus,
+.lightpink-skin .btn-info.active.focus, .lightpink-skin .btn-info.active:focus, .lightpink-skin .btn-info.active:hover, .lightpink-skin .btn-info.focus:active, .lightpink-skin .btn-info:active:focus, .lightpink-skin .btn-info:active:hover, .lightpink-skin .open > .dropdown-toggle.btn-info.focus, .lightpink-skin .open > .dropdown-toggle.btn-info:focus, .lightpink-skin .open > .dropdown-toggle.btn-info:hover, .lightpink-skin .btn-info.focus, .lightpink-skin .btn-info:focus,
+.lightpink-skin .emp-total-vacancy,
+.lightpink-skin .dark-search,
+.lightpink-skin .candidate-grid:hover .lightpink-skin .btn.download-btn, .lightpink-skin .candidate-grid:focus .btn.download-btn,
+.lightpink-skin .btn-primary.active.focus, .lightpink-skin .btn-primary.active:focus, .lightpink-skin .btn-primary.active:hover, .lightpink-skin .btn-primary.focus:active, .lightpink-skin .btn-primary:active:focus, .lightpink-skin .btn-primary:active:hover, .lightpink-skin .open > .dropdown-toggle.btn-primary.focus, .lightpink-skin .open > .dropdown-toggle.btn-primary:focus, .lightpink-skin .open > .dropdown-toggle.btn-primary:hover, .lightpink-skin .btn-primary.focus, .lightpink-skin .btn-primary:focus,
+.lightpink-skin .pagination li:first-child a,
+.lightpink-skin .pagination>.active>a, .lightpink-skin .pagination>.active>a:focus, .lightpink-skin .pagination>.active>a:hover, .lightpink-skin .pagination>.active>span, .lightpink-skin .pagination>.active>span:focus, .lightpink-skin .pagination>.active>span:hover, .lightpink-skin .pagination>li>a:focus, .lightpink-skin .pagination>li>a:hover,
+.lightpink-skin .page-item.active .page-link,
+.lightpink-skin .qa-skill-list li:before,
+.lightpink-skin .checkbox-custom:checked + .checkbox-custom-label:before,
+.lightpink-skin .dropdown-item.active, .lightpink-skin .dropdown-item:hover, .lightpink-skin .dropdown-item:focus, .lightpink-skin .dropdown-item:active,
+.lightpink-skin .breadcrumbs,
+.lightpink-skin .featured-category ul li a:hover, .lightpink-skin .featured-category ul li a:focus,
+.lightpink-skin .select2-container--default .select2-results__option--highlighted[aria-selected],
+.lightpink-skin .candidate-grid:hover .btn.download-btn, .lightpink-skin .candidate-grid:focus .btn.download-btn{
+	background:#FE4164 !important;
+	background-color:#FE4164 !important;
+}
+
+.lightpink-skin .theme-cl,
+.lightpink-skin a.link:hover, .lightpink-skin a.link:focus, .lightpink-skin a:hover, .lightpink-skin a:focus,
+.lightpink-skin .job-grid.style-1:hover .jbc-name a, .lightpink-skin .job-grid.style-1:hover .job-price,
+.lightpink-skin button.owl-prev, .lightpink-skin button.owl-next,
+.lightpink-skin .nav-advance.nav-tabs .nav-item.show .nav-link, .lightpink-skin .nav-advance.nav-tabs .nav-link.active,
+.lightpink-skin .btn-outline-info,
+.lightpink-skin .icon-box-round,
+.lightpink-skin .qa-subtitle,
+.lightpink-skin .dashboard-verticle-nav li a>i,
+.lightpink-skin .btn-flit.active,
+.lightpink-skin .advance-search .search-big-form .form-group i,
+.lightpink-skin .text-info{
+	color:#FE4164;
+}
+
+.lightpink-skin .btn-outline-info:hover, .lightpink-skin .btn-outline-info:focus, .lightpink-skin .btn-outline-info.focus,
+.lightpink-skin .verticle-candidate-list:hover, .lightpink-skin .verticle-candidate-list:focus,
+.lightpink-skin .job-new-list:hover, .lightpink-skin .job-new-list:focus,
+.lightpink-skin .btn-outline-info:hover, .lightpink-skin .btn-outline-info:focus, .lightpink-skin .btn-outline-info.focus,
+.lightpink-skin .btn-info.active.focus, .lightpink-skin .btn-info.active:focus, .lightpink-skin .btn-info.active:hover, .lightpink-skin .btn-info.focus:active, .lightpink-skin .btn-info:active:focus, .lightpink-skin .btn-info:active:hover, .lightpink-skin .open > .dropdown-toggle.btn-info.focus, .lightpink-skin .open > .dropdown-toggle.btn-info:focus, .lightpink-skin .open > .dropdown-toggle.btn-info:hover, .lightpink-skin .btn-info.focus, .lightpink-skin .btn-info:focus,
+.lightpink-skin .page-item.active .page-link,
+.lightpink-skin .btn-outline-info,
+.lightpink-skin .modal-footer a,
+.lightpink-skin .btn-info, .lightpink-skin.btn-info.disabled,
+.lightpink-skin .pagination li:first-child a,
+.lightpink-skin .btn-primary, .lightpink-skin .btn-primary.disabled,
+.lightpink-skin .pagination>.active>a, .lightpink-skin .pagination>.active>a:focus, .lightpink-skin .pagination>.active>a:hover, .lightpink-skin .pagination>.active>span, .lightpink-skin .pagination>.active>span:focus, .lightpink-skin .pagination>.active>span:hover, .lightpink-skin .pagination>li>a:focus, .lightpink-skin .pagination>li>a:hover{
+	border-color:#FE4164 !important;
+}
+
+.lightpink-skin .header-topbar{
+	background:#FE4164 !important;
+}
+
+/*-------------- Emp Blue Skins -----------------*/
+.bg-theme .cluster div, .bg-theme .mapzoom-in, .bg-theme .mapzoom-out, .bg-theme .nav-tabs .nav-item.show .nav-link, .bg-theme .nav-tabs .nav-link.active, .bg-theme .nav-pills .nav-item.show .nav-link, .bg-theme .nav-pills .nav-link.active,
+.empblue-skin .bg-theme,
+.empblue-skin .layout-switcher ul li.active a, .empblue-skin .layout-switcher ul li a:hover, .empblue-skin .layout-switcher ul li a:focus,
+.empblue-skin .bg-info,
+.empblue-skin .bg-primary,
+.empblue-skin .btn-info, .empblue-skin .btn-info.disabled,
+.empblue-skin .btn-info:hover, .empblue-skin .btn-info.disabled:hover,
+.empblue-skin .btn-primary, .empblue-skin .btn-primary.disabled,
+.empblue-skin .btn-primary:hover, .empblue-skin .btn-primary.disabled:hover,
+.empblue-skin .category-wrap li:hover, .empblue-skin .category-wrap li:focus,
+.empblue-skin .btn-outline-info.active, .empblue-skin .btn-outline-info:active, .empblue-skin .btn-outline-info:focus,
+.empblue-skin .btn-outline-info:hover, .empblue-skin .btn-outline-info:focus, .empblue-skin .btn-outline-info.focus,
+.empblue-skin .small-category-box:hover, .empblue-skin .small-category-box:focus,
+.empblue-skin .btn-outline-info.active, .empblue-skin .btn-outline-info:active, .empblue-skin .btn-outline-info:focus,
+.empblue-skin .btn-info.active.focus, .empblue-skin .btn-info.active:focus, .empblue-skin .btn-info.active:hover, .empblue-skin .btn-info.focus:active, .empblue-skin .btn-info:active:focus, .empblue-skin .btn-info:active:hover, .empblue-skin .open > .dropdown-toggle.btn-info.focus, .empblue-skin .open > .dropdown-toggle.btn-info:focus, .empblue-skin .open > .dropdown-toggle.btn-info:hover, .empblue-skin .btn-info.focus, .empblue-skin .btn-info:focus,
+.empblue-skin .emp-total-vacancy,
+.empblue-skin .dark-search,
+.empblue-skin .candidate-grid:hover .empblue-skin .btn.download-btn, .empblue-skin .candidate-grid:focus .btn.download-btn,
+.empblue-skin .btn-primary.active.focus, .empblue-skin .btn-primary.active:focus, .empblue-skin .btn-primary.active:hover, .empblue-skin .btn-primary.focus:active, .empblue-skin .btn-primary:active:focus, .empblue-skin .btn-primary:active:hover, .empblue-skin .open > .dropdown-toggle.btn-primary.focus, .empblue-skin .open > .dropdown-toggle.btn-primary:focus, .empblue-skin .open > .dropdown-toggle.btn-primary:hover, .empblue-skin .btn-primary.focus, .empblue-skin .btn-primary:focus,
+.empblue-skin .pagination li:first-child a,
+.empblue-skin .pagination>.active>a, .empblue-skin .pagination>.active>a:focus, .empblue-skin .pagination>.active>a:hover, .empblue-skin .pagination>.active>span, .empblue-skin .pagination>.active>span:focus, .empblue-skin .pagination>.active>span:hover, .empblue-skin .pagination>li>a:focus, .empblue-skin .pagination>li>a:hover,
+.empblue-skin .page-item.active .page-link,
+.empblue-skin .qa-skill-list li:before,
+.empblue-skin .checkbox-custom:checked + .checkbox-custom-label:before,
+.empblue-skin .dropdown-item.active, .empblue-skin .dropdown-item:hover, .empblue-skin .dropdown-item:focus, .empblue-skin .dropdown-item:active,
+.empblue-skin .breadcrumbs,
+.empblue-skin .featured-category ul li a:hover, .empblue-skin .featured-category ul li a:focus,
+.empblue-skin .select2-container--default .select2-results__option--highlighted[aria-selected],
+.empblue-skin .candidate-grid:hover .btn.download-btn, .empblue-skin .candidate-grid:focus .btn.download-btn{
+	background:#6E6EF9 !important;
+	background-color:#6E6EF9 !important;
+}
+
+.empblue-skin .theme-cl,
+.empblue-skin a.link:hover, .empblue-skin a.link:focus, .empblue-skin a:hover, .empblue-skin a:focus,
+.empblue-skin .job-grid.style-1:hover .jbc-name a, .empblue-skin .job-grid.style-1:hover .job-price,
+.empblue-skin button.owl-prev, .empblue-skin button.owl-next,
+.empblue-skin .nav-advance.nav-tabs .nav-item.show .nav-link, .empblue-skin .nav-advance.nav-tabs .nav-link.active,
+.empblue-skin .btn-outline-info,
+.empblue-skin .icon-box-round,
+.empblue-skin .qa-subtitle,
+.empblue-skin .dashboard-verticle-nav li a>i,
+.empblue-skin .btn-flit.active,
+.empblue-skin .advance-search .search-big-form .form-group i,
+.empblue-skin .text-info{
+	color:#6E6EF9;
+}
+
+.empblue-skin .btn-outline-info:hover, .empblue-skin .btn-outline-info:focus, .empblue-skin .btn-outline-info.focus,
+.empblue-skin .verticle-candidate-list:hover, .empblue-skin .verticle-candidate-list:focus,
+.empblue-skin .job-new-list:hover, .empblue-skin .job-new-list:focus,
+.empblue-skin .btn-outline-info:hover, .empblue-skin .btn-outline-info:focus, .empblue-skin .btn-outline-info.focus,
+.empblue-skin .btn-info.active.focus, .empblue-skin .btn-info.active:focus, .empblue-skin .btn-info.active:hover, .empblue-skin .btn-info.focus:active, .empblue-skin .btn-info:active:focus, .empblue-skin .btn-info:active:hover, .empblue-skin .open > .dropdown-toggle.btn-info.focus, .empblue-skin .open > .dropdown-toggle.btn-info:focus, .empblue-skin .open > .dropdown-toggle.btn-info:hover, .empblue-skin .btn-info.focus, .empblue-skin .btn-info:focus,
+.empblue-skin .page-item.active .page-link,
+.empblue-skin .btn-outline-info,
+.empblue-skin .modal-footer a,
+.empblue-skin .btn-info, .empblue-skin.btn-info.disabled,
+.empblue-skin .pagination li:first-child a,
+.empblue-skin .btn-primary, .empblue-skin .btn-primary.disabled,
+.empblue-skin .pagination>.active>a, .empblue-skin .pagination>.active>a:focus, .empblue-skin .pagination>.active>a:hover, .empblue-skin .pagination>.active>span, .empblue-skin .pagination>.active>span:focus, .empblue-skin .pagination>.active>span:hover, .empblue-skin .pagination>li>a:focus, .empblue-skin .pagination>li>a:hover{
+	border-color:#6E6EF9 !important;
+}
+
+.empblue-skin .header-topbar{
+	background:#6E6EF9 !important;
+}

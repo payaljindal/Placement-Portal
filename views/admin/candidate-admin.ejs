@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Workoholics</title>
+		<link rel ="shortcut icon" type="image/png" href="/img/favicon.png">
+		<!-- All Plugins Css -->
+		<link href="/css/plugins.css" rel="stylesheet">
+		 
+	
+		<!-- Custom CSS -->
+		<link href="/css/styles.css" rel="stylesheet">
+		
+		<!-- Custom Color -->
+		<link href="/css/default.css" rel="stylesheet">
+	</head>
+	
+	<body class="green-skin bg-light">
+		<!-- ============================================================== -->
+		<!-- Preloader - style you can find in spinners.css -->
+		<!-- ============================================================== -->
+		<div class="Loader"></div>
+		
+		<!-- ============================================================== -->
+		<!-- Main wrapper - style you can find in pages.scss -->
+		<!-- ============================================================== -->
+		<div id="main-wrapper">
+		
+			<!-- ============================================================== -->
+			<!-- Top header  -->
+			<!-- ============================================================== -->
+			<!-- Start Navigation -->
+			<div class="header header-light">
+				<div class="container-fluid">
+					<nav id="navigation" class="navigation navigation-landscape">
+						<div class="nav-header">
+							<a class="nav-brand" href="#">
+								<img src="/img/Logo.jpg" class="logo" width="170" height="40" alt="logo">
+							</a>
+							<div class="nav-toggle"></div>
+						</div>
+						<div class="nav-menus-wrapper" style="transition-property: none;">
+							<ul class="nav-menu">
+							
+								<li class="active"><a href="/">Home</a>
+									
+								</li>
+								
+								
+								<li><a href="#">For Employers<span class="submenu-indicator"></span></a>
+									<ul class="nav-dropdown nav-submenu" style="right: auto; display: none;">
+										<li><a href="/admin/all/users">Browse Candidates </a></li>                                    
+										</li>
+									</ul>
+								</li>
+								
+								<li><a href="#">Pages<span class="submenu-indicator"></span></a>
+									<ul class="nav-dropdown nav-submenu" style="right: auto; display: none;">
+
+										<li><a href="/tip">Tips and Tricks</a></li>                                    
+										                                
+										
+										
+									</ul>
+								</li>
+								
+								<li><a href="/contact">Contact Us</a></li>
+								
+							</ul>
+							
+							<ul class="nav-menu nav-menu-social align-to-right">
+								
+								<li>
+									<a href="/admin/messages" >
+										<i class="ti-signal mr-1"></i><span class="dn-lg">Messages</span>
+									</a>
+								</li>
+								<li>
+									<a href="/users/logout" >
+										<i class="ti-user mr-1"></i><span class="dn-lg">Logout</span>
+									</a>
+									</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+			<!-- End Navigation -->
+			<div class="clearfix"></div>		
+			
+			<!-- ============================================================== -->
+			<!-- Top header  -->
+			<!-- ============================================================== -->
+			<br>
+			
+			
+			<!-- ============================ Breadcrums Start================================== -->
+			<div class="container-fluid breadcrumbs breadcrumbs-light">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<a href="/">
+							Home
+							</a>
+							<a href="javascript:void(0)">
+								<span>
+									<i class="ti-arrow-right"></i>
+								</span>
+								Search Candidates With Grid
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<%- messages('messages', locals) -%>
+			<div class="clearfix"></div>
+			<!-- ============================ Breadcrums End ================================== -->
+			
+			<!-- ============================ Main Wrap Start ================================== -->
+			<section>
+				<div class="container">
+				
+				
+					<div class="row">
+					
+						<div class="col-xl-3 col-lg-4">
+						
+							<div class="d-block d-none d-sm-block d-md-none mb-3">
+								<a href="javascript:void(0)" onclick="openNav()" class="btn btn-info full-width btn-md"><i class="ti-filter mrg-r-5"></i>Filter Search</a>
+							</div>
+							
+							<div class="sidebar-container d-sm-none d-md-block d-none">
+								<form action="/admin/filter" method="POST">
+								
+								<!-- location -->
+								<div class="sidebar-widget">
+									<div class="form-group">
+										<h5 class="mb-2">City</h5>
+										<div class="side-imbo" style="width: 100%;">
+											<input type="text" name="location" class="form-control">
+										</div>
+									</div>
+								</div>
+
+								<!-- Skills -->
+								<div class="sidebar-widget">
+									<div class="form-group">
+										<h5 class="mb-2">Skills</h5>
+										<div class="side-imbo">
+											<select name="skills" id="" multiple class="form-control">
+												<option value="python">Python</option>
+												<option value="java">Java</option>
+												<option value="ml">ML</option>
+												<option value="c/c++">C/C++</option>
+												<option value="web_dev">Web Developement</option>
+											  </select>
+											
+										</div>
+									</div>
+								</div>
+
+								<!-- Category -->
+								<div class="sidebar-widget">
+									<div class="form-group">
+										<h5 class="mb-2">Job Category</h5>
+										<div class="side-imbo" style="width: 100%;">
+											<select name="job_category" class="form-control" >
+												<option value=""></option>
+												<option value="it">IT</option>
+												<option value="designing">Graphic Designing</option>
+												<option value="marketing">Marketing</option>
+												<option value="banking">Banking</option>
+												<option value="data_analyst">Data Analyst</option>
+											  </select>
+										</div>
+									</div>
+								</div>
+								
+								
+								
+								<!-- Experince -->
+								<div class="sidebar-widget">
+									<div class="form-group">
+										<h5 class="mb-2">Experince</h5>
+										<div class="side-imbo">
+											<ul class="no-ul-list">
+												<li>
+													<input id="checkbox-e1" class="checkbox-custom" name="exp" type="radio" value="1">
+													<label for="checkbox-e1" class="checkbox-custom-label" > &gt;1 year</label>
+												</li>
+												
+												<li>
+													<input id="checkbox-e2" class="checkbox-custom" name="exp" type="radio" value="4">
+													<label for="checkbox-e2" class="checkbox-custom-label">&gt;4years</label>
+												</li>
+												
+												<li>
+													<input id="checkbox-e3" class="checkbox-custom" name="exp" type="radio" value="8">
+													<label for="checkbox-e3" class="checkbox-custom-label">&gt;8years</label>
+												</li>
+												
+												<li>
+													<input id="checkbox-e4" class="checkbox-custom" name="exp" type="radio" value="10">
+													<label for="checkbox-e4" class="checkbox-custom-label">&gt;10years</label>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								
+								<!-- Job Type -->
+								<div class="sidebar-widget">
+									<div class="form-group">
+										<h5 class="mb-2">Job Type</h5>
+										<div class="side-imbo">
+											<ul class="no-ul-list">
+												<li>
+													<input id="checkbox-j1" class="checkbox-custom" name="job_type" type="radio" value="full_time">
+													<label for="checkbox-j1" class="checkbox-custom-label" >Full Time</label>
+												</li>
+												
+												<li>
+													<input id="checkbox-j2" class="checkbox-custom" name="job_type" type="radio" value="part_time">
+													<label for="checkbox-j2" class="checkbox-custom-label">Part Time</label>
+												</li>
+												
+												<li>
+													<input id="checkbox-j4" class="checkbox-custom" name="job_type" type="radio" value="internship">
+													<label for="checkbox-j4" class="checkbox-custom-label">Internship</label>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								
+								
+								<!-- Compensation -->
+								<div class="sidebar-widget">
+									<div class="form-group">
+										<h5 class="mb-2">Minimum salary</h5>
+										<div class="side-imbo">
+											<ul class="no-ul-list">
+												<li>
+													<input id="checkbox-c1" class="checkbox-custom" type="radio" name="sal" value="5000">
+													<label for="checkbox-c1" class="checkbox-custom-label">5,000 - 10,000</label>
+												</li>
+												
+												<li>
+													<input id="checkbox-c2" class="checkbox-custom"  type="radio" name="sal" value="15000">
+													<label for="checkbox-c2" class="checkbox-custom-label">15,000 - 20,000</label>
+												</li>
+												
+												<li>
+													<input id="checkbox-c03" class="checkbox-custom"  type="radio" name="sal" value="25000">
+													<label for="checkbox-c03" class="checkbox-custom-label">25,000 - 30,000</label>
+												</li>
+												
+												<li>
+													<input id="checkbox-c4" class="checkbox-custom"  type="radio" name="sal" value="50000">
+													<label for="checkbox-c4" class="checkbox-custom-label">50,000-55,000</label>
+												</li>
+											</ul>	
+										</div>
+									</div>
+								</div>
+
+								<div style="align-items: center;">
+									<button type="submit" class="bn btn-success">Filter</button>
+								</div>
+								</form>
+							</div>
+						</div>
+
+						<!-- left side ends here  -->
+			<!-- --------------------------------------------------------------			 -->
+						<div class="col-xl-9 col-lg-8">
+							
+							<!-- Row -->
+							<div class="row">
+								
+								<!-- layout Wrapper -->
+								<div class="col-md-12 mb-1">
+									<div class="layout-switcher-wrap">
+										<div class="layout-switcher-left">Total <%= users.length %> Candidates
+										<br>
+									But displaying only those who've given the skill test!</div>
+										<div class="layout-switcher">
+											<ul>
+												<li ><a href="/admin/sort/experience">Sort by experience</a></li>
+												<li ><a href="/admin/sort/score">Sort by Total score</a></li>
+												<li><a href="/admin/sort/salary">Sort by salary</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							
+							</div>
+							
+							<!-- Row -->
+							<div class="row">
+								<% users.forEach(function(user){%>
+									<% if(typeof(user.score) !== "undefined") { %>
+										<div class="col-lg-4 col-md-6 col-sm-6">
+											<div class="candidate-grid style-1">
+											
+												<div class="candidate-wrap">
+													
+													
+													<div class="candidate-thumb">
+														<a href="/users/detail/<%= user._id %>"><img src="/img/user.png" class="img-fluid mx-auto circle" alt="" /></a>
+													</div>
+													<h4 class="candidate-name"><%= user.name %></h4>
+													<p>Experience - <%= user.experience %> years
+														<br>
+													Total Score - <%= user.tot_score %></p>
+													<a href="/users/detail/<%= user._id %>" class="btn btn-secondary" style="padding: 2px 2px;">Get Details</a>
+												</div>
+												<div class="candidate-grid-footer">
+													<span class="update-resume">Min <%= user.min_salary %> salary required</span>
+	
+													<!-- <div class="can-footer-info">
+														<a href="/admin/shortlist/<%= user._id %>" class="btn" data-toggle="tooltip" data-original-title="Shortlit"><i class="ti-thumb-up"></i></a>
+													</div> -->
+												</div>
+												
+											</div>
+										</div>
+										<% } %>
+									
+								<% });%>
+								
+								
+							</div>
+						
+						</div>
+						
+					</div>
+					
+				</div>
+			</section>
+			<div class="clearfix"></div>
+			<!-- ============================ Main Wrap Start ================================== -->
+			
+					
+			
+			<!-- ============================ Footer Start ================================== -->
+
+			<footer class="dark-footer skin-dark-footer">
+				<div>
+					<div class="container">
+						<div class="row">
+							
+							<div class="col-lg-4 col-md-4">
+								<div class="footer-widget">
+									<img src="/img/logofooter.png" class="logo" width="170" height="100" alt="logo">
+
+									
+									
+								</div>
+							</div>	
+							<div class="col-lg-4 col-md-4">
+								<div class="footer-widget">
+									
+
+									<div class="footer-add">
+										
+										<h4>Address:</h4></strong><p>Model Town, Delhi,</br> India</p>
+										<h4>Email:</strong></br><a href="#">hello@workaholics.com</a></p></h4>
+										<h4>Call:</h4></strong><p>91 9876543210</p>
+									</div>
+									
+								</div>
+							</div>		
+							<div class="col-lg-4 col-md-4">
+								<div class="footer-widget">
+									<h4>Navigations</h4>
+									<ul class="footer-menu">
+										<li><a href="/">Home</a></li>
+										<li><a href="/admin/all/users">Browse Candidates</a></li>
+										<li><a href="/admin/messages">Messages</a></li>
+										
+									</ul>
+								</div>
+							</div>
+									</div>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<div class="container">
+						<div class="row align-items-center">
+							
+							<div class="col-lg-6 col-md-6">
+								<p class="mb-0">© 2020 Workaholics.All Rights Reserved</p>
+							</div>
+							
+							<div class="col-lg-6 col-md-6 text-right">
+								<ul class="footer-bottom-social">
+									<li><a href="#"><i class="ti-facebook"></i></a></li>
+									<li><a href="#"><i class="ti-twitter"></i></a></li>
+									<li><a href="#"><i class="ti-instagram"></i></a></li>
+									<li><a href="#"><i class="ti-linkedin"></i></a></li>
+								</ul>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				
+			</footer>
+			
+			<!-- ============================ Footer End ================================== -->
+			
+			
+
+		</div>
+		<!-- ============================================================== -->
+		<!-- End Wrapper -->
+		<!-- ============================================================== -->
+
+		<!-- ============================================================== -->
+		<!-- All Jquery -->
+		<!-- ============================================================== -->
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/popper.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/select2.min.js"></script>
+		<script src="/js/aos.js"></script>
+		<script src="/js/perfect-scrollbar.jquery.min.js"></script>
+		<script src="/js/owl.carousel.min.js"></script>
+		<script src="/js/jquery.counterup.min.js"></script>
+		<script src="/js/slick.js"></script>
+		<script src="/js/bootstrap-datepicker.js"></script>
+		<script src="/js/isotope.min.js"></script>
+		<script src="/js/summernote.js"></script>
+		<script src="/js/jQuery.style.switcher.js"></script>
+		 
+		<script src="/js/counterup.min.js"></script>
+		<script src="/js/custom.js"></script>
+		
+		<script>
+				$(function(){
+					$('.datepicker').datepicker({
+						format: 'mm-dd-yyyy'
+					});
+				});
+		</script>
+
+	</body>
+
+</html>

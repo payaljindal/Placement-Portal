@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% var score = 0;%>
+    <div class="container">
+        <form action="/result">
+            <% questions.forEach(function(ques){ %>
+            <% if(ques.about === skill){%>
+            <h4>Qus</h4> <%= ques.question %> <br>
+            <input type="radio" name="val"><%= ques.option1 %> <br>
+            <input type="radio" name="val"><%= ques.option2 %> <br>
+            <input type="radio" name="val"><%= ques.answer %> <br>
+            <% } %>
+            <% }); %>
+        <button type="submit">Submit</button>
+        </form>
+    </div>  
+</body>
+</html>
