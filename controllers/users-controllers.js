@@ -13,7 +13,7 @@ const signup = async (req,res,next) => {
   var username = req.body.username;
   var password = req.body.password;
 
-  const {marital, gender, contact , languages, location } = req.body;
+  const { gender, contact , languages, location } = req.body;
   
   if (name=="" || email=="" || username=="" || password =="") {
 
@@ -36,7 +36,7 @@ const signup = async (req,res,next) => {
                   password: password,
                   admin: 0,
                   gender,
-                  marital,
+                 
                   contact,
                   languages,
                   location

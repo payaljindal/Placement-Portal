@@ -98,7 +98,7 @@
 			<!-- ============================================================== -->
 			
 			<!-- ============================ Hero Banner  Start================================== -->
-			<div class="page-title-wrap">
+			<!-- <div class="page-title-wrap">
 				<div class="container">
 					<div class="col-lg-12 col-md-12">
 						<div class="pt-caption">
@@ -106,7 +106,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<div class="clearfix"></div>
 			<!-- ============================ Hero Banner End ================================== -->
 			<%- messages('messages', locals) -%>
@@ -121,12 +121,13 @@
 							<div class="dashboard-wrap">
 							
 							<div class="dashboard-thumb">
-								<div class="dashboard-th-pic">
+								<br> <br>
+								<!-- <div class="dashboard-th-pic">
 									
 									<img src="/img/user.png" class="img-fluid mx-auto img-circle" alt="" />
-								</div>
-								<h4 class="mb-1"><%= user.name %></h4>
-								<span class="text-success">Web Designer</span>
+								</div> -->
+								<h2 class="mb-1" style="font-size: 40px;"><%= user.name %></h2>
+								<span class="text-success"><%= user.bio %></span>
 							</div>
 							
 							<!-- Nav tabs -->
@@ -139,13 +140,13 @@
 								</li>
 							
 								
-								<li class="nav-item">
+								<!-- <li class="nav-item">
 									<a class="nav-link" data-toggle="tab" href="#applied"><i class="lni-briefcase"></i>Messages</a>
-								</li>
+								</li> -->
 								
 								
 								<li class="nav-item">
-									<a class="nav-link" href="/users/detail/<%= user._id %>"><i class="ti-heart"></i>How your profile will be shown to recruiters?</a>
+									<a class="nav-link" href="/users/detail/<%= user._id %>"><i class="ti-heart"></i>View your public profile</a>
 								</li>
 								
 								<li class="nav-item">
@@ -155,7 +156,7 @@
 								<li class="nav-item">
 									<a class="nav-link" href="/users/logout"><i class="lni-exit"></i>Log Out</a>
 								</li>
-								<% if(typeof(user.score) !== "undefined"){ %>
+								<!-- <% if(typeof(user.score) !== "undefined"){ %>
 									<li style="align-items: center;">
 										Capability score -> <%= user.score %>/25
 									</li>
@@ -167,9 +168,9 @@
 											  <br>
 											  You can give this test only once!
 										</li>
-										<% } %>
+										<% } %> -->
 
-											<%if(typeof(user.git_score) !== "undefined"){ %>
+											<!-- <%if(typeof(user.git_score) !== "undefined"){ %>
 												<li style="align-items: center;">
 													Github score -> <%= user.git_score %>
 													<a type="button" class="btn btn-primary" href="/github_score" style="color: aliceblue;padding: 3px 3px;">
@@ -199,7 +200,7 @@
 															<li>
 																<span style="color: green;">Your profile will now be visible to our recruiters!</span>	
 															</li>
-															<% } %>
+															<% } %> -->
 								
 							</ul>
 							
@@ -218,7 +219,7 @@
 									<!-- Basic Info -->
 									<div class="tr-single-box">
 										<div class="tr-single-header">
-											<h4><i class="ti-desktop"></i> Desired Job Details</h4>
+											<h4><i class="ti-desktop"></i> Personal Info</h4>
 										</div>
 										
 										<div class="tr-single-body">
@@ -231,7 +232,7 @@
 													</div>
 												</div>
 											
-												<div class="col-lg-12 col-md-12 col-sm-12">
+												<!-- <div class="col-lg-12 col-md-12 col-sm-12">
 													<div class="form-group">
 														<label>Job Category - <%= user.job_category%> <br>
 														Change it from here -   </label>
@@ -257,12 +258,17 @@
                                                             <option value="internship">Internship</option>
                                                           </select>
 													</div>
-												</div>
-											
-												<div class="col-lg-6 col-md-6 col-sm-12">
+												</div> -->
+												<div class="col-lg-12 col-md-12 col-sm-12">
 													<div class="form-group">
-														<label>Min Expected Salary(in rupees)</label>
-														<input class="form-control" type="number" value="<%= user.min_salary %>" name="min_salary">
+														<label>Bio</label>
+														<input class="form-control" type="text"  value="<%= user.bio %>" name="bio">
+													</div>
+												</div>
+												<div class="col-lg-12 col-md-12 col-sm-12">
+													<div class="form-group">
+														<label>Current CGPA</label>
+														<input class="form-control" type="number" step="0.01" max="10" min="0" value="<%= user.cgpa %>" name="cgpa">
 													</div>
 												</div>
 											
@@ -317,12 +323,12 @@
 													</div>
 												</div>
 												
-												<div class="col-lg-6 col-md-6 col-sm-12">
+												<!-- <div class="col-lg-6 col-md-6 col-sm-12">
 													<div class="form-group">
 														<label class="social-nfo">Marital Status</label>
 														<input class="form-control" type="text" value="<%= user.marital %>" disabled>
 													</div>
-												</div>
+												</div> -->
 												
 												<div class="col-lg-6 col-md-6 col-sm-12">
 													<div class="form-group">
@@ -331,10 +337,15 @@
 													</div>
 												</div>
 												
-												
-												
-												
-												
+													
+														<div class="col-lg-6 col-md-6 col-sm-12">
+															<div class="form-group">
+																<label class="social-nfo"> Total Experience(in years)</label>
+																<input class="form-control" min="0" type="number" value="<%= user.experience %>" name = "experience">
+															</div>
+														</div>
+													
+										
 											</div>
 										</div>
 										
@@ -379,48 +390,7 @@
 									</div>
 									<!-- /Social Account -->
 									
-									<!-- Advance Information -->
-									<div class="tr-single-box">
-										<div class="tr-single-header">
-											<h4><i class="ti-heart"></i> Extra Information</h4>
-										</div>
-										
-										<div class="tr-single-body">
-											<div class="row">
-												
-												<div class="col-lg-6 col-md-6 col-sm-12">
-													<div class="form-group">
-														<label class="social-nfo"> Total Experience(in years)</label>
-														<input class="form-control" type="number" value="<%= user.experience %>" name = "experience">
-													</div>
-												</div>
-
-												<div class="col-lg-6 col-md-6 col-sm-12">
-													<div class="form-group">
-														<label class="social-nfo">Languages</label>
-														<input class="form-control" type="text" value="<%= user.languages %>" name="languages">
-													</div>
-												</div>
-												
-												<div class="col-lg-6 col-md-6 col-sm-12">
-													<div class="form-group">
-														<label class="social-nfo">Age</label>
-														<input class="form-control" type="number" name="age" value="<%= user.age %>">
-													</div>
-												</div>
-										
-												<div class="col-lg-6 col-md-6 col-sm-12">
-													<div class="form-group">
-														<label class="social-nfo">Current Education Level</label>
-														<input class="form-control" name="studying" type="text" value="<%= user.studying %>">
-													</div>
-												</div>
-												
-											</div>
-										</div>
-										
-									</div>
-									<!-- /Advance Information -->
+									
 									<button type="submit" class="btn btn-info btn-md full-width">Save & Update<i class="ml-2 ti-arrow-right"></i></button>
 									
 									</form>
@@ -717,14 +687,12 @@
 								
 								
 								<!-- messages -->
-								<div class="tab-pane" id="applied">
+								<!-- <div class="tab-pane" id="applied">
 								<div class="tr-single-box">
 									<div class="tr-single-header">
 										<h4><i class="lni-briefcase"></i>Messages received from recruiters</h4>
 									</div>
-									
-									<div class="tr-single-body">
-										
+									<div class="tr-single-body">		
 										<table class="table table-striped mb-5">
 											<thead class="thead-dark">
 												<tr>
@@ -733,8 +701,6 @@
 													<th scope="col">Message</th>
 													<th scope="col">Status</th>
 													<th></th>
-
-
 												</tr>
 											</thead>
 											<tbody>
@@ -752,16 +718,12 @@
 															
 														</tr>
 													<% });%>
-										
 											</tbody>
 										</table>
-		
 									</div>
-									
 								</div>
-								
 								</div>
-							
+							 -->
 								
 								<!-- alert job -->
 								
