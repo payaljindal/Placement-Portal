@@ -12,6 +12,7 @@ const User = require('../models/user-model');
 const Blog = require('../models/blog-model');
 const fetch = require('node-fetch');
 const { model } = require('../models/blog-model');
+const bcrypt = require('bcryptjs');
 
 router.get('/',function(req,res){
     res.render('home',{title : 'Home'});
@@ -60,15 +61,16 @@ router.post('/test', function (req, res) {
 // my profile page
 router.post('/edit1',isUser,NotAdmin, function (req, res) {
   
-  const {name,contact,email,location, linkedin , github , experience , cgpa, bio } = req.body;
+  const {name,contact,email,location, linkedin , github , experience , cgpa, bio ,year,backlogs} = req.body;
 // console.log(linkedin);
     var user = req. user;
     user.linkedin = linkedin;
     user.github = github;
     user.experience = experience;
+    user.backlogs = backlogs;
     user.cgpa = cgpa;
     user.bio = bio;
- 
+    user.year = year;
     user.name= name;
     user.contact = contact;
     user.email = email;
@@ -78,6 +80,24 @@ router.post('/edit1',isUser,NotAdmin, function (req, res) {
   res.redirect('/users/profile');
 });
 
+
+// change password
+router.post('/changepswd',isUser,NotAdmin, function (req, res) {
+  
+  const {newpass, confirmpass} = req.body;
+  // console.log(newpass);
+    var user = req. user;
+    bcrypt.genSalt(10, function (err, salt) {
+      bcrypt.hash(newpass, salt, function (err, hash) {
+          if (err)
+              console.log(err);
+          user.password = hash;
+      });
+  });
+  req.user.save();
+  req.flash('success','Successfully updated the password!');
+  res.redirect('/users/profile');
+});
 
 //add new skill
 router.post('/add_skill',isUser,NotAdmin, function (req, res) {
