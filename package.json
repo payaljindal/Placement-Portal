@@ -1,7 +1,7 @@
 {
-  "name": "loading_3041",
+  "name": "placement_portal",
   "version": "1.0.0",
-  "description": "",
+  "description": "1. Clone repo\r 2. npm install\r 3. npm start",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

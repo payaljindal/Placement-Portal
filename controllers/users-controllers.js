@@ -36,10 +36,7 @@ const signup = async (req,res,next) => {
                   password: password,
                   admin: 0,
                   gender,
-                 
-                  contact,
-                  languages,
-                  location
+                  contact
               });
 
               bcrypt.genSalt(10, function (err, salt) {
