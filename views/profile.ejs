@@ -20,6 +20,39 @@
 		
 		<!-- Custom Color -->
 		<link href="/css/default.css" rel="stylesheet">
+		 
+			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+			<script type="text/javascript">
+				$(function () {
+					$("#btnSubmit").click(function () {
+						var password = $("#txtPassword").val();
+						var confirmPassword = $("#txtConfirmPassword").val();
+						if (password != confirmPassword) {
+							document.getElementById("message").innerHTML = "Passwords didn't match. Try again";
+							return false;
+						}
+						return true;
+					});
+				});
+
+				function ourfunc(){
+				
+						var password = $("#txtPassword").val();
+						var confirmPassword = $("#txtConfirmPassword").val();
+						if (password != confirmPassword) {
+							document.getElementById("message").innerHTML = "Passwords didn't match. Try again";
+							document.getElementById("btnSubmit").disabled = true;
+							return false;
+						}else{
+							document.getElementById("message").innerHTML = "Passwords matched";
+							document.getElementById("btnSubmit").disabled = false;
+							return true
+						}
+						
+				
+				}
+				
+			</script>
 	</head>
 	
 	<body class="green-skin bg-light">
@@ -753,24 +786,25 @@
 								
 								<!-- change-password -->
 								<div class="tab-pane" id="change-password">
-									<form method="POST" action="/changepswd">
+									<form method="POST" action="/changepswd" >
 										<div class="tr-single-box">
 											
 												<div class="tr-single-body">
 													<div class="form-group">
 														<label>New Password</label>
-														<input class="form-control" type="password" name="newpass">
+														<input class="form-control" type="password" name="newpass" id="txtPassword">
 													</div>
 													<div class="form-group">
 														<label>Confirm Password</label>
-														<input class="form-control" type="password" name="confirmpass">
+														
+														<input class="form-control" type="password" name = "pswd2" id="txtConfirmPassword" oninput="ourfunc()">
+														<span id='message' style="color: red;"></span>
 													</div>
 												</div>
 											
 										</div>
 									
-										<button type="submit" class="btn btn-info btn-md full-width">Save & Update<i class="ml-2 ti-arrow-right"></i></button>
-										
+										<button type="submit" id="btnSubmit" class="btn btn-info btn-md full-width" disabled>Save & Update<i class="ml-2 ti-arrow-right"></i></button>
 									</form>
 									</div>
 									</div>
