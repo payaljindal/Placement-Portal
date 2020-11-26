@@ -118,13 +118,13 @@
 								<% if(user.admin){ %>
 									
 									<li>
-										<a href="/admin/messages" >
-											<i class="ti-signal mr-1"></i><span class="dn-lg">Messages</span>
+										<a href="/admin/list" >
+											<i class="ti-signal mr-1"></i><span class="dn-lg">Get list </span>
 										</a>
 									</li>
 									<li class="add-listing theme-bg">
-										<a href="/admin/all/users">
-											 <i class="ti-plus"></i> Get Candidates
+										<a href="/admin/addnew">
+											 <i class="ti-plus"></i> Add new company
 										</a>
 									</li>
 									<% }else{ %>
@@ -389,7 +389,7 @@
 											<div class="form-group">
 												<label>Email</label>
 												<div class="input-with-gray">
-													<input type="email" name="email" class="form-control" placeholder="Email ID" required>
+													<input type="text" name="email" pattern="^[a-zA-Z0-9]+@thapar\.edu$" class="form-control" placeholder="your_mail@thapar.edu" required>
 													<i class="ti-email theme-cl"></i>
 												</div>
 											</div>

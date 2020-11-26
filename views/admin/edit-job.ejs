@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/admin/edit-info/<%= id %>" method="POST">
+        Company name
+        <input type="text" name="name" id="" value="<%= name %>"> <br>
+
+        Purpose
+        <input type="text" value="<%= purpose %>" disabled> 
+
+        <select name="purpose" id="">
+            <option value="" disabled selected>Change it from here</option>
+            <option value="job">Job</option>
+            <option value="internship">Internship</option>
+        </select> <br>
+
+        Stipend
+        <input type="text" name="stipend" id="" value="<%= stipend %>"> <br>
+
+        Location
+        <input type="text" name="location" id=""  value="<%= location %>"> <br>
+
+        Time period
+        <input type="text" name="time_period" value="<%=time_period %>"> <br>
+
+        For which branches - 
+        <input type="text" name="branch" value="<%= branch %>"> <br>
+
+        Year
+        <input type="Number" value="<%= year %>" disabled>
+        <select name="year" id="">
+            <option value="" disabled selected>Change it from here</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select> <br>
+
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
