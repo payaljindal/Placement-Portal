@@ -71,7 +71,8 @@ router.get('/edit-info/:id',isAdmin, function (req, res) {
                             year : p.year,
                             location : p.location,
                             branch : p.branch,
-                            id : p._id
+                            id : p._id,
+                            selectedusers : p.selectedusers,
                         });
                     }    
             
@@ -80,7 +81,7 @@ router.get('/edit-info/:id',isAdmin, function (req, res) {
 
 // post update info 
 router.post('/edit-info/:id',isAdmin,async function(req,res){
-    const{name,stipend,purpose,time_period,year,location,branch} = req.body;
+    const{name,stipend,purpose,time_period,year,location,branch,selectedusers} = req.body;
     let existing;
     const id = req.params.id;
 
@@ -95,6 +96,7 @@ router.post('/edit-info/:id',isAdmin,async function(req,res){
             existing.time_period =time_period;
             existing.location = location;
             existing.branch = branch;
+            existing.selectedusers = selectedusers;
             if(typeof(year) != "undefined"){
                 existing.year = year;
                 console.log(existing.year);

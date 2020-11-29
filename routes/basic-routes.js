@@ -204,7 +204,15 @@ router.get('/apply/:id',isUser,NotAdmin,function(req,res){
       res.redirect('/admin/list'); 
 });
 
-
+router.get('/job/:id',isUser,function(req,res){
+      const jobid = req.params.id;
+      let existing;
+      Job.findById(jobid,function(err,existing){
+            res.render('job_details',{
+                    job : existing,
+            });
+      })
+});
 
 
 

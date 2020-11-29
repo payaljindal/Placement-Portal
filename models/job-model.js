@@ -11,6 +11,7 @@ const jobSchema = new Schema({
     location : {type: String},
     branch : {type: String},
     appliedusers : [],
+    selectedusers : {type: String},
 });
 
 jobSchema.plugin(uniqueValidator);

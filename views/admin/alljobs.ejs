@@ -34,6 +34,7 @@
                 <% if (user && user.admin == 0) { %>
                     <td><a href="/apply/<%= job._id %>">Apply</a></td>
                 <% } %>
+                    <td><a href="/job/<%= job._id %>">Details</a></td>
             </tr>
             <% }); %>
     </table>
