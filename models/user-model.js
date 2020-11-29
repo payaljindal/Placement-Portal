@@ -20,7 +20,6 @@ const userSchema = new Schema({
   work : [],
   job_type : {type: String},
   job_category : {type: String },
-  messages : [],
   cgpa : {type : Number},
   year : {type: Number},
   backlogs : {type : String}

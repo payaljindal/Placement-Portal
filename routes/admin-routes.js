@@ -4,6 +4,7 @@ var User = require('../models/user-model');
 var Job = require('../models/job-model');
 var auth = require('../config/auth');
 var isAdmin = auth.isAdmin;
+var isUser = auth.isUser;
 
 router.get('/all/users',isAdmin,function(req,res){
     User.find(function(err, users){
@@ -22,7 +23,7 @@ router.get('/addnew',isAdmin,function(req,res){
 });
 
 // get list page 
-router.get('/list',isAdmin,function(req,res){
+router.get('/list',isUser,function(req,res){
     Job.find(function(err, jobs){
         res.render('admin/alljobs',
         {

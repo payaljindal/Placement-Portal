@@ -17,8 +17,23 @@
                 <td><%= job.purpose %></td>
                 <td><%= job.location %></td>
                 <td><%= job.branch %></td>
+
+                <% if (user && user.admin == 1) { %>
                 <td><a href="/admin/edit-info/<%= job._id %>">Update</a></td>
                 <td><a href="/admin/delete/<%= job._id %>">Delete</a></td>
+                <td>
+                    <% let i=1; %>
+                    <% job.appliedusers.forEach(function(user){ %>
+                        <b>User <%= i %></b> <br>
+                        <%= user.username %> <br>
+                        <a href="<%= user.public_profile  %>">Public profile</a>
+                        <% i = i+1; %>
+                    <% }); %>
+                </td>
+                <% } %>
+                <% if (user && user.admin == 0) { %>
+                    <td><a href="/apply/<%= job._id %>">Apply</a></td>
+                <% } %>
             </tr>
             <% }); %>
     </table>

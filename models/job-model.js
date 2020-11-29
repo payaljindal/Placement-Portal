@@ -9,7 +9,8 @@ const jobSchema = new Schema({
     purpose : {type: String},
     year : {type: Number},
     location : {type: String},
-    branch : {type: String}
+    branch : {type: String},
+    appliedusers : [],
 });
 
 jobSchema.plugin(uniqueValidator);

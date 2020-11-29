@@ -9,6 +9,7 @@ var isUser = auth.isUser;
 var isAdmin = auth.isAdmin;
 var NotAdmin = auth.NotAdmin;
 const User = require('../models/user-model');
+var Job = require('../models/job-model');
 const Blog = require('../models/blog-model');
 const fetch = require('node-fetch');
 const { model } = require('../models/blog-model');
@@ -178,6 +179,38 @@ router.post('/add_education',isUser,NotAdmin, function (req, res) {
   req.flash('success','Successfully added new qualification!');
   res.redirect('/users/profile  ');
 });
+
+
+router.get('/apply/:id',isUser,NotAdmin,function(req,res){
+
+      const jobid = req.params.id;
+      const user = req.user;
+      let existing;
+      Job.findById(jobid, function (err, existing) {
+              existing.appliedusers.push({
+                  name: user.name,
+                  username : user.username,
+                  public_profile : "http://localhost:5000/users/detail/" + user._id ,
+              });
+
+              try {
+                existing.save();
+             } catch (err) {
+               console.log(err);
+             }
+      });  
+      
+      req.flash('success','Successfully applied for the job');
+      res.redirect('/admin/list'); 
+});
+
+
+
+
+
+
+
+
 
 
 // get c++ test

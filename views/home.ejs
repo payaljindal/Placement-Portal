@@ -111,17 +111,18 @@
                             
 								<% if(user) {%>
 									<li>
-                                <a href="/users/logout" >
-                                    <i class="ti-user mr-1"></i><span class="dn-lg">Logout</span>
-								</a>
-								</li>
-								<% if(user.admin){ %>
+										<a href="/users/logout" >
+											<i class="ti-user mr-1"></i><span class="dn-lg">Logout</span>
+										</a>
+									</li>
+								
 									
 									<li>
 										<a href="/admin/list" >
 											<i class="ti-signal mr-1"></i><span class="dn-lg">Get list </span>
 										</a>
 									</li>
+									<% if(user.admin){ %>
 									<li class="add-listing theme-bg">
 										<a href="/admin/addnew">
 											 <i class="ti-plus"></i> Add new company
@@ -130,7 +131,7 @@
 									<% }else{ %>
 										<li class="add-listing theme-bg">
 											<a href="/users/profile">
-												 <i ></i> Update Profile
+												Update Profile
 											</a>
 										</li>
 										<% } %>
