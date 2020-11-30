@@ -114,16 +114,8 @@
 					<% blogs.forEach(function(blog){%>
 						<div class="col-lg-4 col-md-4">
 							<div class="blog-grid-wrap mb-4">
-								<div class="blog-grid-thumb">
-									<img src="/img/tip.jpg" class="img-responsive" alt="" />
-
-									<div class="bg-cat-info">
-										<div class="post-m-info">
-											<h5 class="pm-date">12</h5>
-											<h5 class="pm-month">Dec</h5>
-										</div>
-									</div>
-									<h6 class="post-cat"><%= blog.topic %></h6>
+								<div class="blog-grid-thumb">	
+									<h6 >Topic - <%= blog.topic %></h6>
 								</div>
 								<div class="blog-grid-content">
 									<h4 class="cnt-gb-title"><a href="#"><%= blog.title %></a></h4>
@@ -132,6 +124,7 @@
 								<div class="blog-grid-meta">
 									<div class="gb-info-author">
 										<p><strong>By </strong><%= blog.by %></p>
+										<p><%= blog.date %></p>
 									</div>
 								
 								</div>

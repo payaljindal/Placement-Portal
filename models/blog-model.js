@@ -6,7 +6,7 @@ const blogSchema = new Schema({
    title: {type: String , required : true},
    topic : {type: String, required : true},
     content: {type: String , required  : true},
-    
+    date: { type: String, default: Date } 
 });
 
 module.exports = mongoose.model('Blog',blogSchema);

@@ -5,8 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>Workaholics</title>
-    <link rel ="shortcut icon" type="image/png" href="/img/favicon.png">
+    <title>Placement Portal</title>
+    <link rel ="shortcut icon" type="image/png" href="/img/favicon.ico">
     <!-- All Plugins Css -->
     <link href="/css/plugins.css" rel="stylesheet">
      
@@ -58,7 +58,7 @@
                 <nav id="navigation" class="navigation navigation-landscape">
                     <div class="nav-header">
                         <a class="nav-brand" href="#">
-                            <img src="/img/Logo.jpg" class="logo" width="170" height="40" alt="logo">
+                            <img src="/img/logo4.PNG" class="logo"  alt="logo">
                         </a>
                         <div class="nav-toggle"></div>
                     </div>
@@ -66,40 +66,19 @@
                         <ul class="nav-menu">
                         
                             <li class="active"><a href="/">Home</a></li>
-								<%if (user && user.admin){%>
-									<li><a href="#">For Employers<span class="submenu-indicator"></span></a>
-										<ul class="nav-dropdown nav-submenu" style="right: auto; display: none;">
-											<li><a href="/admin/all/users">Browse Candidates Grid</a></li>                                    
-	
-											</li>
-										</ul>
-									</li>
-									<%}%>
-									<% if(user && !user.admin){ %>
-										<li ><a href="#">For Candidates<span class="submenu-indicator"></span></a>
-											<ul class="nav-dropdown nav-submenu" style="right: auto; display: none;">
-											
-												
-													
-												</li>
-												
-												<li><a href="/users/profile">Candidate Dashboard</a></li>	
-												
-											</ul>
-										</li>
-										<%}%>
 							
-                         
-                            
-                            <li><a href="#">Pages<span class="submenu-indicator"></span></a>
-								<ul class="nav-dropdown nav-submenu" style="right: auto; display: none;">
-									<% if(!user){%>
-										<li><a href="/users/login">LogIn</a></li> 
+								<%if (user && user.admin){%>
+								<li><a href="/allusers">All students</a></li>
+									<%}%>
+									<% if(user){ %>
+										  <li>
+										<a href="/admin/list" >
+											<i class="ti-signal mr-1"></i><span class="dn-lg">Get list </span>
+										</a>
+									</li>
 										<%}%>
-                                    
-                                    <li><a href="/tip">Tips and Tricks</a></li>                                 
-                                    
-                                </ul>
+                                    <li>
+									<a href="/tip"><i class="ti-ink-pen"></i><span class="dn-lg">Add new tip</span></a></li>                                 
                             </li>
                             
                             <li><a href="/contact">Contact Us</a></li>
@@ -117,11 +96,7 @@
 									</li>
 								
 									
-									<li>
-										<a href="/admin/list" >
-											<i class="ti-signal mr-1"></i><span class="dn-lg">Get list </span>
-										</a>
-									</li>
+									
 									<% if(user.admin){ %>
 									<li class="add-listing theme-bg">
 										<a href="/admin/addnew">
@@ -131,7 +106,7 @@
 									<% }else{ %>
 										<li class="add-listing theme-bg">
 											<a href="/users/profile">
-												Update Profile
+												Your Profile
 											</a>
 										</li>
 										<% } %>
@@ -247,52 +222,12 @@
 			
 			
 			<footer class="dark-footer skin-dark-footer">
-				<div>
-					<div class="container">
-						<div class="row">
-							
-							<div class="col-lg-4 col-md-4">
-								<div class="footer-widget">
-									<img src="/img/logofooter.png" class="logo" width="170" height="100" alt="logo">
-
-									
-									
-								</div>
-							</div>	
-							<div class="col-lg-4 col-md-4">
-								<div class="footer-widget">
-									
-
-									<div class="footer-add">
-										
-										<h4>Address:</h4></strong><p>Model Town, Delhi,</br> India</p>
-										<h4>Email:</strong></br><a href="#">hello@workaholics.com</a></p></h4>
-										<h4>Call:</h4></strong><p>91 9876543210</p>
-									</div>
-									
-								</div>
-							</div>		
-							<div class="col-lg-4 col-md-4">
-								<div class="footer-widget">
-									<h4>Navigations</h4>
-									<ul class="footer-menu">
-										<li><a href="/">Home</a></li>
-										<li><a href="/contact">Contact Us</a></li>
-										<li><a href="/tip">Tips and Tricks</a></li>
-										
-										
-									</ul>
-								</div>
-							</div>
-									</div>
-					</div>
-				</div>
 				<div class="footer-bottom">
 					<div class="container">
 						<div class="row align-items-center">
 							
 							<div class="col-lg-6 col-md-6">
-								<p class="mb-0">© 2020 Workaholics.All Rights Reserved</p>
+								<p class="mb-0">© 2020 Placement Portal. All Rights Reserved</p>
 							</div>
 							
 							<div class="col-lg-6 col-md-6 text-right">
