@@ -1,20 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <table>
+    <title>Placement Portal</title>
+    <link rel ="shortcut icon" type="image/png" href="/img/favicon.ico">
+    <!-- All Plugins Css -->
+    <link href="/css/plugins.css" rel="stylesheet">
+     
+
+    <!-- Custom CSS -->
+    <link href="/css/styles.css" rel="stylesheet">
+    
+    <!-- Custom Color -->
+	<link href="/css/default.css" rel="stylesheet">
+</head>
+<body class="green-skin bg-light">
+
+<!-- Start Navigation navbar-->
+        <div class="header header-light">
+            <div class="container-fluid">
+                <nav id="navigation" class="navigation navigation-landscape">
+                    <div class="nav-header">
+                        <a class="nav-brand" href="#">
+                            <img src="/img/logo4.PNG" class="logo"  alt="logo">
+                        </a>
+                        <div class="nav-toggle"></div>
+                    </div>
+                    <div class="nav-menus-wrapper" style="transition-property: none;">
+                        <ul class="nav-menu">
+                        
+                            <li><a href="/">Home</a></li>
+							
+								<%if (user && user.admin){%>
+								<li><a href="/allusers">All students</a></li>
+									<%}%>
+									<% if(user){ %>
+										  <li class="active">
+										<a href="/admin/list" >
+											<i class="ti-signal mr-1"></i><span class="dn-lg">Get list </span>
+										</a>
+									</li>
+										<%}%>
+                                    <li>
+									<a href="/tip"><i class="ti-ink-pen"></i><span class="dn-lg">Add new tip</span></a></li>                                 
+                            </li>
+                            
+                            <li><a href="/contact">Contact Us</a></li>
+                            
+                        </ul>
+                        
+                        <ul class="nav-menu nav-menu-social align-to-right">
+                            
+                            
+								<% if(user) {%>
+									<li>
+										<a href="/users/logout" >
+											<i class="ti-user mr-1"></i><span class="dn-lg">Logout</span>
+										</a>
+									</li>
+                                <% } %>
+								
+									
+									
+									<% if(user && user.admin){ %>
+									<li class="add-listing theme-bg">
+										<a href="/admin/addnew">
+											 <i class="ti-plus"></i> Add new company
+										</a>
+									</li>
+									<% } %>
+                                    <% if(user && user.admin== 0){ %>
+										<li class="add-listing theme-bg">
+											<a href="/users/profile">
+												Your Profile
+											</a>
+										</li>
+										<% } %>
+								<% if(!user){ %>
+									<li>
+									<a href="#" data-toggle="modal" data-target="#login">
+										<i class="ti-user mr-1"></i><span class="dn-lg">Login/Register</span>
+									</a>
+									</li>
+									<% } %>
+                           
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <!-- end navbar  -->
+        <!-- messages  -->
+            <%- messages('messages', locals) -%>
+
+
+<br>
+    <div class="container" >
+    <table class="table  alignmiddle" style="overflow-x:auto;">
+        <tr>
+           <th ><span style="font-color:black;">Company name</span></th> 
+           <th>Purpose</th> 
+           <th>Year</th> 
+           <th>Stipend</th> 
+           <th>Time period</th> 
+           <th>Location</th> 
+           <th>Branch</th> 
+           <% if (user && user.admin == 1) { %>
+                <th>Update</th> 
+                <th>Delete</th> 
+                <th>Applied users</th> 
+           <% } %>
+
+           <% if (user && user.admin == 0) { %>
+                <th>Apply</th> 
+            <% } %>
+
+            <th>Get details</th> 
+        </tr>
         <% jobs.forEach(function(job){ %>
             <tr>
                 <td><%= job.name %></td>
+                <td><%= job.purpose %></td>
                 <td><%= job.year %></td>
                 <td><%= job.stipend %></td>
                 <td><%= job.time_period %></td>
-                <td><%= job.purpose %></td>
+                
                 <td><%= job.location %></td>
                 <td><%= job.branch %></td>
 
@@ -38,5 +151,67 @@
             </tr>
             <% }); %>
     </table>
-</body>
+    </div>
+
+
+
+            <footer class="dark-footer skin-dark-footer">
+				<div class="footer-bottom">
+					<div class="container">
+						<div class="row align-items-center">
+							
+							<div class="col-lg-6 col-md-6">
+								<p class="mb-0">© 2020 Placement Portal. All Rights Reserved</p>
+							</div>
+							
+							<div class="col-lg-6 col-md-6 text-right">
+								<ul class="footer-bottom-social">
+									<li><a href="#"><i class="ti-facebook"></i></a></li>
+									<li><a href="#"><i class="ti-twitter"></i></a></li>
+									<li><a href="#"><i class="ti-instagram"></i></a></li>
+									<li><a href="#"><i class="ti-linkedin"></i></a></li>
+								</ul>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				
+			</footer>
+
+
+		<!-- ============================================================== -->
+		<!-- All Jquery -->
+		<!-- ============================================================== -->
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/popper.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/select2.min.js"></script>
+		<script src="/js/aos.js"></script>
+		<script src="/js/perfect-scrollbar.jquery.min.js"></script>
+		<script src="/js/owl.carousel.min.js"></script>
+		<script src="/js/jquery.counterup.min.js"></script>
+		<script src="/js/slick.js"></script>
+		<script src="/js/bootstrap-datepicker.js"></script>
+		<script src="/js/isotope.min.js"></script>
+		<script src="/js/summernote.js"></script>
+		<script src="/js/jQuery.style.switcher.js"></script>
+		 
+		<script src="/js/counterup.min.js"></script>
+		<script src="/js/custom.js"></script>
+		
+		<script>
+				$(function(){
+					$('.datepicker').datepicker({
+						format: 'mm-dd-yyyy'
+					});
+				});
+		</script>
+		<!-- ============================================================== -->
+		<!-- This page plugins -->
+		<!-- ============================================================== -->
+		
+
+	</body>
+
 </html>
