@@ -36,8 +36,8 @@ router.get('/list',isUser,function(req,res){
 
 // Add new job 
 router.post('/add',isAdmin,function(req,res){
-        const{name,stipend,purpose,time_period,year,location,branch} = req.body;
-
+        const{name,stipend,purpose,time_period,year,location,branch,deadline,formlink,testdate,testlink} = req.body;
+    console.log(deadline);
         var job = new Job({
             name: name,
             stipend:stipend,
@@ -45,7 +45,13 @@ router.post('/add',isAdmin,function(req,res){
             time_period:time_period,
             year:year,
             location:location,
-            branch : branch
+            branch : branch,
+            deadline : deadline,
+            formlink : formlink,
+            open :1,
+            testdate:testdate,
+            testlink: testlink,
+            eligibletest : "",
         });
 
         job.save();
@@ -58,10 +64,22 @@ router.post('/add',isAdmin,function(req,res){
 router.get('/edit-info/:id',isAdmin, function (req, res) {
         Job.findById(req.params.id, function (err, p) {
             if (err) {
-                console.log(err);
+                req.flash('danger', err);
                 res.redirect('/admin/list');
             } else {
-                        
+                        let testDate;
+                        if(p.testdate){
+                            testDate = p.testdate.toISOString().substr(0, 10);
+                        }else{
+                            testDate = null;
+                        }
+
+                        let deadDate;
+                        if(p.deadline){
+                            deadDate = p.deadline.toISOString().substr(0, 10);
+                        }else{
+                            deadDate = null;
+                        }
                         res.render('admin/edit-job', {
                             name : p.name,
                             stipend : p.stipend,
@@ -73,6 +91,12 @@ router.get('/edit-info/:id',isAdmin, function (req, res) {
                             branch : p.branch,
                             id : p._id,
                             selectedusers : p.selectedusers,
+                            deadline : deadDate,
+                            formlink : p.formlink,
+                            open : p.open,
+                            testdate : testDate,
+                            testlink : p.testlink,
+                            eligibletest : p.eligibletest,
                         });
                     }    
             
@@ -81,10 +105,10 @@ router.get('/edit-info/:id',isAdmin, function (req, res) {
 
 // post update info 
 router.post('/edit-info/:id',isAdmin,async function(req,res){
-    const{name,stipend,purpose,time_period,year,location,branch,selectedusers} = req.body;
+    const{name,stipend,purpose,time_period,year,location,branch,selectedusers,open,deadline,formlink,testdate,testlink,eligibletest} = req.body;
     let existing;
     const id = req.params.id;
-
+    // console.log(formlink + name);
     await Job.findById(id, function (err, existing) {
         if (err)
             console.log(err);
@@ -92,19 +116,25 @@ router.post('/edit-info/:id',isAdmin,async function(req,res){
         if (existing) {
             existing.name = name;
             existing.stipend = stipend;
-            
             existing.time_period =time_period;
             existing.location = location;
             existing.branch = branch;
             existing.selectedusers = selectedusers;
+            existing.formlink = formlink;
+            existing.eligibletest = eligibletest;
+            existing.testlink = testlink;
+            existing.deadline = deadline;
+            existing.testdate = testdate;
+
             if(typeof(year) != "undefined"){
                 existing.year = year;
-                console.log(existing.year);
             }
             if(typeof(purpose) != "undefined"){
                 existing.purpose = purpose;
             }
-                
+            if(typeof(open) != "undefined"){
+                existing.open = open;
+            }     
         }
     try {
        existing.save();

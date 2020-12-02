@@ -135,7 +135,37 @@
             <option value="3">3</option>
             <option value="4">4</option>
         </select> <br>
-        Selected candidates -
+
+        
+
+        Form link -
+         <input type="text" name="formlink" value="<%= formlink %>"> <br>
+        
+        Deadline - 
+        <input type="date" name="deadline" value="<%= deadline %>"> <br>
+
+        Eligible students list for the test - 
+        <input type="text" name="eligibletest" value="<%= eligibletest %>"> <br>
+
+        Test date -
+        <input type="date" name="testdate" value="<%= testdate %>"> <br>
+
+        Test link - 
+        <input type="text" name="testlink" value="<%= testlink %>"> <br>
+
+        Applications still open? <br>
+        <% if(open){ %>
+            <input type="text" value="Yes" disabled>
+        <% }else{ %>
+            <input type="text" value="No" disabled>
+        <% } %>
+        <select name="open" id="">
+            <option value="" disabled selected>Change it from here</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select> <br>
+    
+        Final selected candidates -
          <input type="text" name="selectedusers" value="<%= selectedusers %>"> <br>
         <button type="submit">Update</button>
     </form>

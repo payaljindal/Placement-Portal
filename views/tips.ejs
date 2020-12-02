@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+	
 	
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,11 +16,28 @@
     
     <!-- Custom Color -->
 	<link href="/css/default.css" rel="stylesheet">
-
+	<script>
+		function myFunction() {
+		  var x = document.getElementById("myInput");
+		  if (x.type === "password") {
+			x.type = "text";
+		  } else {
+			x.type = "password";
+		  }
+		}
+		function regpass() {
+			  var x = document.getElementById("reg");
+			  if (x.type === "password") {
+				x.type = "text";
+			  } else {
+				x.type = "password";
+			  }
+			}
+		</script>
 </head>
 <body class="green-skin bg-light">
 
-<!-- Start Navigation navbar-->
+   <!-- Start Navigation navbar-->
         <div class="header header-light">
             <div class="container-fluid">
                 <nav id="navigation" class="navigation navigation-landscape">
@@ -33,7 +50,7 @@
                     <div class="nav-menus-wrapper" style="transition-property: none;">
                         <ul class="nav-menu">
                         
-                            <li ><a href="/">Home</a>
+                            <li class="active"><a href="/">Home</a></li>
                                 
                             </li>
 							<%if (user && user.admin){%>
@@ -46,7 +63,9 @@
 										</a>
 									</li>
 										<%}%>
-							
+							<li class="active">
+								<a href="/tip"><i class="ti-ink-pen"></i><span class="dn-lg">Add new tip</span></a></li> 
+							</li>
                      
                             
                     
@@ -100,17 +119,7 @@
 			
 			
 			<!-- ============================ Hero Banner  Start================================== -->
-			<div class="page-title-wrap pt-img-wrap" style="background:url(img/bl.jpg) no-repeat;">
-				<div class="container">
-					<div class="col-lg-12 col-md-12">
-						<div class="pt-caption text-center">
-							<h1>TIPS AND TRICKS</h1>
-							<p><a href="/">Home</a><span class="current-page">Blog</span></p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="clearfix"></div>
+
 			<!-- ============================ Hero Banner End ================================== -->
 			
 			<!-- ============================ Blog Grid Start ================================== -->

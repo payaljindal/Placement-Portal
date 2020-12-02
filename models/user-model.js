@@ -22,7 +22,8 @@ const userSchema = new Schema({
   job_category : {type: String },
   cgpa : {type : Number},
   year : {type: Number},
-  backlogs : {type : String}
+  backlogs : {type : String},
+  appliedjobs : [],
 });
 
 userSchema.plugin(uniqueValidator);

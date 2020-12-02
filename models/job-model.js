@@ -12,6 +12,12 @@ const jobSchema = new Schema({
     branch : {type: String},
     appliedusers : [],
     selectedusers : {type: String},
+    deadline : {type: Date},
+    formlink : {type: String},
+    open : {type : Boolean},
+    testdate : {type : Date},
+    testlink : {type: String},
+    eligibletest : {type : String},
 });
 
 jobSchema.plugin(uniqueValidator);

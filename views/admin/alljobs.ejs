@@ -114,7 +114,7 @@
                 <th>Applied users</th> 
            <% } %>
 
-           <% if (user && user.admin == 0) { %>
+           <% if (user && user.admin == 0) { %> 
                 <th>Apply</th> 
             <% } %>
 
@@ -145,7 +145,11 @@
                 </td>
                 <% } %>
                 <% if (user && user.admin == 0) { %>
-                    <td><a href="/apply/<%= job._id %>">Apply</a></td>
+                    <% if(job.open) { %>
+                        <td><a href="/apply/<%= job._id %>">Apply</a></td>
+                    <% }else{ %>
+                        <td><span style="color: red;">Applications closed</span></td>
+                    <% } %>
                 <% } %>
                     <td><a href="/job/<%= job._id %>">Details</a></td>
             </tr>

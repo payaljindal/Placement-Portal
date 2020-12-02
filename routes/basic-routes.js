@@ -162,21 +162,32 @@ router.get('/apply/:id',isUser,NotAdmin,function(req,res){
       const user = req.user;
       let existing;
       Job.findById(jobid, function (err, existing) {
-              existing.appliedusers.push({
-                  name: user.name,
-                  username : user.username,
-                  public_profile : "http://localhost:5000/users/detail/" + user._id ,
-              });
 
-              try {
-                existing.save();
-             } catch (err) {
-               console.log(err);
-             }
+              if(existing.open){
+                    user.appliedjobs.push({
+                          jobid,
+                    });
+                    existing.appliedusers.push({
+                          name: user.name,
+                          username : user.username,
+                          public_profile : "http://localhost:5000/users/detail/" + user._id ,
+                    });
+
+                    try {
+                        existing.save();
+                    } catch (err) {
+                      console.log(err);
+                    }
+                    req.flash('success','Successfully applied for the job');
+                    res.redirect('/admin/list'); 
+              }else{
+                    req.flash('danger','Applications are closed now.');
+                    res.redirect('/admin/list'); 
+              }
+              
       });  
       
-      req.flash('success','Successfully applied for the job');
-      res.redirect('/admin/list'); 
+      
 });
 
 // job details page 
