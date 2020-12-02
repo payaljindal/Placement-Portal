@@ -127,7 +127,6 @@
                 <td><%= job.year %></td>
                 <td><%= job.stipend %></td>
                 <td><%= job.time_period %></td>
-                
                 <td><%= job.location %></td>
                 <td><%= job.branch %></td>
 
@@ -146,7 +145,19 @@
                 <% } %>
                 <% if (user && user.admin == 0) { %>
                     <% if(job.open) { %>
-                        <td><a href="/apply/<%= job._id %>">Apply</a></td>
+                        
+                        <% let flag = 0; %>
+                        <% user.appliedjobs.forEach(function(kl){ %>
+                            <% if(kl.jobid == job._id){ %>
+                                <% flag = 1; %>
+                            <%} %>
+                        <% }); %>
+
+                        <% if(flag == 1){ %>
+                            <td><span style="color: orange;">Already applied</span></td>
+                        <% }else{ %>
+                            <td><a href="/apply/<%= job._id %>">Apply</a></td>
+                        <% } %>
                     <% }else{ %>
                         <td><span style="color: red;">Applications closed</span></td>
                     <% } %>

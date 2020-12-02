@@ -164,6 +164,19 @@ router.get('/apply/:id',isUser,NotAdmin,function(req,res){
       Job.findById(jobid, function (err, existing) {
 
               if(existing.open){
+                    // already applied 
+                    let flag = 0;
+                    user.appliedjobs.forEach(function(job){
+                        if(job.jobid == jobid){
+                          flag = 1;
+                        }
+                    });
+                    if(flag){
+                      req.flash('danger','Already applied!');
+                      res.redirect('/admin/list'); 
+                    }else{
+
+                      // apply 
                     user.appliedjobs.push({
                           jobid,
                     });
@@ -175,11 +188,13 @@ router.get('/apply/:id',isUser,NotAdmin,function(req,res){
 
                     try {
                         existing.save();
+                        user.save();
                     } catch (err) {
                       console.log(err);
                     }
                     req.flash('success','Successfully applied for the job');
                     res.redirect('/admin/list'); 
+                    }
               }else{
                     req.flash('danger','Applications are closed now.');
                     res.redirect('/admin/list'); 

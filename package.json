@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/InternityFoundation/Loading_3041.git"
+    "url": "git+https://github.com/payaljindal/Placement-Portal.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/InternityFoundation/Loading_3041/issues"
+    "url": "https://github.com/payaljindal/Placement-Portal/issues"
   },
-  "homepage": "https://github.com/InternityFoundation/Loading_3041#readme",
+  "homepage": "https://github.com/payaljindal/Placement-Portal#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
