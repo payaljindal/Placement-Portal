@@ -36,7 +36,7 @@ router.get('/list',isUser,function(req,res){
 
 // Add new job 
 router.post('/add',isAdmin,function(req,res){
-        const{name,stipend,purpose,time_period,year,location,branch,deadline,formlink,testdate,testlink} = req.body;
+        const{name,stipend,purpose,time_period,year,location,branch,deadline,formlink,testdate,testlink,description} = req.body;
     console.log(deadline);
         var job = new Job({
             name: name,
@@ -52,6 +52,7 @@ router.post('/add',isAdmin,function(req,res){
             testdate:testdate,
             testlink: testlink,
             eligibletest : "",
+            description : description,
         });
 
         job.save();
@@ -97,6 +98,7 @@ router.get('/edit-info/:id',isAdmin, function (req, res) {
                             testdate : testDate,
                             testlink : p.testlink,
                             eligibletest : p.eligibletest,
+                            description : p.description,  
                         });
                     }    
             
@@ -105,7 +107,7 @@ router.get('/edit-info/:id',isAdmin, function (req, res) {
 
 // post update info 
 router.post('/edit-info/:id',isAdmin,async function(req,res){
-    const{name,stipend,purpose,time_period,year,location,branch,selectedusers,open,deadline,formlink,testdate,testlink,eligibletest} = req.body;
+    const{name,stipend,purpose,time_period,year,location,branch,selectedusers,open,deadline,formlink,testdate,testlink,eligibletest,description} = req.body;
     let existing;
     const id = req.params.id;
     // console.log(formlink + name);
@@ -125,7 +127,7 @@ router.post('/edit-info/:id',isAdmin,async function(req,res){
             existing.testlink = testlink;
             existing.deadline = deadline;
             existing.testdate = testdate;
-
+            existing.description = description;
             if(typeof(year) != "undefined"){
                 existing.year = year;
             }

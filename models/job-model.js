@@ -18,6 +18,7 @@ const jobSchema = new Schema({
     testdate : {type : Date},
     testlink : {type: String},
     eligibletest : {type : String},
+    description : {type : String},
 });
 
 jobSchema.plugin(uniqueValidator);

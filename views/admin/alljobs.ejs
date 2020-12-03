@@ -121,6 +121,7 @@
             <th>Get details</th> 
         </tr>
         <% jobs.forEach(function(job){ %>
+            <% if(user.year == job.year || user.admin ){%>
             <tr>
                 <td><%= job.name %></td>
                 <td><%= job.purpose %></td>
@@ -164,6 +165,7 @@
                 <% } %>
                     <td><a href="/job/<%= job._id %>">Details</a></td>
             </tr>
+            <% } %>
             <% }); %>
     </table>
     </div>

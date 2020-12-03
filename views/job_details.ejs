@@ -36,7 +36,7 @@
 		</script>
 </head>
 
-<body class="green-skin bg-light" >
+<body class="green-skin " >
 
 <!-- Start Navigation navbar-->
         <div class="header header-light">
@@ -112,16 +112,237 @@
 
         <!-- end navbar  -->
         <!-- messages  -->
-            <%- messages('messages', locals) -%>
+			<%- messages('messages', locals) -%>
 
-<h1> About <%= job.name %></h1>
+			<!-- section 1 -->
+			<div class="page-title-wrap">
+				<div class="container">
+					<div class="col-lg-12 col-md-12">
+						<div class="pt-caption">
+							<h1>About <%= job.name %> [<%= job.purpose%>]</h1> <br>
+							<%= job.description %>
+						</div>
+					</div>
+				</div>
+			</div>
 
-<%= job.stipend %>
-<%= job.purpose %>
+			<br>
+
+			<!-- section 2 -->
+			<div class="container">
+			  <div class="row">
+				<div class="col-md-4">
+							
+							<div class="tr-single-box">
+								<div class="tr-single-header">
+									<h4><i class="ti-info-alt"></i>Job overview</h4>
+								</div>
+								
+								<div class="tr-single-body">
+									<ul class="extra-service">
+										
+										
+										<li>
+											<div class="icon-box-icon-block">
+												<a href="#">
+													<div class="icon-box-round">
+														<i class="ti-more-alt"></i>
+													</div>
+													<div class="icon-box-text">
+														<b>Year</b> <br>
+														<%= job.year %>
+													</div>
+												</a>
+											</div>
+										</li>
+
+										<li>
+											<div class="icon-box-icon-block">
+												<a href="#">
+													<div class="icon-box-round">
+														<i class="ti-list"></i>
+													</div>
+													<div class="icon-box-text">
+														<b>Branch</b> <br>
+														<%= job.branch %>
+													</div>
+												</a>
+											</div>
+										</li>
+										
+										<li>
+											<div class="icon-box-icon-block">
+												<a href="#">
+													<div class="icon-box-round">
+														<i class="ti-location-pin"></i>
+													</div>
+													<div class="icon-box-text">
+														<b>Location</b> <br>
+														<%= job.location %>
+													</div>
+												</a>
+											</div>
+										</li>
+										
+										<li>
+											<div class="icon-box-icon-block">
+												<a href="#">
+													<div class="icon-box-round">
+														<i class="ti-star"></i>
+													</div>
+													<div class="icon-box-text">
+														<b>Offered money</b> <br>
+														<%= job.stipend %>
+													</div>
+												</a>
+											</div>
+										</li>
+										
+										<li>
+											<div class="icon-box-icon-block">
+												<a href="#">
+													<div class="icon-box-round">
+														<i class="ti-time"></i>
+													</div>
+													<div class="icon-box-text">
+														<b>Time period</b> <br>
+														<%= job.time_period %>
+													</div>
+												</a>
+											</div>
+										</li>							
+		
+									</ul>
+								</div>
+								
+							</div>
+				</div>
+
+				<!-- middle section  -->
+				<div class="col-md-4 ">
+							
+					<div class="tr-single-box">
+						<div class="tr-single-header">
+							<h4><i class="ti-info-alt"></i>Test/Interview details</h4>
+						</div>
+						
+						<div class="tr-single-body">
+							<ul class="extra-service">
+								
+								
+								<li>
+									<div class="icon-box-icon-block">
+										<a href="#">
+											<div class="icon-box-round">
+												<i class="ti-file"></i>
+											</div>
+											<div class="icon-box-text">
+												<b>Form to be filled</b> <br>
+												<a href="<%= job.formlink %>" target="_blank"><%= job.formlink %></a>
+											</div>
+										</a>
+									</div>
+								</li>
+
+								<li>
+									<div class="icon-box-icon-block">
+										<a href="#">
+											<div class="icon-box-round">
+												<i class="ti-check"></i>
+											</div>
+											<div class="icon-box-text">
+												<b>Deadline to fill the form</b> <br>
+												<%= job.deadline.toISOString().substr(0, 10) %>
+											</div>
+										</a>
+									</div>
+								</li>
+								
+								<li>
+									<div class="icon-box-icon-block">
+										<a href="#">
+											<div class="icon-box-round">
+												<i class="ti-pin-alt"></i>
+											</div>
+											<div class="icon-box-text">
+												<b>Test date</b> <br>
+												<%= job.testdate.toISOString().substr(0, 10) %>
+											</div>
+										</a>
+									</div>
+								</li>
+								
+								<li>
+									<div class="icon-box-icon-block">
+										<a href="#">
+											<div class="icon-box-round">
+												<i class="ti-desktop"></i>
+											</div>
+											<div class="icon-box-text">
+												<b>Test link</b> <br>
+												<a href="<%= job.testlink %>" target="_blank"><%= job.testlink %></a>
+											</div>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						
+					</div>
+					</div>
+
+				<!-- right section  -->
+				<div class="col-md-4 ">
+							
+					<div class="tr-single-box">
+						<div class="tr-single-header">
+							<h4><i class="ti-info-alt"></i>Eligible/Selected students</h4>
+						</div>
+						
+						<div class="tr-single-body">
+							<ul class="extra-service">
+								
+								
+								<li>
+									<div class="icon-box-icon-block">
+										<a href="#">
+											<div class="icon-box-round">
+												<i class="ti-view-list"></i>
+											</div>
+											<div class="icon-box-text">
+												<b>Eligible students for test</b> <br>
+												<a href="<%= job.eligibletest %>" target="_blank"><%= job.eligibletest %></a>
+											</div>
+										</a>
+									</div>
+								</li>
+
+								<li>
+									<div class="icon-box-icon-block">
+										<a href="#">
+											<div class="icon-box-round">
+												<i class="ti-face-smile"></i>
+											</div>
+											<div class="icon-box-text">
+												<b>Final selected students</b> <br>
+												<%= job.selectedusers %>
+											</div>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						
+					</div>
+					</div>
+		</div>
+
+			</div>
 
 
+<br>
     <!-- footer  -->
-			<footer class="dark-footer skin-dark-footer" style="position: fixed;bottom: 0;width: 100%;">
+			<footer class="dark-footer skin-dark-footer" >
 				<div class="footer-bottom">
 					<div class="container">
 						<div class="row align-items-center">
