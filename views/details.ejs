@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
 		<title>Placement - Portal</title>
-		<link rel ="shortcut icon" type="image/png" href="/img/favicon.png">
+		<link rel ="shortcut icon" type="image/png" href="/img/favicon.ico">
 		<!-- All Plugins Css -->
 		<link href="/css/plugins.css" rel="stylesheet">
 		 
@@ -95,17 +95,12 @@
 			<!-- ======================= Start Banner ===================== -->
 			<section class="page-title-banner"  style="background-image:url(/img/aa.jpg);">
 				<div class="container">
-					<div class="row m-0 align-items-end detail-swap">
+					<div class="row ">
 						<div class="tr-list-wrap">
 							<div class="tr-list-detail">
-								<div class="tr-list-thumb">
-									<img src="/img/user.png" class="img-responsive" alt="" />
-								</div>
 								<div class="tr-list-info">
-									
-									<h4 class="mb-1"><%= user[0].name %></h4>
-									
-									<p class="mb-1"><i class="ti-location-pin mr-2"></i><%= user[0].location %></p>
+									<h2 style="color: white;"><%= user[0].name %></h2>
+									<%= user[0].bio %>
 								</div>
 							</div>
 							<div class="listing-detail_right">
@@ -236,14 +231,12 @@
 													<i class="ti-stats-down"></i>
 												</div>
 												<div class="icon-box-text">
-													<strong class="d-block">Expected Sallery</strong>
-													
-													 <%= user[0].min_salary %> +
+													<strong class="d-block">CGPA</strong>
+													 <%= user[0].cgpa %> 
 												</div>
 											</div>
 										</li>
 
-										
 										<li>
 											<div class="icon-box-icon-block">
 												<div class="icon-box-round">
@@ -259,11 +252,11 @@
 										<li>
 											<div class="icon-box-icon-block">
 												<div class="icon-box-round">
-													<i class="ti-hand-point-right"></i>
+													<i class="ti-pencil"></i>
 												</div>
 												<div class="icon-box-text">
-													<strong class="d-block">Marital Status</strong>
-													<%= user[0].marital %>
+													<strong class="d-block">Year</strong>
+													<%= user[0].year %>
 												</div>
 											</div>
 										</li>
@@ -271,23 +264,11 @@
 										<li>
 											<div class="icon-box-icon-block">
 												<div class="icon-box-round">
-													<i class="ti-marker"></i>
+													<i class="ti-world"></i>
 												</div>
 												<div class="icon-box-text">
 													<strong class="d-block">Experience</strong>
 													<%= user[0].experience %> years
-												</div>
-											</div>
-										</li>
-										
-										<li>
-											<div class="icon-box-icon-block">
-												<div class="icon-box-round">
-													<i class="ti-clipboard"></i>
-												</div>
-												<div class="icon-box-text">
-													<strong class="d-block">Job Type</strong>
-													<%= user[0].job_type %>
 												</div>
 											</div>
 										</li>
@@ -322,7 +303,7 @@
 											<div class="icon-box-icon-block">
 												<a href="#">
 													<div class="icon-box-round">
-														<i class="lni-phone-handset"></i>
+														<i class="ti-bell"></i>
 													</div>
 													<div class="icon-box-text">
 														<%= user[0].contact %>
@@ -378,7 +359,7 @@
 													</div>
 													<div class="icon-box-text">
 														
-														<a href="<%= user[0].linkedin %>">Linkedin</a>
+														<a href="<%= user[0].linkedin %>" target="_blank">Linkedin</a>
 													</div>
 												</a>
 											</div>
@@ -392,7 +373,7 @@
 													</div>
 													<div class="icon-box-text">
 														
-														<a href="<%= user[0].github %>">Github</a>
+														<a href="<%= user[0].github %>" target="_blank">Github</a>
 												</a>
 											</div>
 										</li>
@@ -404,7 +385,7 @@
 														<i class="ti-twitter-alt"></i>
 													</div>
 													<div class="icon-box-text">
-														Twitter
+														<a href="" target="_blank">Twitter</a>
 													</div>
 												</a>
 											</div>

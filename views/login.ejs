@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 	
+	
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Placement Portal</title>
+    <link rel ="shortcut icon" type="image/png" href="/img/favicon.ico">
+    <!-- All Plugins Css -->
+    <link href="/css/plugins.css" rel="stylesheet">
+     
 
-<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Placement Portal</title>
-		<link rel ="shortcut icon" type="image/png" href="/img/favicon.png">
-        <!-- All Plugins Css -->
-        <link href="/css/plugins.css" rel="stylesheet">
-        <!-- Custom CSS -->
-		<link href="/css/styles.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-		
-		<!-- Custom Color -->
-		<link href="/css/default.css" rel="stylesheet">
-		<script>
-			function myFunction() {
-			  var x = document.getElementById("myInput");
-			  if (x.type === "password") {
-				x.type = "text";
-			  } else {
-				x.type = "password";
-			  }
-			}
-
-			function regpass() {
+    <!-- Custom CSS -->
+    <link href="/css/styles.css" rel="stylesheet">
+    
+    <!-- Custom Color -->
+	<link href="/css/default.css" rel="stylesheet">
+	<script>
+		function myFunction() {
+		  var x = document.getElementById("myInput");
+		  if (x.type === "password") {
+			x.type = "text";
+		  } else {
+			x.type = "password";
+		  }
+		}
+		function regpass() {
 			  var x = document.getElementById("reg");
 			  if (x.type === "password") {
 				x.type = "text";
@@ -33,70 +33,94 @@
 				x.type = "password";
 			  }
 			}
-			</script>
-    </head>
-	
-    <body class="green-skin bg-light">
-        <!-- ============================================================== -->
-        <!-- Preloader - style you can find in spinners.css -->
-        <!-- ============================================================== -->
-        <div class="Loader"></div>
+		</script>
+</head>
+
+<body class="green-skin bg-light">
+    
+    <div id="main-wrapper">
 		
-        <!-- ============================================================== -->
-        <!-- Main wrapper - style you can find in pages.scss -->
-        <!-- ============================================================== -->
-        <div id="main-wrapper">
-		
-            <!-- ============================================================== -->
-            <!-- Top header  -->
-            <!-- ============================================================== -->
-            <!-- Start Navigation -->
-			<div class="header header-light">
-				<div class="container-fluid">
-					<nav id="navigation" class="navigation navigation-landscape">
-						<div class="nav-header">
-							<a class="nav-brand" href="#">
-								Placement-Portal
-								<!-- <img src="/img/Logo.jpg" class="logo" width="170" height="40" alt="logo"> -->
-							</a> 
+        <!-- Start Navigation navbar-->
+        <div class="header header-light">
+            <div class="container-fluid">
+                <nav id="navigation" class="navigation navigation-landscape">
+                    <div class="nav-header">
+                        <a class="nav-brand" href="#">
+                            <img src="/img/logo4.PNG" class="logo"  alt="logo">
+                        </a>
+                        <div class="nav-toggle"></div>
+                    </div>
+                    <div class="nav-menus-wrapper" style="transition-property: none;">
+                        <ul class="nav-menu">
+                        
+                            <li class="active"><a href="/">Home</a></li>
 							
-							<div class="nav-toggle"></div>
-						</div>
-						<div class="nav-menus-wrapper" style="transition-property: none;">
-							<ul class="nav-menu">
-							
-								<li class="active"><a href="/">Home</a>	
-								</li>
-								<li><a href="#">Pages<span class="submenu-indicator"></span></a>
-										<li><a href="/tip">Tips and Tricks</a></li>
+								<%if (user && user.admin){%>
+								<li><a href="/allusers">All students</a></li>
+									<%}%>
+									<% if(user){ %>
+										  <li>
+										<a href="/admin/list" >
+											<i class="ti-signal mr-1"></i><span class="dn-lg">Get list </span>
+										</a>
 									</li>
-
-								<li><a href="/contact">Contact Us</a></li>
-								
-							</ul>
-
-							<ul class="nav-menu nav-menu-social align-to-right">
-
+										<%}%>
+                                    <li>
+									<a href="/tip"><i class="ti-ink-pen"></i><span class="dn-lg">Add new tip</span></a></li>                                 
+                            </li>
+                            
+                            <li><a href="/contact">Contact Us</a></li>
+                            
+                        </ul>
+                        
+                        <ul class="nav-menu nav-menu-social align-to-right">
+                            
+                            
+								<% if(user) {%>
 									<li>
-									<a href="#" data-toggle="modal" data-target="#signup">
-										<i class="ti-user mr-1"></i><span class="dn-lg">Register</span>
+										<a href="/users/logout" >
+											<i class="ti-user mr-1"></i><span class="dn-lg">Logout</span>
+										</a>
+									</li>
+								
+									
+									
+									<% if(user.admin){ %>
+									<li class="add-listing theme-bg">
+										<a href="/admin/addnew">
+											 <i class="ti-plus"></i> Add new company
+										</a>
+									</li>
+									<% }else{ %>
+										<li class="add-listing theme-bg">
+											<a href="/users/profile">
+												Your Profile
+											</a>
+										</li>
+										<% } %>
+								<% }else{ %>
+									<li>
+									<a href="#" data-toggle="modal" data-target="#login">
+										<i class="ti-user mr-1"></i><span class="dn-lg">Login/Register</span>
 									</a>
 									</li>
+									<% } %>
+                           
                         </ul>
-						</div>
-					</nav>
-				</div>
-			</div>
-			<!-- End Navigation -->
-			<div class="clearfix"></div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- End Navigation -->
+        <div class="clearfix"></div>
 			<!-- ============================================================== -->
 			<!-- Top header  -->
 			<!-- ============================================================== -->
-			<%- messages('messages', locals) -%>
 			
+			<%- messages('messages', locals) -%>
 			<!-- ============================ Hero Banner  Start================================== -->
 			<!-- <div class="page-title-wrap pt-img-wrap" style="background:url(/img/b.jpg) no-repeat;"> -->
-				<div class="page-title-wrap pt-img-wrap" style="background-color: #32c028;"> 
+				<!-- <div class="page-title-wrap pt-img-wrap" style="background-color: #32c028;"> 
 					
 				<div class="container">
 					<div class="col-lg-12 col-md-12">
@@ -106,7 +130,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<div class="clearfix"></div>
 			<!-- ============================ Hero Banner End ================================== -->
 			
@@ -164,9 +188,11 @@
 				<div class="footer-bottom">
 					<div class="container">
 						<div class="row align-items-center">
+							
 							<div class="col-lg-6 col-md-6">
 								<p class="mb-0">© 2020 Placement Portal. All Rights Reserved</p>
 							</div>
+							
 							<div class="col-lg-6 col-md-6 text-right">
 								<ul class="footer-bottom-social">
 									<li><a href="#"><i class="ti-facebook"></i></a></li>
@@ -179,9 +205,60 @@
 						</div>
 					</div>
 				</div>
+				
 			</footer>
+
 			<!-- ============================ Footer End ================================== -->
 			
+			<!-- Log In Modal -->
+			<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="registermodal" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
+					<div class="modal-content" id="registermodal">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true"><i class="ti-close"></i></span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<h4 class="modal-header-title">SignIn</h4>
+							
+							<div class="login-form">
+								<form method="post" action="/users/login">
+								
+									<div class="form-group">
+										<label>User Name</label>
+										<div class="input-with-gray">
+											<input type="text" class="form-control" placeholder="Username" name="username">
+											<i class="ti-user theme-cl"></i>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label>Password</label>
+										<input class="ml-40" type="checkbox" onclick="myFunction()">
+										<div class="input-with-gray">
+											<input type="password" name="password" id="myInput" class="form-control" placeholder="*******" required>
+												<i class="ti-unlock theme-cl"></i>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<button type="submit" class="btn btn-primary btn-md full-width pop-login">Login</button>
+									</div>
+								
+								</form>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<div class="mf-link"><i class="ti-user"></i>Don't have An Account?<a href="javascript:void(0)" data-toggle="modal" data-target="#signup" data-dismiss="modal"> Sign Up</a></div>
+							<div class="mf-forget"><a href="#"><i class="ti-help"></i>Forget Password</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Modal -->
+			
+			<!-- Sign Up Modal -->
 			<div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="sign-up" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
 					<div class="modal-content" id="sign-up">
@@ -211,7 +288,7 @@
 											<div class="form-group">
 												<label>Email</label>
 												<div class="input-with-gray">
-													<input type="email" name="email" class="form-control" placeholder="Email ID" required>
+													<input type="text" name="email" pattern="^[a-zA-Z0-9]+@thapar\.edu$" class="form-control" placeholder="your_mail@thapar.edu" required>
 													<i class="ti-email theme-cl"></i>
 												</div>
 											</div>
@@ -285,6 +362,7 @@
 					</div>
 				</div>
 			</div>
+			<!-- End Modal -->				
 
 		</div>
 		<!-- ============================================================== -->
@@ -310,7 +388,18 @@
 		 
 		<script src="/js/counterup.min.js"></script>
 		<script src="/js/custom.js"></script>
-
+		
+		<script>
+				$(function(){
+					$('.datepicker').datepicker({
+						format: 'mm-dd-yyyy'
+					});
+				});
+		</script>
+		<!-- ============================================================== -->
+		<!-- This page plugins -->
+		<!-- ============================================================== -->
+		
 
 	</body>
 

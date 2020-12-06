@@ -1,16 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-	
-	<head>
+	<html lang="en">
+		
+		
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-		<title>Placement - Portal</title>
-		<link rel ="shortcut icon" type="image/png" href="/img/favicon.png">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<title>Placement Portal</title>
+		<link rel ="shortcut icon" type="image/png" href="/img/favicon.ico">
 		<!-- All Plugins Css -->
 		<link href="/css/plugins.css" rel="stylesheet">
 		 
@@ -20,10 +16,8 @@
 		
 		<!-- Custom Color -->
 		<link href="/css/default.css" rel="stylesheet">
-		 
-			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-			<script type="text/javascript">
-				$(function () {
+		<script>
+			$(function () {
 					$("#btnSubmit").click(function () {
 						var password = $("#txtPassword").val();
 						var confirmPassword = $("#txtConfirmPassword").val();
@@ -51,74 +45,96 @@
 						
 				
 				}
-				
+			function myFunction() {
+			  var x = document.getElementById("myInput");
+			  if (x.type === "password") {
+				x.type = "text";
+			  } else {
+				x.type = "password";
+			  }
+			}
+			function regpass() {
+				  var x = document.getElementById("reg");
+				  if (x.type === "password") {
+					x.type = "text";
+				  } else {
+					x.type = "password";
+				  }
+				}
 			</script>
 	</head>
 	
 	<body class="green-skin bg-light">
-		<!-- ============================================================== -->
-		<!-- Preloader - style you can find in spinners.css -->
-		<!-- ============================================================== -->
-		<div class="Loader"></div>
 		
-		<!-- ============================================================== -->
-		<!-- Main wrapper - style you can find in pages.scss -->
-		<!-- ============================================================== -->
 		<div id="main-wrapper">
-		
-			<!-- ============================================================== -->
-			<!-- Top header  -->
-			<!-- ============================================================== -->
-			<!-- Start Navigation -->
+			
+			<!-- Start Navigation navbar-->
 			<div class="header header-light">
 				<div class="container-fluid">
 					<nav id="navigation" class="navigation navigation-landscape">
 						<div class="nav-header">
 							<a class="nav-brand" href="#">
-								<img src="/img/Logo.jpg" class="logo" width="170" height="40" alt="logo">
-
+								<img src="/img/logo4.PNG" class="logo"  alt="logo">
 							</a>
 							<div class="nav-toggle"></div>
 						</div>
 						<div class="nav-menus-wrapper" style="transition-property: none;">
 							<ul class="nav-menu">
 							
-								<li ><a href="/">Home</a></li>
+								<li><a href="/">Home</a></li>
 								
-								<li class="active"><a href="#">Profile<span class="submenu-indicator"></span></a>
-									
-								</li>
-								
-								
-								<li><a href="#">Pages<span class="submenu-indicator"></span></a>
-									<ul class="nav-dropdown nav-submenu" style="right: auto; display: none;">
-										
-										<li><a href="/tip">Tips and Tricks</a></li>                                    
-										
-										
-									</ul>
+									<%if (user && user.admin){%>
+									<li><a href="/allusers">All students</a></li>
+										<%}%>
+										<% if(user){ %>
+											  <li>
+											<a href="/admin/list" >
+												<i class="ti-signal mr-1"></i><span class="dn-lg">Get list </span>
+											</a>
+										</li>
+											<%}%>
+										<li>
+										<a href="/tip"><i class="ti-ink-pen"></i><span class="dn-lg">Add new tip</span></a></li>                                 
 								</li>
 								
 								<li><a href="/contact">Contact Us</a></li>
 								
 							</ul>
-
+							
 							<ul class="nav-menu nav-menu-social align-to-right">
-                            
-                            
-								<% if(user) {%>
-									<li>
-                                <a href="/users/logout" >
-                                    <i class="ti-user mr-1"></i><span class="dn-lg">Logout</span>
-								</a>
-								</li>
-								<% } %>
 								
-                            
-                            
-                        </ul>
-							
-							
+								
+									<% if(user) {%>
+										<li>
+											<a href="/users/logout" >
+												<i class="ti-user mr-1"></i><span class="dn-lg">Logout</span>
+											</a>
+										</li>
+									
+										
+										
+										<% if(user.admin){ %>
+										<li class="add-listing theme-bg">
+											<a href="/admin/addnew">
+												 <i class="ti-plus"></i> Add new company
+											</a>
+										</li>
+										<% }else{ %>
+											<!-- <li class="add-listing theme-bg">
+												<a href="/users/profile">
+													Your Profile
+												</a>
+											</li> -->
+											<% } %>
+									<% }else{ %>
+										<li>
+										<a href="#" data-toggle="modal" data-target="#login">
+											<i class="ti-user mr-1"></i><span class="dn-lg">Login/Register</span>
+										</a>
+										</li>
+										<% } %>
+							   
+							</ul>
 						</div>
 					</nav>
 				</div>

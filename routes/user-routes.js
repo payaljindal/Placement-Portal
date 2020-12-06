@@ -10,17 +10,17 @@ var isUser = auth.isUser;
 var User = require('../models/user-model');
 
 // get register
-router.get('/register', function (req, res) {
-    res.render('register', {
-        title: 'Register',
-    });
+// router.get('/register', function (req, res) {
+//     res.render('register', {
+//         title: 'Register',
+//     });
 
-});
+// });
 
 
 // route to signup
-router.post('/register',
-  userControllers.signup);
+// router.post('/register',
+//   userControllers.signup);
 
 // get route for login 
 router.get('/login', function (req, res) {

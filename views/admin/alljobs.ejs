@@ -111,7 +111,7 @@
            <% if (user && user.admin == 1) { %>
                 <th>Update</th> 
                 <th>Delete</th> 
-                <th>Applied users</th> 
+                <!-- <th>Applied users</th>  -->
            <% } %>
 
            <% if (user && user.admin == 0) { %> 
@@ -120,9 +120,12 @@
 
             <th>Get details</th> 
         </tr>
+     
         <% jobs.forEach(function(job){ %>
-            <% if(user.year == job.year || user.admin ){%>
+            <div>
+            <% if(user.year == job.year || user.admin ){ %>
             <tr>
+                
                 <td><%= job.name %></td>
                 <td><%= job.purpose %></td>
                 <td><%= job.year %></td>
@@ -132,9 +135,9 @@
                 <td><%= job.branch %></td>
 
                 <% if (user && user.admin == 1) { %>
-                <td><a href="/admin/edit-info/<%= job._id %>">Update</a></td>
+                <td><a href="/admin/edit-info/<%= job._id %>"><b style="font-family: 'Lucida Sans';color: green;">Update</b></a></td>
                 <td><a href="/admin/delete/<%= job._id %>">Delete</a></td>
-                <td>
+                <!-- <td>
                     <% let i=1; %>
                     <% job.appliedusers.forEach(function(user){ %>
                         <b>User <%= i %></b> <br>
@@ -142,7 +145,7 @@
                         <a href="<%= user.public_profile  %>">Public profile</a>
                         <% i = i+1; %>
                     <% }); %>
-                </td>
+                </td> -->
                 <% } %>
                 <% if (user && user.admin == 0) { %>
                     <% if(job.open) { %>
@@ -157,7 +160,7 @@
                         <% if(flag == 1){ %>
                             <td><span style="color: orange;">Already applied</span></td>
                         <% }else{ %>
-                            <td><a href="/apply/<%= job._id %>">Apply</a></td>
+                            <td ><a href="/apply/<%= job._id %>">Apply</a></td>
                         <% } %>
                     <% }else{ %>
                         <td><span style="color: red;">Applications closed</span></td>
@@ -166,6 +169,7 @@
                     <td><a href="/job/<%= job._id %>">Details</a></td>
             </tr>
             <% } %>
+            </div>
             <% }); %>
     </table>
     </div>

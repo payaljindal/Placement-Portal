@@ -102,77 +102,85 @@
 
 <br>
     <form action="/admin/edit-info/<%= id %>" method="POST">
-        Company name
+        <center>
+            <div class="col-md-5">
+        
+        <label  class="col-md-4" style="font-size:medium">Company name</label>
         <input type="text" name="name" id="" value="<%= name %>"> <br>
-
-        Purpose
-        <input type="text" value="<%= purpose %>" disabled> 
-
+        <label  class="col-md-4" style="font-size:medium">Purpose</label>
+        <input type="text" value="<%= purpose %>" disabled> <br>
+        <label  class="col-md-4" style="font-size:medium"></label>
         <select name="purpose" id="">
             <option value="" disabled selected>Change it from here</option>
             <option value="job">Job</option>
             <option value="internship">Internship</option>
-        </select> <br>
+        </select> <br> <br>
 
-        Stipend
+        <label  class="col-md-4" style="font-size:medium">Description - </label>
+        <input type="textarea" name="description" value="<%= description %>"> <br>
+
+        <label  class="col-md-4" style="font-size:medium">Stipend </label>
         <input type="text" name="stipend" id="" value="<%= stipend %>"> <br>
 
-        Location
+        <label  class="col-md-4" style="font-size:medium">Location </label>
         <input type="text" name="location" id=""  value="<%= location %>"> <br>
 
-        Time period
+        <label  class="col-md-4" style="font-size:medium">Time period </label>
         <input type="text" name="time_period" value="<%=time_period %>"> <br>
 
-        For which branches - 
+        <label  class="col-md-4" style="font-size:medium">For branches - </label>
         <input type="text" name="branch" value="<%= branch %>"> <br>
 
-        Year
-        <input type="Number" value="<%= year %>" disabled>
+        <label  class="col-md-4" style="font-size:medium">Year</label>
+        <input type="Number" value="<%= year %>" disabled> <br>
+        <label  class="col-md-4" style="font-size:medium"></label>
         <select name="year" id="">
             <option value="" disabled selected>Change it from here</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-        </select> <br>
+        </select> <br> <br>
 
         
 
-        Form link -
+        <label  class="col-md-4" style="font-size:medium">Form link -</label>
          <input type="text" name="formlink" value="<%= formlink %>"> <br>
         
-        Deadline - 
+         <label  class="col-md-4" style="font-size:medium">Deadline - </label>
         <input type="date" name="deadline" value="<%= deadline %>"> <br>
 
-        Eligible students list for the test - 
+        <label  class="col-md-4" style="font-size:medium">Eligible students(test)- </label>
         <input type="text" name="eligibletest" value="<%= eligibletest %>"> <br>
 
-        Test date -
+        <label  class="col-md-4" style="font-size:medium">Test date - </label>
         <input type="date" name="testdate" value="<%= testdate %>"> <br>
 
-        Test link - 
+        <label  class="col-md-4" style="font-size:medium">Test link - </label>
         <input type="text" name="testlink" value="<%= testlink %>"> <br>
 
-        Description - 
-        <input type="text" name="description" value="<%= description %>"> <br>
 
-        Applications still open? <br>
+        <label  class="col-md-4" style="font-size:medium">Application open? </label>
         <% if(open){ %>
             <input type="text" value="Yes" disabled>
         <% }else{ %>
             <input type="text" value="No" disabled>
-        <% } %>
+        <% } %> <br>
+        <label  class="col-md-4" style="font-size:medium"></label>
         <select name="open" id="">
             <option value="" disabled selected>Change it from here</option>
             <option value="1">Yes</option>
             <option value="0">No</option>
-        </select> <br>
+        </select> <br> <br>
     
-        Final selected candidates -
-         <input type="text" name="selectedusers" value="<%= selectedusers %>"> <br>
-        <button type="submit">Update</button>
-    </form>
+        <label  class="col-md-4" style="font-size:medium">Selected candidates - </label>
+         <input type="text" name="selectedusers" value="<%= selectedusers %>"> <br> <br>
 
+        <button type="submit" class="btn btn-info btn-md col-md-4">Update</button>
+            </div>
+        </center>
+    </form>
+<br>
     <!-- footer  -->
 			<footer class="dark-footer skin-dark-footer">
 				<div class="footer-bottom">
