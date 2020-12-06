@@ -56,7 +56,7 @@
                             <li><a href="/">Home</a></li>
 							
 								<%if (user && user.admin){%>
-								<li><a href="/allusers">All students</a></li>
+								<li class="active"><a href="/allusers">All students</a></li>
 									<%}%>
 									<% if(user){ %>
 										  <li>
@@ -69,7 +69,7 @@
 									<a href="/tip"><i class="ti-ink-pen"></i><span class="dn-lg">Add new tip</span></a></li>                                 
                             </li>
                             
-                            <li  class="active"><a href="/contact">Contact Us</a></li>
+                            <li><a href="/contact">Contact Us</a></li>
                             
                         </ul>
                         
@@ -118,9 +118,36 @@
 			<!-- ============================================================== -->
 			
 			<%- messages('messages', locals) -%>
-            
-            <%= users %>
-
+			<br>
+			<div class="container">
+            <table class="table alignmiddle" >
+				<tr style="align-items: center;">
+					<th>
+						Username
+					</th>
+					<th>
+						Year
+					</th>
+					<th>
+						Email
+					</th>
+					<th>Public Profile</th>
+				</tr>
+				
+				<% users.forEach(function(user){ %>
+					<tr>
+						<td><%= user.username %></td>
+						<td><%= user.year %></td>
+						<td><%= user.email %></td>
+						<td><a href="/users/detail/<%= user._id %>" style="color: blue;">Click here</a></td>
+					</tr>
+				<% }); %>
+				
+			</table>
+			</div>
+			
+			
+			<!-- footer start  -->
             <footer class="dark-footer skin-dark-footer">
 				<div class="footer-bottom">
 					<div class="container">

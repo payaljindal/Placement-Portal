@@ -99,81 +99,53 @@
 
 <br>
     <div class="container" >
-    <table class="table  alignmiddle" style="overflow-x:auto;">
-        <tr>
-           <th ><span style="font-color:black;">Company name</span></th> 
-           <th>Purpose</th> 
-           <th>Year</th> 
-           <th>Stipend</th> 
-           <th>Time period</th> 
-           <th>Location</th> 
-           <th>Branch</th> 
-           <% if (user && user.admin == 1) { %>
-                <th>Update</th> 
-                <th>Delete</th> 
-                <!-- <th>Applied users</th>  -->
-           <% } %>
 
-           <% if (user && user.admin == 0) { %> 
-                <th>Apply</th> 
-            <% } %>
-
-            <th>Get details</th> 
-        </tr>
-     
         <% jobs.forEach(function(job){ %>
-            <div>
-            <% if(user.year == job.year || user.admin ){ %>
-            <tr>
-                
-                <td><%= job.name %></td>
-                <td><%= job.purpose %></td>
-                <td><%= job.year %></td>
-                <td><%= job.stipend %></td>
-                <td><%= job.time_period %></td>
-                <td><%= job.location %></td>
-                <td><%= job.branch %></td>
-
-                <% if (user && user.admin == 1) { %>
-                <td><a href="/admin/edit-info/<%= job._id %>"><b style="font-family: 'Lucida Sans';color: green;">Update</b></a></td>
-                <td><a href="/admin/delete/<%= job._id %>">Delete</a></td>
-                <!-- <td>
-                    <% let i=1; %>
-                    <% job.appliedusers.forEach(function(user){ %>
-                        <b>User <%= i %></b> <br>
-                        <%= user.username %> <br>
-                        <a href="<%= user.public_profile  %>">Public profile</a>
-                        <% i = i+1; %>
-                    <% }); %>
-                </td> -->
-                <% } %>
-                <% if (user && user.admin == 0) { %>
-                    <% if(job.open) { %>
-                        
-                        <% let flag = 0; %>
-                        <% user.appliedjobs.forEach(function(kl){ %>
-                            <% if(kl.jobid == job._id){ %>
-                                <% flag = 1; %>
-                            <%} %>
-                        <% }); %>
-
-                        <% if(flag == 1){ %>
-                            <td><span style="color: orange;">Already applied</span></td>
-                        <% }else{ %>
-                            <td ><a href="/apply/<%= job._id %>">Apply</a></td>
-                        <% } %>
-                    <% }else{ %>
-                        <td><span style="color: red;">Applications closed</span></td>
+            <div style="background-color: rgba(255, 255, 255, 0.952);padding: 25px;">
+                <b style="font-size: x-large;color: black;"><%= job.name %></b> <br>
+                For <%= job.purpose %> <br>
+                Year - <%= job.year %> <br>
+                Branches allowed - <%= job.branch %> <br>
+                <br> 
+                <div class="mr-0">
+                    <% if (user && user.admin == 1) { %>
+                        <a href="/admin/edit-info/<%= job._id %>" class="btn " style="background-color:#4CAF50;padding: 6px;">Update</a>
+                        <a href="/admin/delete/<%= job._id %>" class="btn " style="background-color: #f44336;padding: 6px;">Delete</a>
                     <% } %>
-                <% } %>
-                    <td><a href="/job/<%= job._id %>">Details</a></td>
-            </tr>
-            <% } %>
+                    <% if(user.year != job.year) { %>
+                        <span style="color: red;">
+                            You can only view this..because it's for <%= job.year %> year students only. <br>
+                        </span>
+                    <% } %>
+                    <% if (user && user.admin == 0 &&  user.year == job.year ) { %>
+                        
+                        <% if(job.open) { %>
+                            
+                            <% let flag = 0; %>
+                            <% user.appliedjobs.forEach(function(kl){ %>
+                                <% if(kl.jobid == job._id){ %>
+                                    <% flag = 1; %>
+                                <%} %>
+                            <% }); %>
+
+                            <% if(flag == 1){ %>
+                                <span style="color: #4CAF50;"><b>Already applied</b></span> <br>
+                            <% }else{ %>
+                                <a href="/apply/<%= job._id %>" class="btn" style="background-color:#4CAF50;padding: 6px;">Apply</a>
+                            <% } %>
+                        <% }else{ %>
+                            <span style="color: red;">Applications closed <br></span>
+                        <% } %>
+                    <% } %> 
+                <a href="/job/<%= job._id %>" class="btn " style="background-color: orange;padding: 6px;"> Get Details</a>
+                </div>
             </div>
+            <br>
             <% }); %>
-    </table>
     </div>
 
+
+    <br>
 
 
             <footer class="dark-footer skin-dark-footer">

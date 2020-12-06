@@ -220,6 +220,7 @@ router.get('/job/:id',isUser,function(req,res){
 // post blog model
 router.post('/tip',function(req,res){
   const { by, title , topic , content } = req.body;
+  try{
     var blog = new Blog({
       by,
       title,
@@ -230,6 +231,12 @@ router.post('/tip',function(req,res){
     blog.save();
     req.flash('success','Tip posted successfully!');
     res.redirect('/');
+  } catch(err){
+    req.flash('danger','err');
+    res.redirect('/tip');
+  }
+
+    
 });
 
 // get all users

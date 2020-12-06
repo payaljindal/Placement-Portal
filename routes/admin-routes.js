@@ -28,7 +28,7 @@ router.get('/list',isUser,function(req,res){
         res.render('admin/alljobs',
         {
             title : 'All companies',
-            jobs : jobs
+            jobs : jobs.reverse(),
         });
     });
 });
