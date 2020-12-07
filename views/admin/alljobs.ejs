@@ -112,7 +112,7 @@
                         <a href="/admin/edit-info/<%= job._id %>" class="btn " style="background-color:#4CAF50;padding: 6px;">Update</a>
                         <a href="/admin/delete/<%= job._id %>" class="btn " style="background-color: #f44336;padding: 6px;">Delete</a>
                     <% } %>
-                    <% if(user.year != job.year) { %>
+                    <% if(user && user.year != job.year  && user.admin == 0) { %>
                         <span style="color: red;">
                             You can only view this..because it's for <%= job.year %> year students only. <br>
                         </span>
@@ -120,7 +120,6 @@
                     <% if (user && user.admin == 0 &&  user.year == job.year ) { %>
                         
                         <% if(job.open) { %>
-                            
                             <% let flag = 0; %>
                             <% user.appliedjobs.forEach(function(kl){ %>
                                 <% if(kl.jobid == job._id){ %>
@@ -135,7 +134,8 @@
                             <% } %>
                         <% }else{ %>
                             <span style="color: red;">Applications closed <br></span>
-                        <% } %>
+						<% } %>
+						
                     <% } %> 
                 <a href="/job/<%= job._id %>" class="btn " style="background-color: orange;padding: 6px;"> Get Details</a>
                 </div>
@@ -147,7 +147,7 @@
 
     <br>
 
-
+<!-- 
             <footer class="dark-footer skin-dark-footer">
 				<div class="footer-bottom">
 					<div class="container">
@@ -170,7 +170,7 @@
 					</div>
 				</div>
 				
-			</footer>
+			</footer> -->
 
 
 		<!-- ============================================================== -->

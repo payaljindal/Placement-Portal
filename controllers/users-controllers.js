@@ -21,12 +21,13 @@ const signup = async (req,res,next) => {
       res.redirect('/');
   }
    else {
-      User.findOne({username: username}, function (err, user) {
+    
+      User.find({$or: [ {username:username}, {email:email} ]  }, function (err, user) {
           if (err)
               console.log(err);
 
           if (user) {
-              req.flash('danger', 'Username exists, choose another!');
+              req.flash('danger', 'Already exists, choose another!');
               res.redirect('/');
           } else {
               var user = new User({
@@ -93,7 +94,7 @@ const details = (req,res,next) => {
         res.render('details',{
             title : 'Details',
             user : user,
-            admin : req.user.admin,
+            loginuser : req.user,
         })
     })
     // res.redirect('/');

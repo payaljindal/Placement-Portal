@@ -19,8 +19,8 @@ var User = require('../models/user-model');
 
 
 // route to signup
-// router.post('/register',
-//   userControllers.signup);
+router.post('/register',
+  userControllers.signup);
 
 // get route for login 
 router.get('/login', function (req, res) {
@@ -42,7 +42,7 @@ router.get('/logout',isUser, userControllers.logout);
 // profile page
 router.get('/profile',isUser,auth.NotAdmin,userControllers.profile);
 
-router.get('/detail/:id',isUser,userControllers.details);
+router.get('/detail/:id',userControllers.details);
 
 module.exports = router;
 

@@ -58,7 +58,10 @@ app.use('/admin',adminRoutes);
  // user routes 
  app.use('/users', usersRoutes);
 
-
+ app.use((req,res,next) => {
+  //  req.flash("Invalid url");
+	res.redirect('/');
+});
 
  app.use((error, req, res, next) => {
     if (res.headerSent) {

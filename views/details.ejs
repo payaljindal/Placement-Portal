@@ -17,6 +17,24 @@
 		
 		<!-- Custom Color -->
 		<link href="/css/default.css" rel="stylesheet">
+		<script>
+			function myFunction() {
+			  var x = document.getElementById("myInput");
+			  if (x.type === "password") {
+				x.type = "text";
+			  } else {
+				x.type = "password";
+			  }
+			}
+			function regpass() {
+				  var x = document.getElementById("reg");
+				  if (x.type === "password") {
+					x.type = "text";
+				  } else {
+					x.type = "password";
+				  }
+				}
+			</script>
 	</head>
 	
 <body class="green-skin bg-light">
@@ -35,16 +53,16 @@
                         
                             <li><a href="/">Home</a></li>
 							
-								<%if (user && user.admin){%>
+								<% if (loginuser && loginuser.admin){%>
 								<li><a href="/allusers">All students</a></li>
 									<%}%>
-									<% if(user){ %>
+									<% if(loginuser){ %>
 										  <li>
 										<a href="/admin/list" >
 											<i class="ti-signal mr-1"></i><span class="dn-lg">Get list </span>
 										</a>
 									</li>
-										<%}%>
+										<% } %>
                                     <li>
 									<a href="/tip"><i class="ti-ink-pen"></i><span class="dn-lg">Add new tip</span></a></li>                                 
                             </li>
@@ -52,13 +70,13 @@
                         </ul>
                         
                         <ul class="nav-menu nav-menu-social align-to-right">
-								<% if(user) {%>
+								<% if(loginuser) {%>
 									<li>
 										<a href="/users/logout" >
 											<i class="ti-user mr-1"></i><span class="dn-lg">Logout</span>
 										</a>
 									</li>
-									<% if(user.admin){ %>
+									<% if(loginuser.admin){ %>
 									<li class="add-listing theme-bg">
 										<a href="/admin/addnew">
 											 <i class="ti-plus"></i> Add new company
@@ -137,9 +155,6 @@
 												</div>
 											</div>
 											<% });%>
-									
-										
-										
 									</div>
 									
 								</div>
@@ -420,7 +435,7 @@
 				</div>
 			</footer>
 			<!-- ============================ Footer End ================================== -->
-			
+	
 			<!-- Log In Modal -->
 			<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="registermodal" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
@@ -433,25 +448,23 @@
 						<div class="modal-body">
 							<h4 class="modal-header-title">SignIn</h4>
 							
-							
-							
-							
 							<div class="login-form">
-								<form>
+								<form method="post" action="/users/login">
 								
 									<div class="form-group">
 										<label>User Name</label>
 										<div class="input-with-gray">
-											<input type="text" class="form-control" placeholder="Username">
+											<input type="text" class="form-control" placeholder="Username" name="username">
 											<i class="ti-user theme-cl"></i>
 										</div>
 									</div>
 									
 									<div class="form-group">
 										<label>Password</label>
+										<input class="ml-40" type="checkbox" onclick="myFunction()">
 										<div class="input-with-gray">
-											<input type="password" class="form-control" placeholder="*******">
-											<i class="ti-unlock theme-cl"></i>
+											<input type="password" name="password" id="myInput" class="form-control" placeholder="*******" required>
+												<i class="ti-unlock theme-cl"></i>
 										</div>
 									</div>
 									
@@ -463,160 +476,120 @@
 							</div>
 						</div>
 						<div class="modal-footer">
-							<div class="mf-link"><i class="ti-user"></i>Haven't An Account?<a href="javascript:void(0)" data-toggle="modal" data-target="#signup" data-dismiss="modal"> Sign Up</a></div>
+							<div class="mf-link"><i class="ti-user"></i>Don't have An Account?<a href="javascript:void(0)" data-toggle="modal" data-target="#signup" data-dismiss="modal"> Sign Up</a></div>
 							<div class="mf-forget"><a href="#"><i class="ti-help"></i>Forget Password</a></div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<!-- End Modal -->
-			
+					
 			<!-- Sign Up Modal -->
 			<div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="sign-up" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
-        <div class="modal-content" id="sign-up">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><i class="ti-close"></i></span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <h4 class="modal-header-title">Sign Up</h4>
-                
-                
-                <div class="login-form">
-                    <form>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="form-group">
-                                    <label>Full Name</label>
-                                    <div class="input-with-gray">
-                                        <input type="text" class="form-control" placeholder="Your Name">
-                                        <i class="ti-user theme-cl"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="form-group">
-                                    <label>Email</label>
-                                    <div class="input-with-gray">
-                                        <input type="email" class="form-control" placeholder="Email ID">
-                                        <i class="ti-user theme-cl"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="form-group">
-                                    <label>Phone Number</label>
-                                    <div class="input-with-gray">
-                                        <input type="number" class="form-control" placeholder="Phone Number">
-                                        <i class="ti-user theme-cl"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="form-group">
-                                    <label>Whatsapp Number</label>
-                                    <div class="input-with-gray">
-                                        <input type="number" class="form-control" placeholder="Whatsapp Number">
-                                        <i class="ti-user theme-cl"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="form-group">
-                                    <label>Gender</label>
-                                    <div class="input-with-gray">
-                                        <input type="text" class="form-control" placeholder="Gender">
-                                        <i class="ti-user theme-cl"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="form-group">
-                                    <label>Marital Status</label>
-                                    <div class="input-with-gray">
-                                        <input type="text" class="form-control" placeholder="Marital Status">
-                                        <i class="ti-user theme-cl"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="form-group">
-                                    <label>Known Languages</label>
-                                    <div class="input-with-gray">
-                                        <input type="text" class="form-control" placeholder="Languages">
-                                        <i class="ti-user theme-cl"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="form-group">
-                                    <label>Native Location</label>
-                                    <div class="input-with-gray">
-                                        <input type="text" class="form-control" placeholder="Native Location">
-                                        <i class="ti-user theme-cl"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    
-                        
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12">
-                                <div class="form-group">
-                                    <label>User Name</label>
-                                    <div class="input-with-gray">
-                                        <input type="text" class="form-control" placeholder="Username">
-                                        <i class="ti-user theme-cl"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12">
-                                <div class="form-group">
-                                    <label>Password</label>
-                                    <div class="input-with-gray">
-                                        <input type="password" class="form-control" placeholder="*******">
-                                        <i class="ti-unlock theme-cl"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12">
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-primary btn-md full-width pop-login">Login</button>
-                                </div>
-                            </div>
-                        </div>
-
-                    </form>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <div class="mf-link"><i class="ti-user"></i>Already Have Account? Sign In</a></div>
-                <div class="mf-forget"><a href="#"><i class="ti-help"></i>Need Help</a></div>
-            </div>
-        </div>
-    </div>
-</div>
-			<!-- End Modal -->			
+				<div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
+					<div class="modal-content" id="sign-up">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true"><i class="ti-close"></i></span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<h4 class="modal-header-title">Sign Up</h4>
+							
+							
+							<div class="login-form">
+								<form method="post" action="/users/register">
+									<div class="row">
+										<div class="col-lg-6 col-md-6 col-sm-6">
+											<div class="form-group">
+												<label>Full Name</label>
+												<div class="input-with-gray">
+													<input type="text" class="form-control" placeholder="Your Name" name="name" required>
+													<i class="ti-user theme-cl"></i>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-lg-6 col-md-6 col-sm-6">
+											<div class="form-group">
+												<label>Email</label>
+												<div class="input-with-gray">
+													<input type="text" name="email" pattern="^[a-zA-Z0-9_]+@thapar\.edu$" class="form-control" placeholder="your_mail@thapar.edu" required>
+													<i class="ti-email theme-cl"></i>
+												</div>
+											</div>
+										</div>
+									</div>
+			
+									<div class="row">
+										<div class="col-lg-6 col-md-6 col-sm-6">
+											<div class="form-group">
+												<label>Year</label>
+												<div class="input-with-gray">
+													<input type="number" min="1" max="4" name="year" class="form-control" placeholder="Current year" required>
+													<i class="ti-info-alt theme-cl"></i>
+												</div>
+											</div>
+										</div>
+										
+										
+									
+										<div class="col-lg-6 col-md-6 col-sm-6">
+											<div class="form-group">
+												<label>Gender</label>
+												<div class="input-with-gray">
+													<select name="gender" id="" class="form-control" required>
+														<option value="" disabled selected>Gender</option>
+														<option value="Male">Male</option>
+														<option value="Female">Female</option>
+													</select>
+													<i class="ti-basketball theme-cl"></i>
+												</div>
+											</div>
+										</div>
+										
+								
+										
+									</div>
+									<div class="row">
+										<div class="col-lg-12 col-md-12 col-sm-12">
+											<div class="form-group">
+												<label>Roll no. </label>
+												<div class="input-with-gray">
+													<input type="text" name="username" pattern="^[0-9]*$" minlength="9" maxlength="9" class="form-control" placeholder="Roll no." required>
+													<i class="ti-user theme-cl"></i>
+												</div>
+											</div>
+										</div>
+										<div class="col-lg-12 col-md-12 col-sm-12">
+											<div class="form-group">
+												<label>Password</label>
+												<input class="ml-40" type="checkbox" onclick="regpass()">
+												<div class="input-with-gray">
+													<input type="password" name="password" id="reg" class="form-control" placeholder="*******" required>
+												<i class="ti-unlock theme-cl"></i>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<div class="row">
+										<div class="col-lg-12 col-md-12 col-sm-12">
+											<div class="form-group">
+												<button type="submit" class="btn btn-primary btn-md full-width pop-login">Sign Up</button>
+											</div>
+										</div>
+									</div>
+			
+								</form>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<!-- End Modal -->				
+		
 
 		</div>
 		<!-- ============================================================== -->
