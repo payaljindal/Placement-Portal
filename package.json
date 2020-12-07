@@ -32,7 +32,8 @@
     "node-fetch": "^2.6.1",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "nodemon": "^2.0.6"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
