@@ -44,7 +44,7 @@ router.post('/newpassword',function(req,res){
       const newpass = req.body.password;
       const senttoken = req.body.token;
       //console.log(newpass);
-      console.log(senttoken);
+      // console.log(senttoken);
 
       User.findOne({resetToken : senttoken,expireToken:{$gt:Date.now()}},function(err,user){
           if(!user){
@@ -92,15 +92,16 @@ router.post('/resetpassword',function(req,res){
           // console.log("else");
           user.resetToken = token;
           user.expireToken = Date.now() + 3600000;
+          let link = process.env.LINK + token;
+          // console.log(link);
           user.save().then((result)=>{
-
             transporter.sendMail({
               to : user.email,
               from : "no-reply@placement--portal.com",
               subject : "Password reset",
               html :`
               <p>You requested for password reset</p>
-              <h5> Click on this <a href="http://localhost:5000/reset/${token}">link</a> to reset password </h5>
+              <h5> Click on this <a href="${link}">link</a> to reset password </h5>
               `
             },function(err){
               console.log(err);
