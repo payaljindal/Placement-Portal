@@ -134,7 +134,7 @@ router.get('/tip',function(req,res){
 // my profile page
 router.post('/edit1',isUser,NotAdmin, function (req, res) {
   
-  const {name,contact,email,location, linkedin , github , experience , cgpa, bio ,year,backlogs} = req.body;
+  const {name,contact,email,location, linkedin , github , experience , cgpa, bio ,backlogs} = req.body;
 // console.log(linkedin);
     var user = req. user;
     user.linkedin = linkedin;
@@ -143,7 +143,6 @@ router.post('/edit1',isUser,NotAdmin, function (req, res) {
     user.backlogs = backlogs;
     user.cgpa = cgpa;
     user.bio = bio;
-    user.year = year;
     user.name= name;
     user.contact = contact;
     user.email = email;
