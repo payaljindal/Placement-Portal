@@ -7,7 +7,7 @@ const userSchema = new Schema({
 	email : { type : String, required : true, unique: true},
 	password : { type : String, required: true , minlength: 6},
   username : {  type : String, required : true },
-  contact : {type : Number,required : true},
+  contact : {type : Number},
   gender : {type : String , required : true},
   bio : {type: String},
   admin : { type : Number},
@@ -24,6 +24,8 @@ const userSchema = new Schema({
   year : {type: Number},
   backlogs : {type : String},
   appliedjobs : [],
+  resetToken : {type: String},
+  expireToken : {type:Date},
 });
 
 userSchema.plugin(uniqueValidator);

@@ -10,34 +10,36 @@ const signup = async (req,res,next) => {
 
   var name = req.body.name;
   var email = req.body.email;
-  var username = req.body.username;
+  var uname = req.body.username;
   var password = req.body.password;
-
-  const { gender, contact , languages, location } = req.body;
+  var year = req.body.year;
+  const { gender} = req.body;
   
-  if (name=="" || email=="" || username=="" || password =="") {
+  if (name=="" || email=="" || uname=="" || password =="") {
 
     req.flash('danger', 'All the fields are required');
       res.redirect('/');
   }
    else {
     
-      User.find({$or: [ {username:username}, {email:email} ]  }, function (err, user) {
+      User.findOne({username:uname, email:email }, function (err, user) {
           if (err)
               console.log(err);
 
           if (user) {
+              console.log(uname);
+              console.log(email);
               req.flash('danger', 'Already exists, choose another!');
               res.redirect('/');
           } else {
               var user = new User({
                   name: name,
                   email: email,
-                  username: username,
+                  username: uname,
                   password: password,
                   admin: 0,
                   gender,
-                  contact
+                  year : year,
               });
 
               bcrypt.genSalt(10, function (err, salt) {

@@ -10,13 +10,109 @@ const User = require('../models/user-model');
 var Job = require('../models/job-model');
 const Blog = require('../models/blog-model');
 const fetch = require('node-fetch');
+const crypto = require('crypto');
+var nodemailer = require('nodemailer');
 const { model } = require('../models/blog-model');
 const bcrypt = require('bcryptjs');
+const dotenv = require('dotenv');
+dotenv.config();
+let transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'payaljindal05052001@gmail.com',
+    pass: process.env.PASSWORD,
+  }
+});
+
 
 router.get('/',function(req,res){
     res.render('home',{title : 'Home'});
 });
 
+router.get('/reset/:token',function(req,res){
+  // console.log(req.params.token);
+  res.render('newpass',{title : 'Home',
+  token : req.params.token,
+  });
+});
+
+router.get('/resetpassword',function(req,res){
+  res.render('resetpassword.ejs');
+})
+
+router.post('/newpassword',function(req,res){
+      const newpass = req.body.password;
+      const senttoken = req.body.token;
+      //console.log(newpass);
+      console.log(senttoken);
+
+      User.findOne({resetToken : senttoken,expireToken:{$gt:Date.now()}},function(err,user){
+          if(!user){
+                req.flash("Token expired!");
+                res.redirect('/users/login');
+          }
+          else{
+            bcrypt.genSalt(10, function (err, salt){
+              bcrypt.hash(newpass, salt, function (err, hash) {
+                  if (err)
+                      console.log(err);
+
+                  user.password = hash;
+                  user.resetToken=undefined;
+                  user.expireToken = undefined;
+
+                  user.save(function (err) {
+                      if (err) {
+                          console.log(err);
+                      } else {
+                          req.flash('success', 'Password changed successfully!');
+                          res.redirect('/users/login');
+                      }
+                  });
+              });
+            });
+          }
+      });
+});
+
+router.post('/resetpassword',function(req,res){
+  crypto.randomBytes(32,(err,buffer)=>{
+    if(err){
+      console.log(err);
+    }
+    const token = buffer.toString("hex");
+    // console.log(req.body.email);
+    User.findOne({email:req.body.email},function(err,user){
+        if(!user){
+          // console.log("iff");
+          req.flash("danger","No such user exists. Try again");
+          res.redirect('/resetpassword');
+        }
+        else{
+          // console.log("else");
+          user.resetToken = token;
+          user.expireToken = Date.now() + 3600000;
+          user.save().then((result)=>{
+
+            transporter.sendMail({
+              to : user.email,
+              from : "no-reply@placement--portal.com",
+              subject : "Password reset",
+              html :`
+              <p>You requested for password reset</p>
+              <h5> Click on this <a href="http://localhost:5000/reset/${token}">link</a> to reset password </h5>
+              `
+            },function(err){
+              console.log(err);
+            });
+            req.flash("success","Email sent successfully..check your mail");
+            res.redirect('/users/login');
+          });
+        }
+    });
+  });
+
+});
 
 router.get('/contact',function(req,res){
     res.render('contact',{title : 'Contact Us'});

@@ -12,8 +12,9 @@ const mongostore = require('connect-mongo')(session);
 // body parser middle ware
 app.use(bodyParser.urlencoded({ extended : false }));
 app.use(bodyParser.json());
-
-
+// dotenv file 
+const dotenv = require('dotenv');
+dotenv.config();
 
 // session middle ware
 app.use(session({
@@ -77,7 +78,7 @@ app.use('/admin',adminRoutes);
 
 mongoose
   .connect(
-    'mongodb+srv://Payal:payalplacement@cluster0.xjtag.mongodb.net/db1?retryWrites=true&w=majority',
+    process.env.DB,
     { useCreateIndex: true,useUnifiedTopology: true, useNewUrlParser: true },
   )
   .then(() => app.listen(process.env.PORT || 5000, console.log("Your server is up man.....")))
